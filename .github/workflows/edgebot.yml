@@ -9,6 +9,7 @@ on:
     - cron: "0 13 * * 0"
     - cron: "0 15 * * 1"
     - cron: "0 15 * * 2"
+   cron:  - cron: "0 15 * * 3"     # Wed 7 AM PT - college + UFC predictions
   workflow_dispatch: {}
 
 permissions:
