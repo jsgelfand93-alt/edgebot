@@ -33,6 +33,10 @@ KALSHI_BASES = [
 BEST_PRICE_MIN_EV = float(os.environ.get("BEST_PRICE_MIN_EV", "0.02"))
 # Need at least this many books for a trustworthy fair line.
 MIN_BOOKS = int(os.environ.get("MIN_BOOKS", "4"))
+# Only these (US-regulated) books can supply a best-price pick, so viewers can actually get the number.
+# Offshore books (MyBookie, BetUS, Bovada, BetOnline, LowVig) still count toward the fair line.
+BEST_PRICE_BOOKS = set(os.environ.get("BEST_PRICE_BOOKS",
+    "draftkings,fanduel,betmgm,williamhill_us,espnbet,fanatics,betrivers,hardrockbet,ballybet,betparx,unibet_us").split(","))
 # Approximate cover-probability value of one point of spread (used to price half-point differences).
 POINT_VALUE = {"NFL": 0.03, "CFB": 0.025}
 

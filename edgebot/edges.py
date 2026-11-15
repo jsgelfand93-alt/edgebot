@@ -78,6 +78,8 @@ def best_price(game, cons, sport):
     ppv = config.POINT_VALUE.get(sport)
     best = None
     for bk in game.get("bookmakers", []):
+        if bk.get("key") not in config.BEST_PRICE_BOOKS:
+            continue
         for mk in bk.get("markets", []):
             outs = _outcomes(mk, home, away)
             if not outs:
