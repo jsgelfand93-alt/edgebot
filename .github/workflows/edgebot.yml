@@ -22,19 +22,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt
+      - name: Find the bot's folder
+        run: |
+          echo "Repo contents:"; find . -path ./.git -prune -o -maxdepth 3 -print | sort
+          APP=$(dirname "$(find . -path ./.git -prune -o -name requirements.txt -print | head -1)")
+          if [ -z "$APP" ] || [ ! -d "$APP/edgebot" ]; then
+            echo "::error::Could not find requirements.txt next to the edgebot folder. Upload the bot files to the repo."; exit 1
+          fi
+          echo "Using folder: $APP"
+          echo "APP=$APP" >> "$GITHUB_ENV"
+      - run: pip install -r "$APP/requirements.txt"
       - name: Grade finished picks
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: python -m edgebot grade
+        run: cd "$APP" && python -m edgebot grade
       - name: Scan for edges
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: python -m edgebot scan --sports NFL,CFB,UFC --lock-hours 30
+        run: cd "$APP" && python -m edgebot scan --sports NFL,CFB,UFC --lock-hours 30
       - name: Save results to the repo
         run: |
           git config user.name "edgebot"
           git config user.email "edgebot@users.noreply.github.com"
-          git add edges.json edgebot.sqlite || true
+          git add "$APP/edges.json" "$APP/edgebot.sqlite" || true
           git commit -m "edgebot run $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing changed"
           git push
