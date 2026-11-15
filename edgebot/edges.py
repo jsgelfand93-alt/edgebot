@@ -40,9 +40,15 @@ def consensus(game):
     probs = {home: [], away: []}
     spreads = {home: [], away: []}
     spread_quotes = []  # (home_point, p_home_cover, p_away_cover)
+    totals = []
     for bk in game.get("bookmakers", []):
         w = config.SHARP_WEIGHT if bk.get("key") in config.SHARP_BOOKS else 1.0
         for mk in bk.get("markets", []):
+            if mk["key"] == "totals":
+                over = next((o for o in mk.get("outcomes", []) if o.get("name") == "Over" and "point" in o), None)
+                if over:
+                    totals.append(float(over["point"]))
+                continue
             outs = _outcomes(mk, home, away)
             if not outs:
                 continue
@@ -56,7 +62,7 @@ def consensus(game):
                 spread_quotes.append((hp, ch, ca))
     if not probs[home]:
         return None
-    out = {"_books": len(probs[home])}
+    out = {"_books": len(probs[home]), "_total": median(totals) if totals else None}
     for t in (home, away):
         tw = sum(w for _, w in probs[t])
         sp = median(spreads[t]) if spreads[t] else None
@@ -151,6 +157,7 @@ def evaluate(game, kalshi_pair, sport, threshold=None):
                 "price": bp["price"], "label": lbl, "ev": bp["ev"]}
 
     fair = {t: {"p": cons[t]["p"], "spread": cons[t]["spread"]} for t in (home, away)}
+    fair["_total"] = cons["_total"]
     return {
         "sport": sport, "game_id": game["id"], "date": str(et_date(game["commence_time"])),
         "commence_time": game["commence_time"], "game": f"{short_name(away)} @ {short_name(home)}",
@@ -159,3 +166,32 @@ def evaluate(game, kalshi_pair, sport, threshold=None):
         "gap": round(kbest["gap"], 1) if kbest else None,
         "best_price": bp, "pick": pick["label"] if pick else None, "pick_info": pick,
     }
+
+
+def chip_line(row, ratings, hfa, sport):
+    """Chip's own spread vs Vegas for one game. Returns a dict (pick None when they roughly agree)."""
+    from .ratings import chip_spread, match_name
+    home, away = row["home"], row["away"]
+    vh = row["fair"][home]["spread"]
+    rh, ra = match_name(home, ratings), match_name(away, ratings)
+    if vh is None or not rh or not ra:
+        return None
+    ch = chip_spread(ratings, hfa, rh, ra)
+    if ch is None:
+        return None
+    total = row["fair"].get("_total") or config.DEFAULT_TOTAL.get(sport, 45.0)
+    margin = -ch  # Chip's expected home margin
+    hs, as_ = round((total + margin) / 2), round((total - margin) / 2)
+    diff = vh - ch  # > 0: Chip likes the home team more than Vegas does
+    pick = side = None
+    if abs(diff) >= config.CHIP_PICK_THRESHOLD.get(sport, 99):
+        side = home if diff > 0 else away
+        line = vh if side == home else -vh
+        pick = f"{short_name(side)} {fmt_spread(line)}"
+    vegas_fav = home if vh < 0 else away
+    chip_fav = home if margin > 0 else away
+    upset = bool(vh != 0 and margin != 0 and chip_fav != vegas_fav)
+    return {"vegas_home_spread": vh, "chip_home_spread": ch, "diff": round(diff, 1), "total": total,
+            "chip_score": {home: hs, away: as_}, "pick": pick, "pick_team": side,
+            "pick_line": (vh if side == home else -vh) if side else None,
+            "upset": upset, "upset_team": chip_fav if upset else None}

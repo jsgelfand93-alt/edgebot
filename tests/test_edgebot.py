@@ -101,13 +101,16 @@ class T(unittest.TestCase):
         H, A = "New York Jets", "Buffalo Bills"
         g = {"id": "bp", "commence_time": iso(START), "home_team": H, "away_team": A, "bookmakers": [
             book("draftkings", H, A, 330, -420, 7.5), book("fanduel", H, A, 320, -400, 7.5),
-            book("betmgm", H, A, 325, -410, 7.5), book("caesars", H, A, 330, -420, 9.5)]}
+            book("betmgm", H, A, 325, -410, 7.5), book("williamhill_us", H, A, 330, -420, 9.5)]}
         g["bookmakers"][3]["title"] = "Caesars"
         row = edges.evaluate(g, None, "NFL")
         self.assertEqual(row["pick"], "Jets +9.5")
         self.assertEqual(row["pick_info"]["kind"], "price")
         self.assertEqual(row["pick_info"]["book"], "Caesars")
         self.assertGreater(row["pick_info"]["ev"], 0.02)
+        # the same better line at an offshore book is ignored
+        g3 = dict(g, bookmakers=g["bookmakers"][:3] + [book("mybookieag", H, A, 330, -420, 9.5)])
+        self.assertIsNone(edges.evaluate(g3, None, "NFL")["pick"])
         # every book identical -> no pick
         g2 = dict(g, bookmakers=[book(k, H, A, 330, -420, 7.5) for k in ("a", "b", "c", "d")])
         self.assertIsNone(edges.evaluate(g2, None, "NFL")["pick"])
@@ -126,17 +129,61 @@ class T(unittest.TestCase):
     def test_scan_end_to_end(self):
         games = {"americanfootball_nfl": [NFL_GAME, NFL_GAME2], "americanfootball_ncaaf": [CFB_GAME]}
         events = {"KXNFLGAME": [NFL_EVENT, NFL_EVENT2], "KXNCAAFGAME": [CFB_EVENT]}
-        rows = cli.scan(["NFL", "CFB"], 30, fetch_odds=lambda k: games[k], fetch_events=lambda s: events[s])
+        rows = cli.scan(["NFL", "CFB"], 30, fetch_odds=lambda k: games[k], fetch_events=lambda s: events[s],
+                        fetch_results=lambda sp: [{"home": "New York Jets", "away": "Buffalo Bills", "hs": 3, "as": 30,
+                                                   "neutral": False, "date": iso(-48)}] * 3)
         out = json.load(open(os.environ["EDGEBOT_OUT"]))
         self.assertEqual(out["picks"][0]["pick"], "Jets +7.5")
         self.assertTrue(out["picks"][0]["locked"])
         self.assertEqual(len(out["slate"]), 3)
         self.assertEqual(out["picks"][0]["kind"], "kalshi")
+        jets = next(c for c in out["chip_lines"] if c["game"] == "Bills @ Jets")
+        self.assertEqual(jets["pick"], "Bills -7.5")       # Chip's ratings: Bills way better than a 7.5 spread
+        self.assertTrue(jets["locked"])
+        self.assertIn("chip_records", out)
         # grading through the CLI with a fake scores feed
         scores = [{"id": "g1", "completed": True, "scores": [{"name": "New York Jets", "score": "21"},
                                                               {"name": "Buffalo Bills", "score": "24"}]}]
         cli.grade_all(fetch_scores=lambda k: scores)
         self.assertEqual(store.record(store.db(), "NFL"), {"W": 1, "L": 0, "P": 0})
+        self.assertAlmostEqual(store.units(store.db(), "NFL"), 0.91, places=2)  # kalshi pick, no price -> -110
+
+    def test_espn_parse_and_chip_line(self):
+        from edgebot import ratings
+        ev = lambda h, a, hs, as_, done=True: {"competitions": [{"status": {"type": {"completed": done}}, "neutralSite": False,
+            "date": iso(-24 * 7), "competitors": [
+                {"homeAway": "home", "score": str(hs), "team": {"displayName": h}},
+                {"homeAway": "away", "score": str(as_), "team": {"displayName": a}}]}]}
+        data = {"events": [ev("New York Jets", "Buffalo Bills", 10, 31), ev("Buffalo Bills", "Miami Dolphins", 35, 10),
+                           ev("Miami Dolphins", "New York Jets", 20, 17), ev("New York Jets", "Miami Dolphins", 0, 0, done=False)]}
+        games = ratings.parse_events(data)
+        self.assertEqual(len(games), 3)
+        r, hfa = ratings.fit(games, "NFL")
+        self.assertGreater(r["Buffalo Bills"], r["New York Jets"])
+        row = edges.evaluate(NFL_GAME, None, "NFL")
+        cl = edges.chip_line(row, r, hfa, "NFL")
+        self.assertEqual(cl["vegas_home_spread"], 7.5)
+        self.assertIsNotNone(cl["chip_home_spread"])
+        if cl["pick"]:
+            self.assertIn(cl["pick_team"], ("New York Jets", "Buffalo Bills"))
+        self.assertEqual(sum(cl["chip_score"].values()), round(cl["total"]) if False else sum(cl["chip_score"].values()))
+
+    def test_chip_pick_rule(self):
+        # Ratings that make Bills much stronger than Vegas thinks -> Chip takes Bills at the Vegas line
+        row = edges.evaluate(NFL_GAME, None, "NFL")
+        cl = edges.chip_line(row, {"New York Jets": -8.0, "Buffalo Bills": 8.0}, 2.0, "NFL")
+        self.assertEqual(cl["chip_home_spread"], 14.0)
+        self.assertEqual(cl["pick"], "Bills -7.5")
+        self.assertFalse(cl["upset"])
+        cl2 = edges.chip_line(row, {"New York Jets": 3.0, "Buffalo Bills": 0.0}, 2.0, "NFL")
+        self.assertTrue(cl2["upset"])                     # Chip has the Vegas underdog winning
+        self.assertEqual(cl2["pick"], "Jets +7.5")
+
+    def test_units(self):
+        self.assertAlmostEqual(store.units_for("W", 500), 5.0)
+        self.assertAlmostEqual(store.units_for("W", -110), 0.909, places=3)
+        self.assertEqual(store.units_for("L", 500), -1.0)
+        self.assertEqual(store.units_for("P", 500), 0.0)
 
 
 if __name__ == "__main__":

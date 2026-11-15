@@ -5,11 +5,26 @@
 import argparse, json
 from datetime import datetime, timezone, timedelta
 from . import config, odds_api, kalshi, store
-from .edges import evaluate
+from .edges import evaluate, chip_line
+from . import ratings as ratings_mod
 from .teams import match_game
 
 
-def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi.fetch_events, out=None):
+def _chip_model(sp, fetch_results):
+    if sp not in ratings_mod.LEAGUES:
+        return None
+    try:
+        games = fetch_results(sp)
+        r, hfa = ratings_mod.fit(games, sp)
+        print(f"[{sp}] Chip's ratings: {len(r)} teams from {len(games)} games, home field {hfa:+.1f}")
+        return r, hfa
+    except Exception as e:
+        print(f"[{sp}] Chip's ratings unavailable: {e}")
+        return None
+
+
+def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi.fetch_events, out=None,
+         fetch_results=ratings_mod.fetch_results):
     con = store.db()
     rows, unmatched, ok = [], [], 0
     now = datetime.now(timezone.utc)
@@ -26,6 +41,7 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
             print(f"[{sp}] Kalshi unavailable ({e}); running best-price check only")
             events = []
         ok += 1
+        model = _chip_model(sp, fetch_results)
         for g in games:
             start = datetime.fromisoformat(g["commence_time"].replace("Z", "+00:00"))
             if start <= now:
@@ -44,6 +60,10 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
             if row["pick"] and start - now <= timedelta(hours=lock_hours):
                 store.lock_pick(con, row)
                 row["locked"] = True
+            row["chip"] = chip_line(row, *model, sp) if model else None
+            if row["chip"] and row["chip"]["pick"] and start - now <= timedelta(hours=lock_hours):
+                store.lock_chip_pick(con, row, row["chip"])
+                row["chip"]["locked"] = True
             rows.append(row)
         print(f"[{sp}] {len(games)} games, {sum(1 for r in rows if r['sport'] == sp)} matched to Kalshi")
     rows.sort(key=lambda r: -_strength(r))
@@ -96,6 +116,16 @@ def write_output(con, rows, unmatched, path):
              "pick": r["pick"] or "NO EDGE", "kalshi_gap": r["gap"],
              "best_ev_pct": round(r["best_price"]["ev"] * 100, 1) if r["best_price"] else None}
             for r in sorted(rows, key=lambda r: r["commence_time"])],
+        "chip_records": {sp: _rec_str(store.chip_record(con, sp)) for sp in ("NFL", "CFB")} | {"overall": _rec_str(store.chip_record(con))},
+        "chip_lines": [
+            {"sport": r["sport"], "date": r["date"], "kickoff": r["commence_time"], "game": r["game"],
+             "home": r["home"], "away": r["away"],
+             "vegas_home_spread": r["chip"]["vegas_home_spread"], "chip_home_spread": r["chip"]["chip_home_spread"],
+             "diff": r["chip"]["diff"], "total": r["chip"]["total"],
+             "chip_score": r["chip"]["chip_score"], "pick": r["chip"]["pick"] or "PASS",
+             "upset": r["chip"]["upset"], "upset_team": r["chip"]["upset_team"],
+             "locked": bool(r["chip"].get("locked"))}
+            for r in sorted(rows, key=lambda r: r["commence_time"]) if r.get("chip")],
         "unmatched_kalshi": unmatched,
     }
     with open(path, "w") as f:
@@ -115,7 +145,18 @@ def print_table(rows):
 
 def grade_all(fetch_scores=odds_api.fetch_scores):
     con = store.db()
-    pending = con.execute("SELECT * FROM picks WHERE result='pending'").fetchall()
+    cache = {}
+    def cached(key):  # one scores call per sport, shared by both tables
+        if key not in cache:
+            cache[key] = fetch_scores(key)
+        return cache[key]
+    for table in ("picks", "chip_picks"):
+        _grade_table(con, table, cached)
+    print_record(con)
+
+
+def _grade_table(con, table, fetch_scores):
+    pending = con.execute(f"SELECT * FROM {table} WHERE result='pending'").fetchall()
     by_sport = {}
     for p in pending:
         by_sport.setdefault(p["sport"], []).append(p)
@@ -132,16 +173,17 @@ def grade_all(fetch_scores=odds_api.fetch_scores):
             pts = {s["name"]: float(s["score"]) for s in g["scores"]}
             res = store.grade(p, pts[p["home"]], pts[p["away"]])
             score = f"{p['away']} {pts[p['away']]:g} - {p['home']} {pts[p['home']]:g}"
-            con.execute("UPDATE picks SET result=?, score=? WHERE id=?", (res, score, p["id"]))
-            print(f"{p['pick']:24} {res}  ({score})")
+            con.execute(f"UPDATE {table} SET result=?, score=? WHERE id=?", (res, score, p["id"]))
+            print(f"[{table}] {p['pick']:24} {res}  ({score})")
     con.commit()
-    print_record(con)
 
 
 def print_record(con=None):
     con = con or store.db()
     parts = [f"{sp} {_rec_full(con, sp)['label']}" for sp in config.SPORTS]
-    print("Record: " + " · ".join(parts) + f" · Overall {_rec_full(con)['label']}")
+    print("Money Bets: " + " · ".join(parts) + f" · Overall {_rec_full(con)['label']}")
+    print("Chip's Picks: " + " · ".join(f"{sp} {_rec_str(store.chip_record(con, sp))}" for sp in ("NFL", "CFB"))
+          + f" · Overall {_rec_str(store.chip_record(con))}")
 
 
 def main(argv=None):

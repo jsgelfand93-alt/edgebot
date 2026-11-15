@@ -15,6 +15,13 @@ CREATE TABLE IF NOT EXISTS picks (
   kind TEXT, book TEXT, price REAL, ev REAL
 );
 """
+CHIP_SCHEMA = """
+CREATE TABLE IF NOT EXISTS chip_picks (
+  id TEXT PRIMARY KEY, locked_at TEXT, sport TEXT, game_id TEXT, date TEXT, commence_time TEXT,
+  game TEXT, team TEXT, home TEXT, away TEXT, pick TEXT, spread REAL,
+  vegas_home_spread REAL, chip_home_spread REAL, upset INTEGER, result TEXT DEFAULT 'pending', score TEXT DEFAULT ''
+);
+"""
 NEW_COLS = {"kind": "TEXT", "book": "TEXT", "price": "REAL", "ev": "REAL"}
 
 
@@ -22,6 +29,7 @@ def db():
     con = sqlite3.connect(config.DB_PATH)
     con.row_factory = sqlite3.Row
     con.executescript(SCHEMA)
+    con.executescript(CHIP_SCHEMA)
     have = {r[1] for r in con.execute("PRAGMA table_info(picks)")}
     for col, typ in NEW_COLS.items():  # upgrade databases made by v0.1
         if col not in have:
@@ -65,6 +73,28 @@ def lock_pick(con, row):
                  pk["team"], row["home"], row["away"], row["pick"], pk["line"], fair["p"], kal, row["gap"],
                  pk["kind"], pk["book"], pk["price"], pk["ev"]))
     con.commit()
+
+
+def lock_chip_pick(con, row, cl):
+    """Lock Chip's own-line pick (graded against the Vegas spread at lock time)."""
+    con.execute("""INSERT OR IGNORE INTO chip_picks (id, locked_at, sport, game_id, date, commence_time, game, team,
+                   home, away, pick, spread, vegas_home_spread, chip_home_spread, upset)
+                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                (f"{row['sport']}-{row['game_id']}", now(), row["sport"], row["game_id"], row["date"],
+                 row["commence_time"], row["game"], cl["pick_team"], row["home"], row["away"], cl["pick"],
+                 cl["pick_line"], cl["vegas_home_spread"], cl["chip_home_spread"], int(cl["upset"])))
+    con.commit()
+
+
+def chip_record(con, sport=None):
+    q = "SELECT result, COUNT(*) n FROM chip_picks WHERE result IN ('W','L','P')"
+    args = ()
+    if sport:
+        q += " AND sport=?"; args = (sport,)
+    r = {"W": 0, "L": 0, "P": 0}
+    for row in con.execute(q + " GROUP BY result", args):
+        r[row["result"]] = row["n"]
+    return r
 
 
 def grade(pick, home_score, away_score):

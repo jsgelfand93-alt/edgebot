@@ -4,7 +4,7 @@ Compares the sportsbooks' odds (vig removed, sharp books weighted 3×) with Kals
 
 ## Setup (about 15 minutes, no computer needs to stay on)
 
-1. **Get a free Odds API key** at https://the-odds-api.com. The free plan gives 500 credits a month, and this bot uses about 60 a week.
+1. **Get a free Odds API key** at https://the-odds-api.com. The free plan gives 500 credits a month, and this bot uses about 80 a week.
 2. **Make a GitHub account** at https://github.com if you don't have one.
 3. **Create a new repository** called `edgebot`, set to **Public**. Public lets Chip's automated runs read `edges.json`; your API key stays secret either way.
 4. **Upload these files**: on the repo page, choose *Add file → Upload files* and drag in everything from this folder, including the hidden `.github` folder. If your file picker hides it, create the file by hand: *Add file → Create new file*, name it `.github/workflows/edgebot.yml`, and paste in its contents.
@@ -39,11 +39,25 @@ For cron, copy the schedule above, e.g. `0 15 * * 6 cd ~/edgebot && python -m ed
 
 ## How it decides
 
-- **Vegas number**: each book's moneyline converted to a probability with the vig removed, then averaged across books, with sharp books (Pinnacle, Circa, BetOnline, LowVig, Bookmaker) weighted 3×. The free US region usually doesn't include Pinnacle; set `ODDS_REGIONS=us,eu` to add it, at double the credit cost.
-- **Kalshi number**: the bid/ask midpoint when the spread is 10¢ or tighter, otherwise the last trade.
-- **Gap**: Vegas minus Kalshi, for each team. If the bigger gap is 3+ points, the bot picks that team: against the spread for football (e.g. "Jets +7.5"), moneyline for UFC.
-- **Locking**: picks lock once a game is within 30 hours. Later scans keep showing the numbers but never change a locked pick, so the record is honest.
-- **Line movement**: every scan is saved, and `gap_move` in `edges.json` shows how much the gap has grown or shrunk since the bot first saw the game.
+Two rules. Each game gets at most one pick, from rule 1 if it fires, otherwise rule 2.
+
+1. **Kalshi gap.** The fair win chance (each book's moneyline with the vig removed, averaged across books, sharp books weighted 3×) compared with Kalshi's price (bid/ask midpoint, or the last trade if the spread is wide). A gap of 3+ points (`EDGE_THRESHOLD`) is a pick at the consensus spread. Expect this to be rare: Kalshi tracks the books closely.
+2. **Best price.** The fair line is the consensus spread and its vig-free cover chance. The bot checks every book's price and line against it. Each half-point of spread is valued at about 1.5% cover probability for NFL and 1.25% for college; UFC is moneyline only. If one book's bet is worth +2% expected value or more (`BEST_PRICE_MIN_EV`) and at least 4 books are quoting the game (`MIN_BOOKS`), that's a pick at that book's line, e.g. "Jets +9.5" when the consensus is +7.5.
+
+- **Locking:** picks lock once a game is within 30 hours. Later scans never change a locked pick, so the record stays honest. Grading uses the locked line.
+- **Line movement:** every scan is saved, and `gap_move` in `edges.json` shows how much the Kalshi gap has moved since the bot first saw the game.
+- **Free tier note:** the "us" region doesn't include Pinnacle (the sharpest book). Set `ODDS_REGIONS=us,eu` to add it, at double the credit cost.
+
+## Chip's own line (power ratings)
+
+Before each NFL and college scan, the bot downloads this season's final scores from ESPN's public scoreboard (no key needed) and fits a power rating for every team. Each team gets points above or below average, plus a home-field edge, with recent games weighted more and blowouts capped (21 points NFL, 28 college). That gives **Chip's spread** for every game.
+
+- **Chip's Picks:** when Chip's spread and the Vegas spread differ by 3+ points (NFL) or 6+ (college), Chip takes the side Vegas is undervaluing, at the Vegas line. These are graded against the spread and kept in their own record, separate from the Money Bets (units).
+- **Upset alert:** Chip's ratings have the Vegas underdog winning outright.
+- **Chip's score:** the Vegas over/under split by Chip's margin, e.g. "Chiefs 27, Bills 23."
+- Everything lands in `chip_lines` and `chip_records` in `edges.json`.
+
+Be realistic: a simple rating model is less accurate than the betting market, so expect roughly coin-flip results against the spread over time. Its job is to give Chip an honest opinion of his own; the Money Bets are where the real edge is.
 
 ## Things to check in the first week
 

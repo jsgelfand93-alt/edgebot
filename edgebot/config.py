@@ -40,6 +40,11 @@ BEST_PRICE_BOOKS = set(os.environ.get("BEST_PRICE_BOOKS",
 # Approximate cover-probability value of one point of spread (used to price half-point differences).
 POINT_VALUE = {"NFL": 0.03, "CFB": 0.025}
 
+# Chip's own line: how far (points) Chip's spread must differ from Vegas before he makes a pick.
+CHIP_PICK_THRESHOLD = {"NFL": float(os.environ.get("CHIP_NFL_PTS", "3.0")),
+                       "CFB": float(os.environ.get("CHIP_CFB_PTS", "6.0"))}
+DEFAULT_TOTAL = {"NFL": 44.0, "CFB": 52.0}
+
 # Books treated as "sharp" get extra weight in the consensus.
 SHARP_BOOKS = {"pinnacle", "circasports", "betonlineag", "lowvig", "bookmaker", "betcris"}
 SHARP_WEIGHT = 3.0

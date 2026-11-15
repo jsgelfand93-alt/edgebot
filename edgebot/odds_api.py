@@ -15,7 +15,7 @@ def _get(path, **params):
     return r.json()
 
 
-def fetch_odds(sport_key, markets="h2h,spreads"):
+def fetch_odds(sport_key, markets="h2h,spreads,totals"):
     """Upcoming games with every book's moneyline and spread (American odds)."""
     return _get(f"/sports/{sport_key}/odds", regions=config.ODDS_REGIONS,
                 markets=markets, oddsFormat="american", dateFormat="iso")
