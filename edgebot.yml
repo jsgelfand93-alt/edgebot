@@ -1,0 +1,41 @@
+name: edgebot
+
+# Times are UTC (Pacific = UTC-8 in winter). About 60 Odds API credits a week, under the free 500/month.
+on:
+  schedule:
+    - cron: "0 15 * * 4"     # Thu 7 AM PT   - Thursday night game + early look at the weekend
+    - cron: "0 21 * * 5"     # Fri 1 PM PT   - college football Saturday + UFC (locks Saturday games)
+    - cron: "0 14 * * 6"     # Sat 6 AM PT   - morning refresh before college kickoffs
+    - cron: "0 23 * * 6"     # Sat 3 PM PT   - NFL Sunday (locks Sunday games)
+    - cron: "0 13 * * 0"     # Sun 5 AM PT   - final NFL refresh + grade Saturday
+    - cron: "0 15 * * 1"     # Mon 7 AM PT   - grade Sunday + Monday night game
+    - cron: "0 15 * * 2"     # Tue 7 AM PT   - grade Monday night
+  workflow_dispatch: {}      # lets you press "Run workflow" by hand
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Grade finished picks
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python -m edgebot grade
+      - name: Scan for edges
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python -m edgebot scan --sports NFL,CFB,UFC --lock-hours 30
+      - name: Save results to the repo
+        run: |
+          git config user.name "edgebot"
+          git config user.email "edgebot@users.noreply.github.com"
+          git add edges.json edgebot.sqlite || true
+          git commit -m "edgebot run $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing changed"
+          git push
