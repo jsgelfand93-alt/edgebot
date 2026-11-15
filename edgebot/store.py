@@ -37,6 +37,18 @@ def db():
     # picks locked before the long-shot rule: moneylines longer than the cap move to the Long Shot record
     con.execute("UPDATE picks SET kind='longshot' WHERE kind='price' AND pick LIKE '% ML %' AND price > ?",
                 (config.MAX_DOG_ODDS,))
+    # cleanup: pending picks from books that are no longer allowed (offshore) never count
+    legal = ("draftkings", "fanduel", "betmgm", "caesars", "williamhill", "espnbet", "fanatics", "betrivers",
+             "hardrock", "bally", "betparx", "unibet", "kalshi")
+    for r in con.execute("SELECT id, book FROM picks WHERE result='pending' AND kind='price'").fetchall():
+        b = "".join(ch for ch in (r["book"] or "").lower() if ch.isalnum())
+        if b and not b.startswith(legal):
+            con.execute("DELETE FROM picks WHERE id=?", (r["id"],))
+    # cleanup: one pick per game and team - keep the most recently locked, drop older duplicates
+    con.execute("""DELETE FROM picks WHERE rowid NOT IN (
+                     SELECT MAX(rowid) FROM picks GROUP BY game_id, team, COALESCE(kind,''))""")
+    con.execute("""DELETE FROM picks WHERE kind='longshot' AND result='pending' AND rowid NOT IN (
+                     SELECT MAX(rowid) FROM picks WHERE kind='longshot' GROUP BY game_id, team)""")
     con.commit()
     return con
 
@@ -70,6 +82,8 @@ def lock_pick(con, row, pk=None):
     fair = row["fair"][pk["team"]]
     kal = next((s["kalshi"]["mid"] for s in row["sides"] if s["team"] == pk["team"]), None)
     pid = f"{row['sport']}-{row['game_id']}" + ("-LS" if pk["kind"] == "longshot" else "")
+    if con.execute("SELECT 1 FROM picks WHERE game_id=? AND team=? AND id!=?", (row["game_id"], pk["team"], pid)).fetchone():
+        return  # this game/team already has a locked pick
     con.execute("""INSERT OR IGNORE INTO picks (id, locked_at, sport, game_id, date, commence_time, game, team,
                    home, away, pick, spread, vegas, kalshi, gap, kind, book, price, ev)
                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
