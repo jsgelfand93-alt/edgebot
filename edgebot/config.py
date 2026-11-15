@@ -28,6 +28,14 @@ KALSHI_BASES = [
     "https://external-api.kalshi.com/trade-api/v2",
 ]
 
+# Best-price check: a single book's price must beat the fair (vig-free consensus) line by this much
+# expected value per $1 before the bot calls it a pick. 0.02 = +2% EV.
+BEST_PRICE_MIN_EV = float(os.environ.get("BEST_PRICE_MIN_EV", "0.02"))
+# Need at least this many books for a trustworthy fair line.
+MIN_BOOKS = int(os.environ.get("MIN_BOOKS", "4"))
+# Approximate cover-probability value of one point of spread (used to price half-point differences).
+POINT_VALUE = {"NFL": 0.03, "CFB": 0.025}
+
 # Books treated as "sharp" get extra weight in the consensus.
 SHARP_BOOKS = {"pinnacle", "circasports", "betonlineag", "lowvig", "bookmaker", "betcris"}
 SHARP_WEIGHT = 3.0

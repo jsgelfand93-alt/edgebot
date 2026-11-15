@@ -11,15 +11,21 @@ CREATE TABLE IF NOT EXISTS snapshots (
 CREATE TABLE IF NOT EXISTS picks (
   id TEXT PRIMARY KEY, locked_at TEXT, sport TEXT, game_id TEXT, date TEXT, commence_time TEXT,
   game TEXT, team TEXT, home TEXT, away TEXT, pick TEXT, spread REAL,
-  vegas REAL, kalshi REAL, gap REAL, result TEXT DEFAULT 'pending', score TEXT DEFAULT ''
+  vegas REAL, kalshi REAL, gap REAL, result TEXT DEFAULT 'pending', score TEXT DEFAULT '',
+  kind TEXT, book TEXT, price REAL, ev REAL
 );
 """
+NEW_COLS = {"kind": "TEXT", "book": "TEXT", "price": "REAL", "ev": "REAL"}
 
 
 def db():
     con = sqlite3.connect(config.DB_PATH)
     con.row_factory = sqlite3.Row
     con.executescript(SCHEMA)
+    have = {r[1] for r in con.execute("PRAGMA table_info(picks)")}
+    for col, typ in NEW_COLS.items():  # upgrade databases made by v0.1
+        if col not in have:
+            con.execute(f"ALTER TABLE picks ADD COLUMN {col} {typ}")
     return con
 
 
@@ -48,13 +54,16 @@ def movement(con, game_id, team):
 
 def lock_pick(con, row):
     """Record a pick once; later scans never overwrite a locked pick."""
-    side = next(s for s in row["sides"] if s["team"] == row["best_team"])
+    pk = row["pick_info"]
+    fair = row["fair"][pk["team"]]
+    kal = next((s["kalshi"]["mid"] for s in row["sides"] if s["team"] == pk["team"]), None)
     pid = f"{row['sport']}-{row['game_id']}"
     con.execute("""INSERT OR IGNORE INTO picks (id, locked_at, sport, game_id, date, commence_time, game, team,
-                   home, away, pick, spread, vegas, kalshi, gap) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                   home, away, pick, spread, vegas, kalshi, gap, kind, book, price, ev)
+                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (pid, now(), row["sport"], row["game_id"], row["date"], row["commence_time"], row["game"],
-                 side["team"], row["home"], row["away"], row["pick"], side["spread"], side["vegas"],
-                 side["kalshi"]["mid"], row["gap"]))
+                 pk["team"], row["home"], row["away"], row["pick"], pk["line"], fair["p"], kal, row["gap"],
+                 pk["kind"], pk["book"], pk["price"], pk["ev"]))
     con.commit()
 
 
@@ -62,7 +71,8 @@ def grade(pick, home_score, away_score):
     """Grade against the locked spread (or straight up for moneyline picks). Returns W, L or P."""
     team_pts = home_score if pick["team"] == pick["home"] else away_score
     opp_pts = away_score if pick["team"] == pick["home"] else home_score
-    margin = team_pts - opp_pts + (pick["spread"] if pick["pick"].split()[-1] != "ML" and pick["spread"] is not None else 0)
+    line = pick["spread"] if pick["spread"] is not None and " ML" not in pick["pick"] else 0
+    margin = team_pts - opp_pts + line
     return "W" if margin > 0 else ("L" if margin < 0 else "P")
 
 

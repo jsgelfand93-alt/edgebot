@@ -1,5 +1,6 @@
 """Match Odds API games/teams to Kalshi events/markets."""
 import re
+import unicodedata
 from datetime import datetime, timedelta
 from difflib import SequenceMatcher
 from zoneinfo import ZoneInfo
@@ -25,8 +26,16 @@ NFL_CODES = {
 STOP = {"the", "of", "university", "fc"}
 
 
+# Kalshi often shortens names ("Ohio St.", "Miami (OH)"); expand them before comparing.
+ABBREV = {"st": "state", "u": "university", "univ": "university", "mich": "michigan", "fla": "florida",
+          "so": "southern", "no": "northern", "intl": "international", "oh": "ohio", "fl": "florida"}
+FOLD = str.maketrans({"ł": "l", "Ł": "L", "ø": "o", "Ø": "O", "đ": "d", "Đ": "D", "ß": "ss"})
+
+
 def norm(s):
-    return re.sub(r"[^a-z0-9 ]", " ", (s or "").lower()).split()
+    """Lowercase ASCII tokens with accents removed ('Łopaczyk' -> 'lopaczyk') and abbreviations expanded."""
+    s = unicodedata.normalize("NFKD", (s or "").translate(FOLD)).encode("ascii", "ignore").decode()
+    return [ABBREV.get(w, w) for w in re.sub(r"[^a-z0-9 ]", " ", s.lower()).split()]
 
 
 def short_name(full):

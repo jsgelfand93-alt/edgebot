@@ -17,29 +17,36 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
         cfg = config.SPORTS[sp]
         try:
             games = fetch_odds(cfg["odds_key"])
-            events = fetch_events(cfg["kalshi_series"])
         except Exception as e:
             print(f"[{sp}] skipped: {e}")
             continue
+        try:
+            events = fetch_events(cfg["kalshi_series"])
+        except Exception as e:  # Kalshi down: best-price check still runs
+            print(f"[{sp}] Kalshi unavailable ({e}); running best-price check only")
+            events = []
         ok += 1
         for g in games:
             start = datetime.fromisoformat(g["commence_time"].replace("Z", "+00:00"))
             if start <= now:
                 continue  # already started
             pair = match_game(g, events, sp)
-            row = evaluate(g, pair, sp) if pair else None
-            if not row:
+            if not pair:
                 unmatched.append(f"{sp}: {g['away_team']} @ {g['home_team']}")
+            row = evaluate(g, pair, sp)
+            if not row:
                 continue
-            store.save_snapshot(con, row)
-            mv = store.movement(con, row["game_id"], row["best_team"])
-            row["gap_move"] = round(row["gap"] - mv[0], 1) if mv else 0.0
+            row["gap_move"] = 0.0
+            if row["sides"]:
+                store.save_snapshot(con, row)
+                mv = store.movement(con, row["game_id"], row["best_team"])
+                row["gap_move"] = round(row["gap"] - mv[0], 1) if mv else 0.0
             if row["pick"] and start - now <= timedelta(hours=lock_hours):
                 store.lock_pick(con, row)
                 row["locked"] = True
             rows.append(row)
         print(f"[{sp}] {len(games)} games, {sum(1 for r in rows if r['sport'] == sp)} matched to Kalshi")
-    rows.sort(key=lambda r: -r["gap"])
+    rows.sort(key=lambda r: -_strength(r))
     if not ok:
         print("No data source worked; keeping the previous edges.json.")
         return rows
@@ -54,25 +61,36 @@ def _rec_str(r):
     return f"{r['W']}-{r['L']}" + (f"-{r['P']}" if r["P"] else "")
 
 
+def _strength(r):
+    pk = r["pick_info"]
+    return (pk["ev"] or 0) * 100 if pk and pk["kind"] == "price" else (r["gap"] or 0)
+
+
 def write_output(con, rows, unmatched, path):
-    """edges.json: what Chip's video pipeline reads. Percentages are rounded to whole points."""
-    def side(r):
-        return next(s for s in r["sides"] if s["team"] == r["best_team"])
+    """edges.json: what Chip's video pipeline reads. Percentages are whole points."""
+    def pick_json(r):
+        pk = r["pick_info"]; t = pk["team"]
+        k = next((s for s in r["sides"] if s["team"] == t), None)
+        return {"sport": r["sport"], "date": r["date"], "kickoff": r["commence_time"], "game": r["game"],
+                "pick": r["pick"], "kind": pk["kind"], "team": t,
+                "fair_pct": round(r["fair"][t]["p"] * 100), "fair_spread": r["fair"][t]["spread"],
+                "line": pk["line"], "price": pk["price"], "book": pk["book"],
+                "ev_pct": round(pk["ev"] * 100, 1) if pk["ev"] is not None else None,
+                "kalshi_pct": round(k["kalshi"]["mid"] * 100) if k else None,
+                "kalshi_gap": round(k["gap"], 1) if k else None,
+                "locked": bool(r.get("locked")), "books": r["books"]}
+    picks = sorted((r for r in rows if r["pick"]), key=lambda r: -_strength(r))
     data = {
         "generated_at": store.now(),
-        "threshold": config.EDGE_THRESHOLD,
+        "rules": {"kalshi_gap_pts": config.EDGE_THRESHOLD, "best_price_min_ev_pct": config.BEST_PRICE_MIN_EV * 100},
         "records": {sp: _rec_str(store.record(con, sp)) for sp in config.SPORTS} | {"overall": _rec_str(store.record(con))},
-        "picks": [
-            {"sport": r["sport"], "date": r["date"], "kickoff": r["commence_time"], "game": r["game"],
-             "pick": r["pick"], "vegas": round(side(r)["vegas"] * 100), "market": round(side(r)["kalshi"]["mid"] * 100),
-             "market_name": "Kalshi", "gap": r["gap"], "gap_move": r.get("gap_move", 0.0),
-             "locked": bool(r.get("locked")), "books": r["books"]}
-            for r in rows if r["pick"]],
+        "picks": [pick_json(r) for r in picks],
         "slate": [
-            {"sport": r["sport"], "date": r["date"], "game": r["game"], "pick": r["pick"] or "NO EDGE",
-             "gap": r["gap"], "team": r["best_team"]}
+            {"sport": r["sport"], "date": r["date"], "kickoff": r["commence_time"], "game": r["game"],
+             "pick": r["pick"] or "NO EDGE", "kalshi_gap": r["gap"],
+             "best_ev_pct": round(r["best_price"]["ev"] * 100, 1) if r["best_price"] else None}
             for r in sorted(rows, key=lambda r: r["commence_time"])],
-        "unmatched": unmatched,
+        "unmatched_kalshi": unmatched,
     }
     with open(path, "w") as f:
         json.dump(data, f, indent=2)
@@ -80,11 +98,12 @@ def write_output(con, rows, unmatched, path):
 
 
 def print_table(rows):
-    print(f"\n{'SPORT':5} {'GAME':34} {'PICK':22} {'VEGAS':>6} {'KALSHI':>7} {'GAP':>6} {'MOVE':>6}")
+    print(f"\n{'SPORT':5} {'GAME':32} {'PICK':24} {'KALSHI GAP':>10} {'BEST PRICE':>28}")
     for r in rows:
-        s = next(x for x in r["sides"] if x["team"] == r["best_team"])
-        print(f"{r['sport']:5} {r['game'][:34]:34} {(r['pick'] or 'no edge')[:22]:22} "
-              f"{s['vegas']*100:5.1f}% {s['kalshi']['mid']*100:6.1f}% {r['gap']:+6.1f} {r.get('gap_move', 0):+6.1f}"
+        bp = r["best_price"]
+        bps = f"{bp['ev']*100:+.1f}% {bp['book'][:14]}" if bp else ""
+        gap = f"{r['gap']:+.1f}" if r["gap"] is not None else "n/a"
+        print(f"{r['sport']:5} {r['game'][:32]:32} {(r['pick'] or 'no edge')[:24]:24} {gap:>10} {bps:>28}"
               + ("  LOCKED" if r.get("locked") else ""))
 
 

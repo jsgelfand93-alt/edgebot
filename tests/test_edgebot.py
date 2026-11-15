@@ -73,10 +73,44 @@ class T(unittest.TestCase):
         self.assertEqual(pair["Michigan State Spartans"]["ticker"], "x-MSU")
         self.assertEqual(pair["Michigan Wolverines"]["ticker"], "x-MICH")
 
+    def test_kalshi_short_names(self):
+        g = {"id": "o", "commence_time": iso(START), "home_team": "Nebraska Cornhuskers", "away_team": "Ohio State Buckeyes",
+             "bookmakers": []}
+        ev = {"event_ticker": f"KXNCAAFGAME-{tick_date(START)}OSUNEB", "markets": [
+            {"ticker": "x-OSU", "yes_sub_title": "Ohio St."}, {"ticker": "x-NEB", "yes_sub_title": "Nebraska"}]}
+        self.assertEqual(teams.match_game(g, [ev], "CFB")["Ohio State Buckeyes"]["ticker"], "x-OSU")
+        g2 = {"id": "m2", "commence_time": iso(START), "home_team": "Kent State Golden Flashes",
+              "away_team": "Miami (OH) RedHawks", "bookmakers": []}
+        ev2 = {"event_ticker": f"KXNCAAFGAME-{tick_date(START)}MOHKENT", "markets": [
+            {"ticker": "x-MOH", "yes_sub_title": "Miami (OH)"}, {"ticker": "x-KENT", "yes_sub_title": "Kent St."}]}
+        self.assertEqual(teams.match_game(g2, [ev2], "CFB")["Miami (OH) RedHawks"]["ticker"], "x-MOH")
+
+    def test_fighter_accents(self):
+        g = {"id": "f", "commence_time": iso(START), "home_team": "Tymoteusz Łopaczyk", "away_team": "Adrian Bartosinski",
+             "bookmakers": []}
+        ev = {"event_ticker": f"KXUFCFIGHT-{tick_date(START)}BARLOP", "markets": [
+            {"ticker": "x-LOP", "yes_sub_title": "Tymoteusz Lopaczyk"}, {"ticker": "x-BAR", "yes_sub_title": "Adrian Bartosinski"}]}
+        self.assertEqual(teams.match_game(g, [ev], "UFC")["Tymoteusz Łopaczyk"]["ticker"], "x-LOP")
+
     def test_edge_and_pick(self):
         row = edges.evaluate(NFL_GAME, teams.match_game(NFL_GAME, [NFL_EVENT], "NFL"), "NFL")
         self.assertEqual(row["pick"], "Jets +7.5")
         self.assertGreater(row["gap"], 3)
+
+    def test_best_price(self):
+        H, A = "New York Jets", "Buffalo Bills"
+        g = {"id": "bp", "commence_time": iso(START), "home_team": H, "away_team": A, "bookmakers": [
+            book("draftkings", H, A, 330, -420, 7.5), book("fanduel", H, A, 320, -400, 7.5),
+            book("betmgm", H, A, 325, -410, 7.5), book("caesars", H, A, 330, -420, 9.5)]}
+        g["bookmakers"][3]["title"] = "Caesars"
+        row = edges.evaluate(g, None, "NFL")
+        self.assertEqual(row["pick"], "Jets +9.5")
+        self.assertEqual(row["pick_info"]["kind"], "price")
+        self.assertEqual(row["pick_info"]["book"], "Caesars")
+        self.assertGreater(row["pick_info"]["ev"], 0.02)
+        # every book identical -> no pick
+        g2 = dict(g, bookmakers=[book(k, H, A, 330, -420, 7.5) for k in ("a", "b", "c", "d")])
+        self.assertIsNone(edges.evaluate(g2, None, "NFL")["pick"])
 
     def test_no_edge(self):
         row = edges.evaluate(NFL_GAME2, teams.match_game(NFL_GAME2, [NFL_EVENT2], "NFL"), "NFL")
@@ -97,6 +131,7 @@ class T(unittest.TestCase):
         self.assertEqual(out["picks"][0]["pick"], "Jets +7.5")
         self.assertTrue(out["picks"][0]["locked"])
         self.assertEqual(len(out["slate"]), 3)
+        self.assertEqual(out["picks"][0]["kind"], "kalshi")
         # grading through the CLI with a fake scores feed
         scores = [{"id": "g1", "completed": True, "scores": [{"name": "New York Jets", "score": "21"},
                                                               {"name": "Buffalo Bills", "score": "24"}]}]
