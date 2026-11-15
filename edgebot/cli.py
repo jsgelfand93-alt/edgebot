@@ -61,6 +61,12 @@ def _rec_str(r):
     return f"{r['W']}-{r['L']}" + (f"-{r['P']}" if r["P"] else "")
 
 
+def _rec_full(con, sport=None):
+    """'NFL 1-4 · +1.0u' style string pieces: record and units."""
+    u = store.units(con, sport)
+    return {"record": _rec_str(store.record(con, sport)), "units": u, "label": f"{_rec_str(store.record(con, sport))} · {u:+.1f}u"}
+
+
 def _strength(r):
     pk = r["pick_info"]
     return (pk["ev"] or 0) * 100 if pk and pk["kind"] == "price" else (r["gap"] or 0)
@@ -83,7 +89,7 @@ def write_output(con, rows, unmatched, path):
     data = {
         "generated_at": store.now(),
         "rules": {"kalshi_gap_pts": config.EDGE_THRESHOLD, "best_price_min_ev_pct": config.BEST_PRICE_MIN_EV * 100},
-        "records": {sp: _rec_str(store.record(con, sp)) for sp in config.SPORTS} | {"overall": _rec_str(store.record(con))},
+        "records": {sp: _rec_full(con, sp) for sp in config.SPORTS} | {"overall": _rec_full(con)},
         "picks": [pick_json(r) for r in picks],
         "slate": [
             {"sport": r["sport"], "date": r["date"], "kickoff": r["commence_time"], "game": r["game"],
@@ -134,8 +140,8 @@ def grade_all(fetch_scores=odds_api.fetch_scores):
 
 def print_record(con=None):
     con = con or store.db()
-    parts = [f"{sp} {_rec_str(store.record(con, sp))}" for sp in config.SPORTS]
-    print("Record: " + " · ".join(parts) + f" · Overall {_rec_str(store.record(con))}")
+    parts = [f"{sp} {_rec_full(con, sp)['label']}" for sp in config.SPORTS]
+    print("Record: " + " · ".join(parts) + f" · Overall {_rec_full(con)['label']}")
 
 
 def main(argv=None):

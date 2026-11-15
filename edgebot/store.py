@@ -76,6 +76,24 @@ def grade(pick, home_score, away_score):
     return "W" if margin > 0 else ("L" if margin < 0 else "P")
 
 
+def units_for(result, price):
+    """Profit in units for a 1-unit bet. Spread/Kalshi picks without a stored price assume -110."""
+    if result == "L":
+        return -1.0
+    if result != "W":
+        return 0.0
+    p = float(price) if price not in (None, "") else -110.0
+    return p / 100 if p > 0 else 100 / -p
+
+
+def units(con, sport=None):
+    q = "SELECT result, price FROM picks WHERE result IN ('W','L','P')"
+    args = ()
+    if sport:
+        q += " AND sport=?"; args = (sport,)
+    return round(sum(units_for(r["result"], r["price"]) for r in con.execute(q, args)), 2)
+
+
 def record(con, sport=None):
     q = "SELECT result, COUNT(*) n FROM picks WHERE result IN ('W','L','P')"
     args = ()
