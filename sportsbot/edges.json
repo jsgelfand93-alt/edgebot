@@ -1,0 +1,479 @@
+{
+  "generated_at": "2026-11-15T06:24:02+00:00",
+  "threshold": 3.0,
+  "records": {
+    "NFL": "0-0",
+    "CFB": "0-0",
+    "UFC": "0-0",
+    "overall": "0-0"
+  },
+  "picks": [],
+  "slate": [
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Patriots @ Lions",
+      "pick": "NO EDGE",
+      "gap": 0.2,
+      "team": "Detroit Lions"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Panthers @ Saints",
+      "pick": "NO EDGE",
+      "gap": 1.2,
+      "team": "New Orleans Saints"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Dolphins @ Colts",
+      "pick": "NO EDGE",
+      "gap": 1.2,
+      "team": "Miami Dolphins"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Chiefs @ Falcons",
+      "pick": "NO EDGE",
+      "gap": 1.1,
+      "team": "Atlanta Falcons"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Texans @ Browns",
+      "pick": "NO EDGE",
+      "gap": 1.1,
+      "team": "Cleveland Browns"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Jaguars @ Titans",
+      "pick": "NO EDGE",
+      "gap": 1.1,
+      "team": "Tennessee Titans"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Vikings @ Packers",
+      "pick": "NO EDGE",
+      "gap": 1.0,
+      "team": "Minnesota Vikings"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Bills @ Jets",
+      "pick": "NO EDGE",
+      "gap": 0.8,
+      "team": "New York Jets"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-15",
+      "game": "Ole Miss Rebels @ Oklahoma Sooners",
+      "pick": "NO EDGE",
+      "gap": -0.2,
+      "team": "Oklahoma Sooners"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Rams @ Cardinals",
+      "pick": "NO EDGE",
+      "gap": 1.5,
+      "team": "Arizona Cardinals"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Seahawks @ Raiders",
+      "pick": "NO EDGE",
+      "gap": 0.3,
+      "team": "Las Vegas Raiders"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "49ers @ Cowboys",
+      "pick": "NO EDGE",
+      "gap": 0.1,
+      "team": "Dallas Cowboys"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "game": "Steelers @ Bengals",
+      "pick": "NO EDGE",
+      "gap": 0.7,
+      "team": "Pittsburgh Steelers"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-16",
+      "game": "Chargers @ Ravens",
+      "pick": "NO EDGE",
+      "gap": 0.2,
+      "team": "Los Angeles Chargers"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-17",
+      "game": "Eastern Michigan Eagles @ Western Michigan Broncos",
+      "pick": "NO EDGE",
+      "gap": 0.9,
+      "team": "Western Michigan Broncos"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-18",
+      "game": "Akron Zips @ UMass Minutemen",
+      "pick": "NO EDGE",
+      "gap": 0.4,
+      "team": "Akron Zips"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-18",
+      "game": "Central Michigan Chippewas @ Buffalo Bulls",
+      "pick": "NO EDGE",
+      "gap": 1.1,
+      "team": "Central Michigan Chippewas"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-19",
+      "game": "Colts @ Texans",
+      "pick": "NO EDGE",
+      "gap": -0.0,
+      "team": "Houston Texans"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-20",
+      "game": "Clemson Tigers @ Duke Blue Devils",
+      "pick": "NO EDGE",
+      "gap": 2.2,
+      "team": "Clemson Tigers"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-20",
+      "game": "Oregon Ducks @ Michigan State Spartans",
+      "pick": "NO EDGE",
+      "gap": 2.5,
+      "team": "Michigan State Spartans"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Tahir Abdullayev @ Jake Matthews",
+      "pick": "NO EDGE",
+      "gap": 1.2,
+      "team": "Tahir Abdullayev"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Alessandro Costa @ Amir Albazi",
+      "pick": "NO EDGE",
+      "gap": 1.3,
+      "team": "Amir Albazi"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "LSU Tigers @ Tennessee Volunteers",
+      "pick": "NO EDGE",
+      "gap": 1.1,
+      "team": "LSU Tigers"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Tallison Teixeira @ Shamil Gaziev",
+      "pick": "NO EDGE",
+      "gap": 2.3,
+      "team": "Tallison Teixeira"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "BYU Cougars @ Kansas Jayhawks",
+      "pick": "NO EDGE",
+      "gap": 2.5,
+      "team": "Kansas Jayhawks"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Alik Lorenz @ Diyar Nurgozhay",
+      "pick": "NO EDGE",
+      "gap": 1.8,
+      "team": "Alik Lorenz"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "UCLA Bruins @ Michigan Wolverines",
+      "pick": "NO EDGE",
+      "gap": 1.6,
+      "team": "UCLA Bruins"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Santiago Luna @ Aleksandre Topuria",
+      "pick": "NO EDGE",
+      "gap": 1.6,
+      "team": "Santiago Luna"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Navajo Stirling @ Jiri Prochazka",
+      "pick": "NO EDGE",
+      "gap": 1.4,
+      "team": "Jiri Prochazka"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "Vanderbilt Commodores @ Florida Gators",
+      "pick": "NO EDGE",
+      "gap": 1.1,
+      "team": "Vanderbilt Commodores"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Dom Mar Fan @ Nikolas Motta",
+      "pick": "NO EDGE",
+      "gap": 0.6,
+      "team": "Dom Mar Fan"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "Indiana Hoosiers @ Washington Huskies",
+      "pick": "NO EDGE",
+      "gap": 0.5,
+      "team": "Washington Huskies"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Kevin Vallejos @ Aljamain Sterling",
+      "pick": "NO EDGE",
+      "gap": 0.1,
+      "team": "Kevin Vallejos"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Ikram Aliskerov @ Jared Cannonier",
+      "pick": "NO EDGE",
+      "gap": 1.9,
+      "team": "Jared Cannonier"
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "game": "Asu Almabaev @ Kyoji Horiguchi",
+      "pick": "NO EDGE",
+      "gap": 1.9,
+      "team": "Asu Almabaev"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "Iowa Hawkeyes @ Illinois Fighting Illini",
+      "pick": "NO EDGE",
+      "gap": 1.0,
+      "team": "Iowa Hawkeyes"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "Arkansas Razorbacks @ Texas Longhorns",
+      "pick": "NO EDGE",
+      "gap": 0.7,
+      "team": "Arkansas Razorbacks"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "Wake Forest Demon Deacons @ Georgia Tech Yellow Jackets",
+      "pick": "NO EDGE",
+      "gap": 0.6,
+      "team": "Georgia Tech Yellow Jackets"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "SMU Mustangs @ Notre Dame Fighting Irish",
+      "pick": "NO EDGE",
+      "gap": 2.2,
+      "team": "SMU Mustangs"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "Kentucky Wildcats @ Missouri Tigers",
+      "pick": "NO EDGE",
+      "gap": 0.4,
+      "team": "Missouri Tigers"
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "game": "Georgia Bulldogs @ South Carolina Gamecocks",
+      "pick": "NO EDGE",
+      "gap": 0.3,
+      "team": "South Carolina Gamecocks"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Saints @ Bears",
+      "pick": "NO EDGE",
+      "gap": 2.1,
+      "team": "New Orleans Saints"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Dolphins @ Bills",
+      "pick": "NO EDGE",
+      "gap": 1.2,
+      "team": "Buffalo Bills"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Titans @ Cowboys",
+      "pick": "NO EDGE",
+      "gap": 1.0,
+      "team": "Tennessee Titans"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Steelers @ Eagles",
+      "pick": "NO EDGE",
+      "gap": 0.7,
+      "team": "Philadelphia Eagles"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Ravens @ Panthers",
+      "pick": "NO EDGE",
+      "gap": 0.5,
+      "team": "Carolina Panthers"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Cardinals @ Chiefs",
+      "pick": "NO EDGE",
+      "gap": 0.4,
+      "team": "Kansas City Chiefs"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Buccaneers @ Lions",
+      "pick": "NO EDGE",
+      "gap": -0.0,
+      "team": "Tampa Bay Buccaneers"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Jets @ Chargers",
+      "pick": "NO EDGE",
+      "gap": -0.3,
+      "team": "Los Angeles Chargers"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Jaguars @ Giants",
+      "pick": "NO EDGE",
+      "gap": 0.5,
+      "team": "Jacksonville Jaguars"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Raiders @ Broncos",
+      "pick": "NO EDGE",
+      "gap": 0.0,
+      "team": "Las Vegas Raiders"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "game": "Vikings @ 49ers",
+      "pick": "NO EDGE",
+      "gap": 0.7,
+      "team": "Minnesota Vikings"
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-23",
+      "game": "Bengals @ Commanders",
+      "pick": "NO EDGE",
+      "gap": -0.7,
+      "team": "Washington Commanders"
+    }
+  ],
+  "unmatched": [
+    "CFB: Ball State Cardinals @ Ohio Bobcats",
+    "CFB: Miami (OH) RedHawks @ Kent State Golden Flashes",
+    "CFB: Iowa State Cyclones @ UCF Knights",
+    "CFB: Virginia Tech Hokies @ Miami Hurricanes",
+    "CFB: Ohio State Buckeyes @ Nebraska Cornhuskers",
+    "UFC: Adrian Bartosinski @ Tymoteusz \u0141opaczyk",
+    "UFC: Tomasz Romanowski @ Igor Michaliszyn",
+    "UFC: Madars Fleminas @ Mateusz Pawlik",
+    "UFC: Valeriu Mircea @ Marcin Held",
+    "UFC: Oskar Szczepaniak @ Steven Krt",
+    "UFC: Wojciech Kawa @ Sasha Moisa",
+    "UFC: Brian Ortega @ Daniel Hooker",
+    "UFC: Yaroslav Amosov @ Ian Garry",
+    "UFC: Shara Magomedov @ Israel Adesanya",
+    "UFC: Alex Pereira @ Sergey Pavlovich",
+    "UFC: Diego Lopes @ Charles Oliveira",
+    "UFC: Ilia Topuria @ Justin Gaethje",
+    "UFC: Jorge Masvidal @ Conor McGregor",
+    "UFC: Alexa Grasso @ Natalia Silva",
+    "UFC: Paulo Henrique Costa @ Khamzat Chimaev",
+    "UFC: Khamzat Chimaev @ Sean Strickland",
+    "UFC: Paddy Pimblett @ Max Holloway",
+    "UFC: Nassourdine Imavov @ Sean Strickland",
+    "UFC: Natalia Silva @ Valentina Shevchenko",
+    "UFC: Alex Pereira @ Sergey Pavlovich",
+    "UFC: Michael Morales @ Carlos Prates",
+    "UFC: Manel Kape @ Joshua Van",
+    "UFC: Benoit Saint-Denis @ Quillan Salkilld",
+    "UFC: Robert Whittaker @ Bogdan Guskov",
+    "UFC: Carlos Prates @ Islam Makhachev",
+    "UFC: Michael Morales @ Islam Makhachev",
+    "UFC: Jean Silva @ Alex Volkanovski",
+    "UFC: Sean O'Malley @ Petr Yan",
+    "UFC: Kamaru Usman @ Islam Makhachev",
+    "UFC: Conor McGregor @ Paddy Pimblett",
+    "UFC: Song Yadong @ Petr Yan",
+    "UFC: Carlos Ulberg @ Magomed Ankalaev",
+    "UFC: Jiri Prochazka @ Magomed Ankalaev",
+    "UFC: Alex Volkanovski @ Justin Gaethje",
+    "UFC: Arman Tsarukyan @ Justin Gaethje"
+  ]
+}
