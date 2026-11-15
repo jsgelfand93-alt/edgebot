@@ -1,445 +1,1029 @@
 {
-  "generated_at": "2026-11-15T06:15:58+00:00",
-  "threshold": 3.0,
+  "generated_at": "2026-11-15T06:32:00+00:00",
+  "rules": {
+    "kalshi_gap_pts": 3.0,
+    "best_price_min_ev_pct": 2.0
+  },
   "records": {
     "NFL": "0-0",
     "CFB": "0-0",
     "UFC": "0-0",
     "overall": "0-0"
   },
-  "picks": [],
-  "slate": [
+  "picks": [
     {
       "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Patriots @ Lions",
-      "pick": "NO EDGE",
-      "gap": 0.2,
-      "team": "Detroit Lions"
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
+      "game": "Saints @ Bears",
+      "pick": "Saints ML +430",
+      "kind": "price",
+      "team": "New Orleans Saints",
+      "fair_pct": 20,
+      "fair_spread": 9.5,
+      "line": null,
+      "price": 430,
+      "book": "FanDuel",
+      "ev_pct": 6.6,
+      "kalshi_pct": 18,
+      "kalshi_gap": 2.1,
+      "locked": false,
+      "books": 4
     },
     {
       "sport": "NFL",
       "date": "2026-11-15",
-      "game": "Panthers @ Saints",
-      "pick": "NO EDGE",
-      "gap": 1.2,
-      "team": "New Orleans Saints"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Dolphins @ Colts",
-      "pick": "NO EDGE",
-      "gap": 1.2,
-      "team": "Miami Dolphins"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Chiefs @ Falcons",
-      "pick": "NO EDGE",
-      "gap": 1.1,
-      "team": "Atlanta Falcons"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Texans @ Browns",
-      "pick": "NO EDGE",
-      "gap": 1.1,
-      "team": "Cleveland Browns"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
       "game": "Jaguars @ Titans",
-      "pick": "NO EDGE",
-      "gap": 1.1,
-      "team": "Tennessee Titans"
+      "pick": "Titans ML +500",
+      "kind": "price",
+      "team": "Tennessee Titans",
+      "fair_pct": 18,
+      "fair_spread": 10.5,
+      "line": null,
+      "price": 500,
+      "book": "DraftKings",
+      "ev_pct": 5.5,
+      "kalshi_pct": 16,
+      "kalshi_gap": 1.1,
+      "locked": true,
+      "books": 9
     },
     {
       "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Vikings @ Packers",
-      "pick": "NO EDGE",
-      "gap": 1.0,
-      "team": "Minnesota Vikings"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Bills @ Jets",
-      "pick": "NO EDGE",
-      "gap": 0.8,
-      "team": "New York Jets"
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-15",
-      "game": "Ole Miss Rebels @ Oklahoma Sooners",
-      "pick": "NO EDGE",
-      "gap": -0.2,
-      "team": "Oklahoma Sooners"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Rams @ Cardinals",
-      "pick": "NO EDGE",
-      "gap": 1.5,
-      "team": "Arizona Cardinals"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Seahawks @ Raiders",
-      "pick": "NO EDGE",
-      "gap": 0.3,
-      "team": "Las Vegas Raiders"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "49ers @ Cowboys",
-      "pick": "NO EDGE",
-      "gap": 0.1,
-      "team": "Dallas Cowboys"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "game": "Steelers @ Bengals",
-      "pick": "NO EDGE",
-      "gap": 0.7,
-      "team": "Pittsburgh Steelers"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-16",
-      "game": "Chargers @ Ravens",
-      "pick": "NO EDGE",
-      "gap": 0.2,
-      "team": "Los Angeles Chargers"
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T21:05:00Z",
+      "game": "Jets @ Chargers",
+      "pick": "Chargers PK",
+      "kind": "price",
+      "team": "Los Angeles Chargers",
+      "fair_pct": 53,
+      "fair_spread": -1.5,
+      "line": 0.0,
+      "price": -110,
+      "book": "BetUS",
+      "ev_pct": 4.0,
+      "kalshi_pct": 54,
+      "kalshi_gap": -0.3,
+      "locked": false,
+      "books": 4
     },
     {
       "sport": "CFB",
       "date": "2026-11-17",
-      "game": "Eastern Michigan Eagles @ Western Michigan Broncos",
-      "pick": "NO EDGE",
-      "gap": 0.9,
-      "team": "Western Michigan Broncos"
+      "kickoff": "2026-11-18T00:00:00Z",
+      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
+      "pick": "Kent State Golden Flashes ML +285",
+      "kind": "price",
+      "team": "Kent State Golden Flashes",
+      "fair_pct": 27,
+      "fair_spread": 8.0,
+      "line": null,
+      "price": 285,
+      "book": "MyBookie.ag",
+      "ev_pct": 2.9,
+      "kalshi_pct": 26,
+      "kalshi_gap": 0.2,
+      "locked": false,
+      "books": 4
     },
     {
-      "sport": "CFB",
-      "date": "2026-11-18",
-      "game": "Akron Zips @ UMass Minutemen",
-      "pick": "NO EDGE",
-      "gap": 0.4,
-      "team": "Akron Zips"
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
+      "game": "Cardinals @ Chiefs",
+      "pick": "Cardinals ML +750",
+      "kind": "price",
+      "team": "Arizona Cardinals",
+      "fair_pct": 12,
+      "fair_spread": 14.5,
+      "line": null,
+      "price": 750,
+      "book": "FanDuel",
+      "ev_pct": 2.9,
+      "kalshi_pct": 12,
+      "kalshi_gap": -0.4,
+      "locked": false,
+      "books": 4
     },
     {
-      "sport": "CFB",
-      "date": "2026-11-18",
-      "game": "Central Michigan Chippewas @ Buffalo Bulls",
-      "pick": "NO EDGE",
-      "gap": 1.1,
-      "team": "Central Michigan Chippewas"
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T21:05:00Z",
+      "game": "Rams @ Cardinals",
+      "pick": "Cardinals ML +390",
+      "kind": "price",
+      "team": "Arizona Cardinals",
+      "fair_pct": 21,
+      "fair_spread": 9.5,
+      "line": null,
+      "price": 390,
+      "book": "DraftKings",
+      "ev_pct": 2.8,
+      "kalshi_pct": 20,
+      "kalshi_gap": 1.5,
+      "locked": true,
+      "books": 9
     },
     {
       "sport": "NFL",
       "date": "2026-11-19",
+      "kickoff": "2026-11-20T01:15:00Z",
       "game": "Colts @ Texans",
+      "pick": "Texans -10",
+      "kind": "price",
+      "team": "Houston Texans",
+      "fair_pct": 80,
+      "fair_spread": -10.0,
+      "line": -10.0,
+      "price": 105,
+      "book": "LowVig.ag",
+      "ev_pct": 2.5,
+      "kalshi_pct": 80,
+      "kalshi_gap": -0.0,
+      "locked": false,
+      "books": 4
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Dolphins @ Colts",
+      "pick": "Dolphins ML +195",
+      "kind": "price",
+      "team": "Miami Dolphins",
+      "fair_pct": 35,
+      "fair_spread": 4.5,
+      "line": null,
+      "price": 195,
+      "book": "MyBookie.ag",
+      "ev_pct": 2.4,
+      "kalshi_pct": 34,
+      "kalshi_gap": 1.2,
+      "locked": true,
+      "books": 9
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-17",
+      "kickoff": "2026-11-17T23:00:00Z",
+      "game": "Eastern Michigan Eagles @ Western Michigan Broncos",
+      "pick": "Eastern Michigan Eagles ML +500",
+      "kind": "price",
+      "team": "Eastern Michigan Eagles",
+      "fair_pct": 17,
+      "fair_spread": 14.0,
+      "line": null,
+      "price": 500,
+      "book": "MyBookie.ag",
+      "ev_pct": 2.4,
+      "kalshi_pct": 17,
+      "kalshi_gap": 0.1,
+      "locked": false,
+      "books": 4
+    }
+  ],
+  "slate": [
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T14:30:00Z",
+      "game": "Patriots @ Lions",
       "pick": "NO EDGE",
-      "gap": -0.5,
-      "team": "Indianapolis Colts"
+      "kalshi_gap": 0.2,
+      "best_ev_pct": 0.5
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Jaguars @ Titans",
+      "pick": "Titans ML +500",
+      "kalshi_gap": 1.1,
+      "best_ev_pct": 5.5
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Dolphins @ Colts",
+      "pick": "Dolphins ML +195",
+      "kalshi_gap": 1.2,
+      "best_ev_pct": 2.4
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Panthers @ Saints",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.2,
+      "best_ev_pct": -1.6
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Chiefs @ Falcons",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.1,
+      "best_ev_pct": -0.5
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Texans @ Browns",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.1,
+      "best_ev_pct": 0.5
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Vikings @ Packers",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.0,
+      "best_ev_pct": 1.3
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Bills @ Jets",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.8,
+      "best_ev_pct": -0.5
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Ole Miss Rebels @ Oklahoma Sooners",
+      "pick": "NO EDGE",
+      "kalshi_gap": -0.2,
+      "best_ev_pct": -1.1
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T21:05:00Z",
+      "game": "Rams @ Cardinals",
+      "pick": "Cardinals ML +390",
+      "kalshi_gap": 1.5,
+      "best_ev_pct": 2.8
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T21:05:00Z",
+      "game": "Seahawks @ Raiders",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.3,
+      "best_ev_pct": -0.6
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T21:25:00Z",
+      "game": "49ers @ Cowboys",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.1,
+      "best_ev_pct": -1.6
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-16T01:20:00Z",
+      "game": "Steelers @ Bengals",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.7,
+      "best_ev_pct": -1.4
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-16",
+      "kickoff": "2026-11-17T01:15:00Z",
+      "game": "Chargers @ Ravens",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.2,
+      "best_ev_pct": -1.5
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-17",
+      "kickoff": "2026-11-17T23:00:00Z",
+      "game": "Eastern Michigan Eagles @ Western Michigan Broncos",
+      "pick": "Eastern Michigan Eagles ML +500",
+      "kalshi_gap": 0.9,
+      "best_ev_pct": 2.4
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-17",
+      "kickoff": "2026-11-18T00:00:00Z",
+      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
+      "pick": "Kent State Golden Flashes ML +285",
+      "kalshi_gap": 0.2,
+      "best_ev_pct": 2.9
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-17",
+      "kickoff": "2026-11-18T00:00:00Z",
+      "game": "Ball State Cardinals @ Ohio Bobcats",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.4,
+      "best_ev_pct": 0.2
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-18",
+      "kickoff": "2026-11-19T00:00:00Z",
+      "game": "Akron Zips @ UMass Minutemen",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.4,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-18",
+      "kickoff": "2026-11-19T00:30:00Z",
+      "game": "Central Michigan Chippewas @ Buffalo Bulls",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.1,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-19",
+      "kickoff": "2026-11-20T01:15:00Z",
+      "game": "Colts @ Texans",
+      "pick": "Texans -10",
+      "kalshi_gap": -0.0,
+      "best_ev_pct": 2.5
     },
     {
       "sport": "CFB",
       "date": "2026-11-20",
+      "kickoff": "2026-11-20T23:00:00Z",
+      "game": "Iowa State Cyclones @ UCF Knights",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.9,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-20",
+      "kickoff": "2026-11-21T00:30:00Z",
       "game": "Clemson Tigers @ Duke Blue Devils",
       "pick": "NO EDGE",
-      "gap": 1.2,
-      "team": "Clemson Tigers"
+      "kalshi_gap": 2.2,
+      "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-20",
+      "kickoff": "2026-11-21T01:00:00Z",
       "game": "Oregon Ducks @ Michigan State Spartans",
       "pick": "NO EDGE",
-      "gap": 2.5,
-      "team": "Michigan State Spartans"
+      "kalshi_gap": 2.5,
+      "best_ev_pct": null
     },
     {
       "sport": "UFC",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T11:00:00Z",
+      "game": "Adrian Bartosinski @ Tymoteusz \u0141opaczyk",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T11:00:00Z",
+      "game": "Tomasz Romanowski @ Igor Michaliszyn",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T11:00:00Z",
+      "game": "Madars Fleminas @ Mateusz Pawlik",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T11:00:00Z",
+      "game": "Valeriu Mircea @ Marcin Held",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T11:00:00Z",
+      "game": "Oskar Szczepaniak @ Steven Krt",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T11:00:00Z",
+      "game": "Wojciech Kawa @ Sasha Moisa",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T15:15:00Z",
       "game": "Tahir Abdullayev @ Jake Matthews",
       "pick": "NO EDGE",
-      "gap": 1.2,
-      "team": "Tahir Abdullayev"
+      "kalshi_gap": 1.2,
+      "best_ev_pct": -2.6
     },
     {
       "sport": "UFC",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T15:45:00Z",
       "game": "Alessandro Costa @ Amir Albazi",
       "pick": "NO EDGE",
-      "gap": 1.3,
-      "team": "Amir Albazi"
+      "kalshi_gap": 1.3,
+      "best_ev_pct": -3.2
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T16:00:00Z",
       "game": "LSU Tigers @ Tennessee Volunteers",
       "pick": "NO EDGE",
-      "gap": 0.6,
-      "team": "LSU Tigers"
+      "kalshi_gap": 1.6,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T16:00:00Z",
+      "game": "Virginia Tech Hokies @ Miami Hurricanes",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
     },
     {
       "sport": "UFC",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T16:15:00Z",
       "game": "Tallison Teixeira @ Shamil Gaziev",
       "pick": "NO EDGE",
-      "gap": 2.3,
-      "team": "Tallison Teixeira"
+      "kalshi_gap": 2.3,
+      "best_ev_pct": -1.2
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "BYU Cougars @ Kansas Jayhawks",
       "pick": "NO EDGE",
-      "gap": 2.5,
-      "team": "Kansas Jayhawks"
+      "kalshi_gap": 2.5,
+      "best_ev_pct": null
     },
     {
       "sport": "UFC",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "Alik Lorenz @ Diyar Nurgozhay",
       "pick": "NO EDGE",
-      "gap": 1.8,
-      "team": "Alik Lorenz"
+      "kalshi_gap": 1.8,
+      "best_ev_pct": -2.7
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "UCLA Bruins @ Michigan Wolverines",
       "pick": "NO EDGE",
-      "gap": 1.6,
-      "team": "UCLA Bruins"
+      "kalshi_gap": 1.6,
+      "best_ev_pct": null
     },
     {
       "sport": "UFC",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "Santiago Luna @ Aleksandre Topuria",
       "pick": "NO EDGE",
-      "gap": 1.6,
-      "team": "Santiago Luna"
+      "kalshi_gap": 1.6,
+      "best_ev_pct": -2.7
     },
     {
       "sport": "UFC",
       "date": "2026-11-21",
-      "game": "Navajo Stirling @ Jiri Prochazka",
-      "pick": "NO EDGE",
-      "gap": 1.4,
-      "team": "Jiri Prochazka"
-    },
-    {
-      "sport": "UFC",
-      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "Kevin Vallejos @ Aljamain Sterling",
       "pick": "NO EDGE",
-      "gap": 0.9,
-      "team": "Aljamain Sterling"
-    },
-    {
-      "sport": "UFC",
-      "date": "2026-11-21",
-      "game": "Dom Mar Fan @ Nikolas Motta",
-      "pick": "NO EDGE",
-      "gap": 0.6,
-      "team": "Dom Mar Fan"
+      "kalshi_gap": 1.4,
+      "best_ev_pct": -2.9
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
-      "game": "Indiana Hoosiers @ Washington Huskies",
-      "pick": "NO EDGE",
-      "gap": 0.5,
-      "team": "Washington Huskies"
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "Vanderbilt Commodores @ Florida Gators",
       "pick": "NO EDGE",
-      "gap": 0.1,
-      "team": "Vanderbilt Commodores"
+      "kalshi_gap": 1.1,
+      "best_ev_pct": null
     },
     {
       "sport": "UFC",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "Navajo Stirling @ Jiri Prochazka",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.9,
+      "best_ev_pct": -3.5
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "Dom Mar Fan @ Nikolas Motta",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.6,
+      "best_ev_pct": -1.1
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "Indiana Hoosiers @ Washington Huskies",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.5,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T18:15:00Z",
       "game": "Ikram Aliskerov @ Jared Cannonier",
       "pick": "NO EDGE",
-      "gap": 1.9,
-      "team": "Jared Cannonier"
+      "kalshi_gap": 1.9,
+      "best_ev_pct": -1.1
     },
     {
       "sport": "UFC",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T18:45:00Z",
       "game": "Asu Almabaev @ Kyoji Horiguchi",
       "pick": "NO EDGE",
-      "gap": 1.9,
-      "team": "Asu Almabaev"
+      "kalshi_gap": 1.9,
+      "best_ev_pct": -2.2
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T19:15:00Z",
+      "game": "Brian Ortega @ Daniel Hooker",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": -2.7
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T19:30:00Z",
       "game": "Iowa Hawkeyes @ Illinois Fighting Illini",
       "pick": "NO EDGE",
-      "gap": 1.0,
-      "team": "Iowa Hawkeyes"
+      "kalshi_gap": 1.0,
+      "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
       "game": "Arkansas Razorbacks @ Texas Longhorns",
       "pick": "NO EDGE",
-      "gap": 0.8,
-      "team": "Arkansas Razorbacks"
+      "kalshi_gap": 0.7,
+      "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
       "game": "Wake Forest Demon Deacons @ Georgia Tech Yellow Jackets",
       "pick": "NO EDGE",
-      "gap": 0.1,
-      "team": "Georgia Tech Yellow Jackets"
+      "kalshi_gap": 0.6,
+      "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
+      "game": "Ohio State Buckeyes @ Nebraska Cornhuskers",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.0,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:30:00Z",
       "game": "SMU Mustangs @ Notre Dame Fighting Irish",
       "pick": "NO EDGE",
-      "gap": 2.2,
-      "team": "SMU Mustangs"
+      "kalshi_gap": 2.7,
+      "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:30:00Z",
       "game": "Georgia Bulldogs @ South Carolina Gamecocks",
       "pick": "NO EDGE",
-      "gap": 0.7,
-      "team": "Georgia Bulldogs"
+      "kalshi_gap": 0.8,
+      "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:30:00Z",
       "game": "Kentucky Wildcats @ Missouri Tigers",
       "pick": "NO EDGE",
-      "gap": 0.4,
-      "team": "Missouri Tigers"
+      "kalshi_gap": 0.4,
+      "best_ev_pct": null
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
       "game": "Saints @ Bears",
-      "pick": "NO EDGE",
-      "gap": 2.1,
-      "team": "New Orleans Saints"
+      "pick": "Saints ML +430",
+      "kalshi_gap": 2.1,
+      "best_ev_pct": 6.6
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
+      "game": "Cardinals @ Chiefs",
+      "pick": "Cardinals ML +750",
+      "kalshi_gap": -0.1,
+      "best_ev_pct": 2.9
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
       "game": "Titans @ Cowboys",
       "pick": "NO EDGE",
-      "gap": 1.0,
-      "team": "Tennessee Titans"
+      "kalshi_gap": 1.0,
+      "best_ev_pct": 1.4
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
       "game": "Dolphins @ Bills",
       "pick": "NO EDGE",
-      "gap": 0.7,
-      "team": "Buffalo Bills"
+      "kalshi_gap": 0.7,
+      "best_ev_pct": 0.7
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
       "game": "Steelers @ Eagles",
       "pick": "NO EDGE",
-      "gap": 0.7,
-      "team": "Philadelphia Eagles"
+      "kalshi_gap": 0.7,
+      "best_ev_pct": -2.4
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
       "game": "Ravens @ Panthers",
       "pick": "NO EDGE",
-      "gap": 0.5,
-      "team": "Carolina Panthers"
+      "kalshi_gap": 0.5,
+      "best_ev_pct": -2.2
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
-      "game": "Cardinals @ Chiefs",
-      "pick": "NO EDGE",
-      "gap": 0.4,
-      "team": "Kansas City Chiefs"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
       "game": "Buccaneers @ Lions",
       "pick": "NO EDGE",
-      "gap": -0.0,
-      "team": "Tampa Bay Buccaneers"
+      "kalshi_gap": -0.0,
+      "best_ev_pct": 1.1
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
+      "kickoff": "2026-11-22T21:05:00Z",
       "game": "Jets @ Chargers",
-      "pick": "NO EDGE",
-      "gap": -0.3,
-      "team": "Los Angeles Chargers"
+      "pick": "Chargers PK",
+      "kalshi_gap": -0.3,
+      "best_ev_pct": 4.0
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
-      "game": "Jaguars @ Giants",
-      "pick": "NO EDGE",
-      "gap": 0.5,
-      "team": "Jacksonville Jaguars"
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
+      "kickoff": "2026-11-22T21:25:00Z",
       "game": "Raiders @ Broncos",
       "pick": "NO EDGE",
-      "gap": 0.0,
-      "team": "Las Vegas Raiders"
+      "kalshi_gap": 0.5,
+      "best_ev_pct": -0.9
     },
     {
       "sport": "NFL",
       "date": "2026-11-22",
+      "kickoff": "2026-11-22T21:25:00Z",
+      "game": "Jaguars @ Giants",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.5,
+      "best_ev_pct": -1.7
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "kickoff": "2026-11-23T01:20:00Z",
       "game": "Vikings @ 49ers",
       "pick": "NO EDGE",
-      "gap": 0.7,
-      "team": "Minnesota Vikings"
+      "kalshi_gap": 0.7,
+      "best_ev_pct": 0.6
     },
     {
       "sport": "NFL",
       "date": "2026-11-23",
+      "kickoff": "2026-11-24T01:15:00Z",
       "game": "Bengals @ Commanders",
       "pick": "NO EDGE",
-      "gap": -0.7,
-      "team": "Washington Commanders"
+      "kalshi_gap": -0.7,
+      "best_ev_pct": -2.6
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-05",
+      "kickoff": "2026-12-05T17:00:00Z",
+      "game": "Yaroslav Amosov @ Ian Garry",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": -2.3
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-05",
+      "kickoff": "2026-12-05T17:00:00Z",
+      "game": "Shara Magomedov @ Israel Adesanya",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": -3.3
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-12",
+      "kickoff": "2026-12-13T02:30:00Z",
+      "game": "Alex Pereira @ Sergey Pavlovich",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-12",
+      "kickoff": "2026-12-13T04:00:00Z",
+      "game": "Diego Lopes @ Charles Oliveira",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": -3.6
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-31",
+      "kickoff": "2026-12-31T05:00:00Z",
+      "game": "Ilia Topuria @ Justin Gaethje",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-31",
+      "kickoff": "2026-12-31T17:00:00Z",
+      "game": "Jorge Masvidal @ Conor McGregor",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-31",
+      "kickoff": "2027-01-01T03:00:00Z",
+      "game": "Alexa Grasso @ Natalia Silva",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-31",
+      "kickoff": "2027-01-01T03:00:00Z",
+      "game": "Paulo Henrique Costa @ Khamzat Chimaev",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-31",
+      "kickoff": "2027-01-01T03:00:00Z",
+      "game": "Khamzat Chimaev @ Sean Strickland",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-31",
+      "kickoff": "2027-01-01T03:00:00Z",
+      "game": "Paddy Pimblett @ Max Holloway",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-31",
+      "kickoff": "2027-01-01T03:00:00Z",
+      "game": "Nassourdine Imavov @ Sean Strickland",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2026-12-31",
+      "kickoff": "2027-01-01T03:00:00Z",
+      "game": "Natalia Silva @ Valentina Shevchenko",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-01-12",
+      "kickoff": "2027-01-13T03:00:00Z",
+      "game": "Alex Pereira @ Sergey Pavlovich",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-01-30",
+      "kickoff": "2027-01-31T04:30:00Z",
+      "game": "Michael Morales @ Carlos Prates",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": -2.5
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-01-31",
+      "kickoff": "2027-01-31T05:00:00Z",
+      "game": "Manel Kape @ Joshua Van",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": -2.5
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-02-06",
+      "kickoff": "2027-02-06T17:00:00Z",
+      "game": "Benoit Saint-Denis @ Quillan Salkilld",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-02-06",
+      "kickoff": "2027-02-06T17:00:00Z",
+      "game": "Robert Whittaker @ Bogdan Guskov",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-04-24",
+      "kickoff": "2027-04-25T02:00:00Z",
+      "game": "Carlos Prates @ Islam Makhachev",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-04-24",
+      "kickoff": "2027-04-25T02:00:00Z",
+      "game": "Michael Morales @ Islam Makhachev",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-06-26",
+      "kickoff": "2027-06-27T02:00:00Z",
+      "game": "Jean Silva @ Alex Volkanovski",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-06-26",
+      "kickoff": "2027-06-27T02:00:00Z",
+      "game": "Sean O'Malley @ Petr Yan",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-07-01",
+      "kickoff": "2027-07-02T02:00:00Z",
+      "game": "Kamaru Usman @ Islam Makhachev",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-07-10",
+      "kickoff": "2027-07-11T00:00:00Z",
+      "game": "Conor McGregor @ Paddy Pimblett",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-07-24",
+      "kickoff": "2027-07-25T02:00:00Z",
+      "game": "Song Yadong @ Petr Yan",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-07-31",
+      "kickoff": "2027-08-01T02:00:00Z",
+      "game": "Carlos Ulberg @ Magomed Ankalaev",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-07-31",
+      "kickoff": "2027-08-01T02:00:00Z",
+      "game": "Jiri Prochazka @ Magomed Ankalaev",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2027-10-24",
+      "kickoff": "2027-10-25T02:00:00Z",
+      "game": "Alex Volkanovski @ Justin Gaethje",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "UFC",
+      "date": "2028-07-30",
+      "kickoff": "2028-07-30T04:00:00Z",
+      "game": "Arman Tsarukyan @ Justin Gaethje",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
     }
   ],
-  "unmatched": [
-    "CFB: Ball State Cardinals @ Ohio Bobcats",
-    "CFB: Miami (OH) RedHawks @ Kent State Golden Flashes",
-    "CFB: Iowa State Cyclones @ UCF Knights",
+  "unmatched_kalshi": [
     "CFB: Virginia Tech Hokies @ Miami Hurricanes",
-    "CFB: Ohio State Buckeyes @ Nebraska Cornhuskers",
     "UFC: Adrian Bartosinski @ Tymoteusz \u0141opaczyk",
     "UFC: Tomasz Romanowski @ Igor Michaliszyn",
     "UFC: Madars Fleminas @ Mateusz Pawlik",
