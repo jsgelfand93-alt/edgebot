@@ -60,6 +60,10 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
             if row["pick"] and start - now <= timedelta(hours=lock_hours):
                 store.lock_pick(con, row)
                 row["locked"] = True
+            if row["longshot"] and start - now <= timedelta(hours=lock_hours):
+                store.lock_pick(con, row, row["longshot"])
+                row["longshot"]["locked"] = True
+            store.update_close(con, row, sp)
             row["chip"] = chip_line(row, *model, sp) if model else None
             if row["chip"] and row["chip"]["pick"] and start - now <= timedelta(hours=lock_hours):
                 store.lock_chip_pick(con, row, row["chip"])
@@ -81,10 +85,11 @@ def _rec_str(r):
     return f"{r['W']}-{r['L']}" + (f"-{r['P']}" if r["P"] else "")
 
 
-def _rec_full(con, sport=None):
+def _rec_full(con, sport=None, longshots=False):
     """'NFL 1-4 · +1.0u' style string pieces: record and units."""
-    u = store.units(con, sport)
-    return {"record": _rec_str(store.record(con, sport)), "units": u, "label": f"{_rec_str(store.record(con, sport))} · {u:+.1f}u"}
+    u = store.units(con, sport, longshots)
+    r = _rec_str(store.record(con, sport, longshots))
+    return {"record": r, "units": u, "label": f"{r} · {u:+.1f}u"}
 
 
 def _strength(r):
@@ -96,6 +101,7 @@ def write_output(con, rows, unmatched, path):
     """edges.json: what Chip's video pipeline reads. Percentages are whole points."""
     def pick_json(r):
         pk = r["pick_info"]; t = pk["team"]
+        cl = con.execute("SELECT close_ev FROM picks WHERE id=?", (f"{r['sport']}-{r['game_id']}",)).fetchone()
         k = next((s for s in r["sides"] if s["team"] == t), None)
         return {"sport": r["sport"], "date": r["date"], "kickoff": r["commence_time"], "game": r["game"],
                 "pick": r["pick"], "kind": pk["kind"], "team": t,
@@ -104,7 +110,9 @@ def write_output(con, rows, unmatched, path):
                 "ev_pct": round(pk["ev"] * 100, 1) if pk["ev"] is not None else None,
                 "kalshi_pct": round(k["kalshi"]["mid"] * 100) if k else None,
                 "kalshi_gap": round(k["gap"], 1) if k else None,
-                "locked": bool(r.get("locked")), "books": r["books"]}
+                "locked": bool(r.get("locked")), "books": r["books"],
+                "fair_odds": __import__("edgebot.edges", fromlist=["x"]).prob_to_american(r["fair"][t]["p"]),
+                "close_ev_pct": round(cl["close_ev"] * 100, 1) if cl and cl["close_ev"] is not None else None}
     picks = sorted((r for r in rows if r["pick"]), key=lambda r: -_strength(r))
     data = {
         "generated_at": store.now(),
@@ -116,6 +124,18 @@ def write_output(con, rows, unmatched, path):
              "pick": r["pick"] or "NO EDGE", "kalshi_gap": r["gap"],
              "best_ev_pct": round(r["best_price"]["ev"] * 100, 1) if r["best_price"] else None}
             for r in sorted(rows, key=lambda r: r["commence_time"])],
+        "longshot_records": {sp: _rec_full(con, sp, True) for sp in config.SPORTS} | {"overall": _rec_full(con, None, True)},
+        "longshots": [
+            {"sport": r["sport"], "date": r["date"], "kickoff": r["commence_time"], "game": r["game"],
+             "pick": r["longshot"]["label"], "team": r["longshot"]["team"], "price": r["longshot"]["price"],
+             "book": r["longshot"]["book"], "ev_pct": round(r["longshot"]["ev"] * 100, 1),
+             "fair_odds": __import__("edgebot.edges", fromlist=["x"]).prob_to_american(r["fair"][r["longshot"]["team"]]["p"]),
+             "locked": bool(r["longshot"].get("locked"))}
+            for r in rows if r.get("longshot")],
+        "closing_value": [
+            {"pick": p["pick"], "sport": p["sport"], "game": p["game"], "kind": p["kind"],
+             "close_ev_pct": round(p["close_ev"] * 100, 1)}
+            for p in con.execute("SELECT * FROM picks WHERE close_ev IS NOT NULL ORDER BY locked_at DESC LIMIT 40")],
         "chip_records": {sp: _rec_str(store.chip_record(con, sp)) for sp in ("NFL", "CFB")} | {"overall": _rec_str(store.chip_record(con))},
         "chip_lines": [
             {"sport": r["sport"], "date": r["date"], "kickoff": r["commence_time"], "game": r["game"],
@@ -182,6 +202,7 @@ def print_record(con=None):
     con = con or store.db()
     parts = [f"{sp} {_rec_full(con, sp)['label']}" for sp in config.SPORTS]
     print("Money Bets: " + " · ".join(parts) + f" · Overall {_rec_full(con)['label']}")
+    print(f"Long Shots: {_rec_full(con, None, True)['label']}")
     print("Chip's Picks: " + " · ".join(f"{sp} {_rec_str(store.chip_record(con, sp))}" for sp in ("NFL", "CFB"))
           + f" · Overall {_rec_str(store.chip_record(con))}")
 

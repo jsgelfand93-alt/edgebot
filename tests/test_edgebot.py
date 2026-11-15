@@ -94,7 +94,7 @@ class T(unittest.TestCase):
 
     def test_edge_and_pick(self):
         row = edges.evaluate(NFL_GAME, teams.match_game(NFL_GAME, [NFL_EVENT], "NFL"), "NFL")
-        self.assertEqual(row["pick"], "Jets +7.5")
+        self.assertEqual(row["pick"], "Jets ML (Kalshi 18¢)")      # Kalshi underprices the Jets -> buy on Kalshi
         self.assertGreater(row["gap"], 3)
 
     def test_best_price(self):
@@ -115,6 +115,18 @@ class T(unittest.TestCase):
         g2 = dict(g, bookmakers=[book(k, H, A, 330, -420, 7.5) for k in ("a", "b", "c", "d")])
         self.assertIsNone(edges.evaluate(g2, None, "NFL")["pick"])
 
+    def test_longshot_split(self):
+        H, A = "Tennessee Titans", "Jacksonville Jaguars"
+        bks = [book(k, H, A, 450, -600, 10.5) for k in ("draftkings", "fanduel", "betmgm")] + [book("williamhill_us", H, A, 600, -600, 10.5)]
+        g = {"id": "ls", "commence_time": iso(START), "home_team": H, "away_team": A, "bookmakers": bks}
+        row = edges.evaluate(g, None, "NFL")
+        self.assertIsNone(row["pick"])                       # +600 is too long for a main Money Bet
+        self.assertEqual(row["longshot"]["label"], "Titans ML +600")
+        # the same value on the spread becomes a normal Money Bet instead
+        bks2 = [book(k, H, A, 450, -600, 10.5) for k in ("draftkings", "fanduel", "betmgm")] + [book("williamhill_us", H, A, 450, -600, 12.5)]
+        row2 = edges.evaluate(dict(g, bookmakers=bks2), None, "NFL")
+        self.assertEqual(row2["pick"], "Titans +12.5")
+
     def test_no_edge(self):
         row = edges.evaluate(NFL_GAME2, teams.match_game(NFL_GAME2, [NFL_EVENT2], "NFL"), "NFL")
         self.assertIsNone(row["pick"])
@@ -133,7 +145,7 @@ class T(unittest.TestCase):
                         fetch_results=lambda sp: [{"home": "New York Jets", "away": "Buffalo Bills", "hs": 3, "as": 30,
                                                    "neutral": False, "date": iso(-48)}] * 3)
         out = json.load(open(os.environ["EDGEBOT_OUT"]))
-        self.assertEqual(out["picks"][0]["pick"], "Jets +7.5")
+        self.assertEqual(out["picks"][0]["pick"], "Jets ML (Kalshi 18¢)")
         self.assertTrue(out["picks"][0]["locked"])
         self.assertEqual(len(out["slate"]), 3)
         self.assertEqual(out["picks"][0]["kind"], "kalshi")
@@ -145,8 +157,8 @@ class T(unittest.TestCase):
         scores = [{"id": "g1", "completed": True, "scores": [{"name": "New York Jets", "score": "21"},
                                                               {"name": "Buffalo Bills", "score": "24"}]}]
         cli.grade_all(fetch_scores=lambda k: scores)
-        self.assertEqual(store.record(store.db(), "NFL"), {"W": 1, "L": 0, "P": 0})
-        self.assertAlmostEqual(store.units(store.db(), "NFL"), 0.91, places=2)  # kalshi pick, no price -> -110
+        self.assertEqual(store.record(store.db(), "NFL"), {"W": 0, "L": 1, "P": 0})   # Jets lost outright (Kalshi ML)
+        self.assertAlmostEqual(store.units(store.db(), "NFL"), -1.0, places=2)
 
     def test_espn_parse_and_chip_line(self):
         from edgebot import ratings

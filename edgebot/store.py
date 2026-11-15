@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS chip_picks (
   vegas_home_spread REAL, chip_home_spread REAL, upset INTEGER, result TEXT DEFAULT 'pending', score TEXT DEFAULT ''
 );
 """
-NEW_COLS = {"kind": "TEXT", "book": "TEXT", "price": "REAL", "ev": "REAL"}
+NEW_COLS = {"kind": "TEXT", "book": "TEXT", "price": "REAL", "ev": "REAL", "close_fair": "REAL", "close_ev": "REAL"}
 
 
 def db():
@@ -34,6 +34,10 @@ def db():
     for col, typ in NEW_COLS.items():  # upgrade databases made by v0.1
         if col not in have:
             con.execute(f"ALTER TABLE picks ADD COLUMN {col} {typ}")
+    # picks locked before the long-shot rule: moneylines longer than the cap move to the Long Shot record
+    con.execute("UPDATE picks SET kind='longshot' WHERE kind='price' AND pick LIKE '% ML %' AND price > ?",
+                (config.MAX_DOG_ODDS,))
+    con.commit()
     return con
 
 
@@ -60,17 +64,17 @@ def movement(con, game_id, team):
     return rows[0]["gap"], rows[-1]["gap"], rows[0]["spread"], rows[-1]["spread"]
 
 
-def lock_pick(con, row):
+def lock_pick(con, row, pk=None):
     """Record a pick once; later scans never overwrite a locked pick."""
-    pk = row["pick_info"]
+    pk = pk or row["pick_info"]
     fair = row["fair"][pk["team"]]
     kal = next((s["kalshi"]["mid"] for s in row["sides"] if s["team"] == pk["team"]), None)
-    pid = f"{row['sport']}-{row['game_id']}"
+    pid = f"{row['sport']}-{row['game_id']}" + ("-LS" if pk["kind"] == "longshot" else "")
     con.execute("""INSERT OR IGNORE INTO picks (id, locked_at, sport, game_id, date, commence_time, game, team,
                    home, away, pick, spread, vegas, kalshi, gap, kind, book, price, ev)
                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (pid, now(), row["sport"], row["game_id"], row["date"], row["commence_time"], row["game"],
-                 pk["team"], row["home"], row["away"], row["pick"], pk["line"], fair["p"], kal, row["gap"],
+                 pk["team"], row["home"], row["away"], pk["label"], pk["line"], fair["p"], kal, row["gap"],
                  pk["kind"], pk["book"], pk["price"], pk["ev"]))
     con.commit()
 
@@ -116,16 +120,32 @@ def units_for(result, price):
     return p / 100 if p > 0 else 100 / -p
 
 
-def units(con, sport=None):
-    q = "SELECT result, price FROM picks WHERE result IN ('W','L','P')"
+def _kind_filter(longshots):
+    return " AND kind='longshot'" if longshots else " AND COALESCE(kind,'') != 'longshot'"
+
+
+def update_close(con, row, sport):
+    """Closing-line value: re-price each locked, not-yet-started pick for this game with the latest fair line."""
+    from .edges import fair_cover, american_to_decimal
+    for p in con.execute("SELECT * FROM picks WHERE game_id=? AND result='pending'", (row["game_id"],)).fetchall():
+        fc = fair_cover(row["cons"], sport, p["team"], p["spread"] if p["kind"] != "longshot" and " ML" not in p["pick"] else None)
+        if fc is None or p["price"] is None:
+            continue
+        con.execute("UPDATE picks SET close_fair=?, close_ev=? WHERE id=?",
+                    (fc, fc * american_to_decimal(p["price"]) - 1, p["id"]))
+    con.commit()
+
+
+def units(con, sport=None, longshots=False):
+    q = "SELECT result, price FROM picks WHERE result IN ('W','L','P')" + _kind_filter(longshots)
     args = ()
     if sport:
         q += " AND sport=?"; args = (sport,)
     return round(sum(units_for(r["result"], r["price"]) for r in con.execute(q, args)), 2)
 
 
-def record(con, sport=None):
-    q = "SELECT result, COUNT(*) n FROM picks WHERE result IN ('W','L','P')"
+def record(con, sport=None, longshots=False):
+    q = "SELECT result, COUNT(*) n FROM picks WHERE result IN ('W','L','P')" + _kind_filter(longshots)
     args = ()
     if sport:
         q += " AND sport=?"; args = (sport,)

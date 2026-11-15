@@ -31,6 +31,8 @@ KALSHI_BASES = [
 # Best-price check: a single book's price must beat the fair (vig-free consensus) line by this much
 # expected value per $1 before the bot calls it a pick. 0.02 = +2% EV.
 BEST_PRICE_MIN_EV = float(os.environ.get("BEST_PRICE_MIN_EV", "0.02"))
+# Main Money Bets can't be moneyline underdogs longer than this; longer ones become "Long Shot" picks.
+MAX_DOG_ODDS = float(os.environ.get("MAX_DOG_ODDS", "250"))
 # Need at least this many books for a trustworthy fair line.
 MIN_BOOKS = int(os.environ.get("MIN_BOOKS", "4"))
 # Only these (US-regulated) books can supply a best-price pick, so viewers can actually get the number.

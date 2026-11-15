@@ -78,11 +78,11 @@ def consensus(game):
     return out
 
 
-def best_price(game, cons, sport):
-    """Best single-book bet vs the fair line. Returns the highest-EV candidate or None."""
+def price_candidates(game, cons, sport):
+    """Every legal-book bet priced against the fair line: list of dicts with ev, kind, team, line, price, book."""
     home, away = game["home_team"], game["away_team"]
     ppv = config.POINT_VALUE.get(sport)
-    best = None
+    out = []
     for bk in game.get("bookmakers", []):
         if bk.get("key") not in config.BEST_PRICE_BOOKS:
             continue
@@ -96,15 +96,37 @@ def best_price(game, cons, sport):
                     p, line, kind = cons[t]["p"], None, "ml"
                 elif mk["key"] == "spreads" and ppv and cons[t]["spread"] is not None and "point" in o:
                     line, kind = float(o["point"]), "spread"
-                    p = cons[t]["cover_p"] + (line - cons[t]["spread"]) * ppv
-                    p = min(max(p, 0.01), 0.99)
+                    p = min(max(cons[t]["cover_p"] + (line - cons[t]["spread"]) * ppv, 0.01), 0.99)
                 else:
                     continue
-                ev = p * american_to_decimal(o["price"]) - 1
-                if best is None or ev > best["ev"]:
-                    best = {"team": t, "kind": kind, "line": line, "price": o["price"], "ev": ev,
-                            "book": bk.get("title") or bk.get("key"), "fair_p": p}
-    return best
+                out.append({"team": t, "kind": kind, "line": line, "price": o["price"],
+                            "ev": p * american_to_decimal(o["price"]) - 1,
+                            "book": bk.get("title") or bk.get("key"), "fair_p": p})
+    return out
+
+
+def best_price(game, cons, sport):
+    """Best main-eligible bet (spreads, or moneylines no longer than MAX_DOG_ODDS) and best long shot."""
+    cands = price_candidates(game, cons, sport)
+    main = [c for c in cands if c["kind"] == "spread" or float(c["price"]) <= config.MAX_DOG_ODDS]
+    longs = [c for c in cands if c["kind"] == "ml" and float(c["price"]) > config.MAX_DOG_ODDS]
+    best_main = max(main, key=lambda c: c["ev"]) if main else None
+    best_long = max(longs, key=lambda c: c["ev"]) if longs else None
+    return best_main, best_long
+
+
+def fair_cover(cons, sport, team, line):
+    """Fair chance that `team` wins a bet at `line` (None = moneyline). Used for closing-line value."""
+    if line is None:
+        return cons[team]["p"]
+    ppv = config.POINT_VALUE.get(sport)
+    if not ppv or cons[team]["spread"] is None:
+        return None
+    return min(max(cons[team]["cover_p"] + (line - cons[team]["spread"]) * ppv, 0.01), 0.99)
+
+
+def prob_to_american(p):
+    return round((1 - p) / p * 100) if p < 0.5 else -round(p / (1 - p) * 100)
 
 
 def fmt_spread(x):
@@ -141,20 +163,24 @@ def evaluate(game, kalshi_pair, sport, threshold=None):
 
     pick = None
     trusted = cons["_books"] >= config.MIN_BOOKS
-    # Rule 1: Kalshi gap
-    if kbest and kbest["gap"] >= threshold:
-        t = kbest["team"]
-        line = cons[t]["spread"] if style == "spread" else None
-        pick = {"kind": "kalshi", "team": t, "line": line, "book": None, "price": None,
-                "label": f"{short_name(t)} {fmt_spread(line)}" if line is not None else f"{short_name(t)} ML",
-                "ev": None}
-    # Rule 2: best single-book price vs the fair line
-    bp = best_price(game, cons, sport) if trusted else None
+    # Rule 1: Kalshi itself is mispriced -> buy the team on Kalshi (tradeable before the game ends)
+    if kbest and kbest["gap"] >= threshold and kbest["kalshi"]["ask"]:
+        t, ask = kbest["team"], kbest["kalshi"]["ask"]
+        pick = {"kind": "kalshi", "team": t, "line": None, "book": "Kalshi", "price": prob_to_american(ask),
+                "label": f"{short_name(t)} ML (Kalshi {round(ask * 100)}¢)",
+                "ev": cons[t]["p"] / ask - 1}
+    # Rule 2: one legal sportsbook pays more than the fair line
+    bp, longshot = best_price(game, cons, sport) if trusted else (None, None)
     if not pick and bp and bp["ev"] >= config.BEST_PRICE_MIN_EV:
         lbl = (f"{short_name(bp['team'])} {fmt_spread(bp['line'])}" if bp["kind"] == "spread"
                else f"{short_name(bp['team'])} ML {fmt_price(bp['price'])}")
         pick = {"kind": "price", "team": bp["team"], "line": bp["line"], "book": bp["book"],
                 "price": bp["price"], "label": lbl, "ev": bp["ev"]}
+    long_pick = None
+    if longshot and longshot["ev"] >= config.BEST_PRICE_MIN_EV:
+        long_pick = {"kind": "longshot", "team": longshot["team"], "line": None, "book": longshot["book"],
+                     "price": longshot["price"], "ev": longshot["ev"],
+                     "label": f"{short_name(longshot['team'])} ML {fmt_price(longshot['price'])}"}
 
     fair = {t: {"p": cons[t]["p"], "spread": cons[t]["spread"]} for t in (home, away)}
     fair["_total"] = cons["_total"]
@@ -165,6 +191,7 @@ def evaluate(game, kalshi_pair, sport, threshold=None):
         "sides": sides, "best_team": kbest["team"] if kbest else None,
         "gap": round(kbest["gap"], 1) if kbest else None,
         "best_price": bp, "pick": pick["label"] if pick else None, "pick_info": pick,
+        "longshot": long_pick, "cons": cons,
     }
 
 
