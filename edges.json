@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T09:20:41+00:00",
+  "generated_at": "2026-11-15T09:23:49+00:00",
   "rules": {
     "kalshi_gap_pts": 3.0,
     "best_price_min_ev_pct": 2.0
@@ -135,6 +135,15 @@
       "best_ev_pct": 1.1
     },
     {
+      "sport": "CFB",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Ole Miss Rebels @ Oklahoma Sooners",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.8,
+      "best_ev_pct": -1.1
+    },
+    {
       "sport": "NFL",
       "date": "2026-11-15",
       "kickoff": "2026-11-15T18:00:00Z",
@@ -142,15 +151,6 @@
       "pick": "NO EDGE",
       "kalshi_gap": 0.6,
       "best_ev_pct": -1.3
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-15",
-      "kickoff": "2026-11-15T18:00:00Z",
-      "game": "Ole Miss Rebels @ Oklahoma Sooners",
-      "pick": "NO EDGE",
-      "kalshi_gap": -0.2,
-      "best_ev_pct": -1.1
     },
     {
       "sport": "NFL",
@@ -230,7 +230,7 @@
       "kickoff": "2026-11-19T00:00:00Z",
       "game": "Akron Zips @ UMass Minutemen",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.8,
+      "kalshi_gap": 0.4,
       "best_ev_pct": null
     },
     {
@@ -698,7 +698,7 @@
       "kickoff": "2026-11-22T18:00:00Z",
       "game": "Titans @ Cowboys",
       "pick": "NO EDGE",
-      "kalshi_gap": 2.0,
+      "kalshi_gap": 2.5,
       "best_ev_pct": -3.0
     },
     {
@@ -1147,27 +1147,6 @@
       "game": "Rams @ Cardinals",
       "kind": "longshot",
       "close_ev_pct": 8.3
-    },
-    {
-      "pick": "Dolphins ML +195",
-      "sport": "NFL",
-      "game": "Dolphins @ Colts",
-      "kind": "price",
-      "close_ev_pct": 2.7
-    },
-    {
-      "pick": "Titans ML +500",
-      "sport": "NFL",
-      "game": "Jaguars @ Titans",
-      "kind": "longshot",
-      "close_ev_pct": 5.2
-    },
-    {
-      "pick": "Cardinals ML +390",
-      "sport": "NFL",
-      "game": "Rams @ Cardinals",
-      "kind": "longshot",
-      "close_ev_pct": 1.1
     }
   ],
   "chip_records": {
@@ -1317,26 +1296,6 @@
       "locked": false
     },
     {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "kickoff": "2026-11-15T18:00:00Z",
-      "game": "Bills @ Jets",
-      "home": "New York Jets",
-      "away": "Buffalo Bills",
-      "vegas_home_spread": 7.5,
-      "chip_home_spread": 10.5,
-      "diff": -3.0,
-      "total": 51.0,
-      "chip_score": {
-        "New York Jets": 20,
-        "Buffalo Bills": 31
-      },
-      "pick": "Bills -7.5",
-      "upset": false,
-      "upset_team": null,
-      "locked": true
-    },
-    {
       "sport": "CFB",
       "date": "2026-11-15",
       "kickoff": "2026-11-15T18:00:00Z",
@@ -1355,6 +1314,26 @@
       "upset": true,
       "upset_team": "Ole Miss Rebels",
       "locked": false
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Bills @ Jets",
+      "home": "New York Jets",
+      "away": "Buffalo Bills",
+      "vegas_home_spread": 7.5,
+      "chip_home_spread": 10.5,
+      "diff": -3.0,
+      "total": 51.0,
+      "chip_score": {
+        "New York Jets": 20,
+        "Buffalo Bills": 31
+      },
+      "pick": "Bills -7.5",
+      "upset": false,
+      "upset_team": null,
+      "locked": true
     },
     {
       "sport": "NFL",
