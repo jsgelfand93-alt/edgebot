@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T16:10:37+00:00",
+  "generated_at": "2026-11-15T16:40:25+00:00",
   "rules": {
     "kalshi_gap_pts": 3.0,
     "best_price_min_ev_pct": 2.0
@@ -30,6 +30,111 @@
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:00:00Z",
+      "game": "Florida International Panthers @ Kennesaw State Owls",
+      "pick": "Kennesaw State Owls ML (Kalshi 57\u00a2)",
+      "kind": "kalshi",
+      "team": "Kennesaw State Owls",
+      "fair_pct": 61,
+      "fair_spread": -3.0,
+      "line": null,
+      "price": -133,
+      "book": "Kalshi",
+      "ev_pct": 6.9,
+      "kalshi_pct": 48,
+      "kalshi_gap": 12.4,
+      "locked": false,
+      "books": 1,
+      "fair_odds": -156,
+      "close_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "Georgia Southern Eagles @ Troy Trojans",
+      "pick": "Georgia Southern Eagles ML (Kalshi 69\u00a2)",
+      "kind": "kalshi",
+      "team": "Georgia Southern Eagles",
+      "fair_pct": 73,
+      "fair_spread": -8.5,
+      "line": null,
+      "price": -223,
+      "book": "Kalshi",
+      "ev_pct": 6.3,
+      "kalshi_pct": 64,
+      "kalshi_gap": 8.9,
+      "locked": false,
+      "books": 1,
+      "fair_odds": -275,
+      "close_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:30:00Z",
+      "game": "Colorado State Rams @ Fresno State Bulldogs",
+      "pick": "Fresno State Bulldogs ML (Kalshi 86\u00a2)",
+      "kind": "kalshi",
+      "team": "Fresno State Bulldogs",
+      "fair_pct": 91,
+      "fair_spread": -19.5,
+      "line": null,
+      "price": -614,
+      "book": "Kalshi",
+      "ev_pct": 6.1,
+      "kalshi_pct": 82,
+      "kalshi_gap": 8.7,
+      "locked": false,
+      "books": 1,
+      "fair_odds": -1042,
+      "close_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "North Texas Mean Green @ Tulane Green Wave",
+      "pick": "North Texas Mean Green ML (Kalshi 74\u00a2)",
+      "kind": "kalshi",
+      "team": "North Texas Mean Green",
+      "fair_pct": 82,
+      "fair_spread": -13.5,
+      "line": null,
+      "price": -285,
+      "book": "Kalshi",
+      "ev_pct": 10.4,
+      "kalshi_pct": 75,
+      "kalshi_gap": 6.7,
+      "locked": false,
+      "books": 1,
+      "fair_odds": -447,
+      "close_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:00:00Z",
+      "game": "Arkansas State Red Wolves @ Louisiana Tech Bulldogs",
+      "pick": "Louisiana Tech Bulldogs ML (Kalshi 85\u00a2)",
+      "kind": "kalshi",
+      "team": "Louisiana Tech Bulldogs",
+      "fair_pct": 86,
+      "fair_spread": -16.5,
+      "line": null,
+      "price": -567,
+      "book": "Kalshi",
+      "ev_pct": 0.9,
+      "kalshi_pct": 80,
+      "kalshi_gap": 5.8,
+      "locked": false,
+      "books": 1,
+      "fair_odds": -604,
+      "close_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
       "kickoff": "2026-11-21T18:00:00Z",
       "game": "Western Kentucky Hilltoppers @ Liberty Flames",
       "pick": "Western Kentucky Hilltoppers ML (Kalshi 12\u00a2)",
@@ -40,55 +145,76 @@
       "line": null,
       "price": 733,
       "book": "Kalshi",
-      "ev_pct": 37.8,
+      "ev_pct": 40.0,
       "kalshi_pct": 12,
-      "kalshi_gap": 5.0,
+      "kalshi_gap": 5.3,
       "locked": false,
-      "books": 1,
-      "fair_odds": 505,
-      "close_ev_pct": null
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T18:00:00Z",
-      "game": "Saints @ Bears",
-      "pick": "Saints ML (Kalshi 17\u00a2)",
-      "kind": "kalshi",
-      "team": "New Orleans Saints",
-      "fair_pct": 20,
-      "fair_spread": 9.5,
-      "line": null,
-      "price": 488,
-      "book": "Kalshi",
-      "ev_pct": 18.3,
-      "kalshi_pct": 16,
-      "kalshi_gap": 3.6,
-      "locked": false,
-      "books": 4,
-      "fair_odds": 397,
+      "books": 2,
+      "fair_odds": 495,
       "close_ev_pct": null
     },
     {
       "sport": "CFB",
-      "date": "2026-11-20",
-      "kickoff": "2026-11-21T00:30:00Z",
-      "game": "Clemson Tigers @ Duke Blue Devils",
-      "pick": "Clemson Tigers ML (Kalshi 24\u00a2)",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
+      "game": "Old Dominion Monarchs @ UConn Huskies",
+      "pick": "UConn Huskies ML (Kalshi 84\u00a2)",
       "kind": "kalshi",
-      "team": "Clemson Tigers",
-      "fair_pct": 26,
-      "fair_spread": 9.5,
+      "team": "UConn Huskies",
+      "fair_pct": 83,
+      "fair_spread": -14.5,
       "line": null,
-      "price": 317,
+      "price": -525,
       "book": "Kalshi",
-      "ev_pct": 9.5,
-      "kalshi_pct": 23,
-      "kalshi_gap": 3.3,
+      "ev_pct": -1.5,
+      "kalshi_pct": 79,
+      "kalshi_gap": 3.7,
       "locked": false,
-      "books": 3,
-      "fair_odds": 280,
+      "books": 1,
+      "fair_odds": -478,
       "close_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "Northern Illinois Huskies @ North Dakota State Bison",
+      "pick": "North Dakota State Bison ML (Kalshi 93\u00a2)",
+      "kind": "kalshi",
+      "team": "North Dakota State Bison",
+      "fair_pct": 95,
+      "fair_spread": -25.5,
+      "line": null,
+      "price": -1329,
+      "book": "Kalshi",
+      "ev_pct": 2.0,
+      "kalshi_pct": 92,
+      "kalshi_gap": 3.4,
+      "locked": false,
+      "books": 1,
+      "fair_odds": -1863,
+      "close_ev_pct": null
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Panthers @ Saints",
+      "pick": "Panthers +1.5",
+      "kind": "price",
+      "team": "Carolina Panthers",
+      "fair_pct": 50,
+      "fair_spread": -1.0,
+      "line": 1.5,
+      "price": -120,
+      "book": "DraftKings",
+      "ev_pct": 3.3,
+      "kalshi_pct": 50,
+      "kalshi_gap": 0.7,
+      "locked": true,
+      "books": 8,
+      "fair_odds": -101,
+      "close_ev_pct": 3.3
     },
     {
       "sport": "CFB",
@@ -99,16 +225,16 @@
       "kind": "kalshi",
       "team": "Charlotte 49ers",
       "fair_pct": 13,
-      "fair_spread": 17.5,
+      "fair_spread": 18.5,
       "line": null,
       "price": 900,
       "book": "Kalshi",
-      "ev_pct": 26.4,
+      "ev_pct": 27.2,
       "kalshi_pct": 10,
-      "kalshi_gap": 3.1,
+      "kalshi_gap": 3.2,
       "locked": false,
-      "books": 1,
-      "fair_odds": 691,
+      "books": 2,
+      "fair_odds": 686,
       "close_ev_pct": null
     },
     {
@@ -135,12 +261,21 @@
   ],
   "slate": [
     {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Panthers @ Saints",
+      "pick": "Panthers +1.5",
+      "kalshi_gap": 0.7,
+      "best_ev_pct": 3.3
+    },
+    {
       "sport": "CFB",
       "date": "2026-11-15",
       "kickoff": "2026-11-15T18:00:00Z",
       "game": "Ole Miss Rebels @ Oklahoma Sooners",
       "pick": "NO EDGE",
-      "kalshi_gap": 2.5,
+      "kalshi_gap": 1.3,
       "best_ev_pct": -2.8
     },
     {
@@ -149,7 +284,7 @@
       "kickoff": "2026-11-15T18:00:00Z",
       "game": "Dolphins @ Colts",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.6,
+      "kalshi_gap": 0.7,
       "best_ev_pct": -1.0
     },
     {
@@ -165,10 +300,10 @@
       "sport": "NFL",
       "date": "2026-11-15",
       "kickoff": "2026-11-15T18:00:00Z",
-      "game": "Vikings @ Packers",
+      "game": "Texans @ Browns",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.4,
-      "best_ev_pct": -1.9
+      "kalshi_gap": 0.5,
+      "best_ev_pct": -1.0
     },
     {
       "sport": "NFL",
@@ -176,26 +311,17 @@
       "kickoff": "2026-11-15T18:00:00Z",
       "game": "Chiefs @ Falcons",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.3,
+      "kalshi_gap": 0.1,
       "best_ev_pct": 0.5
     },
     {
       "sport": "NFL",
       "date": "2026-11-15",
       "kickoff": "2026-11-15T18:00:00Z",
-      "game": "Panthers @ Saints",
+      "game": "Vikings @ Packers",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.3,
-      "best_ev_pct": -2.5
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "kickoff": "2026-11-15T18:00:00Z",
-      "game": "Texans @ Browns",
-      "pick": "NO EDGE",
-      "kalshi_gap": 0.2,
-      "best_ev_pct": -2.0
+      "kalshi_gap": 0.1,
+      "best_ev_pct": -1.1
     },
     {
       "sport": "NFL",
@@ -203,8 +329,8 @@
       "kickoff": "2026-11-15T18:00:00Z",
       "game": "Bills @ Jets",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.1,
-      "best_ev_pct": -1.5
+      "kalshi_gap": 0.0,
+      "best_ev_pct": -1.3
     },
     {
       "sport": "NFL",
@@ -212,8 +338,8 @@
       "kickoff": "2026-11-15T21:05:00Z",
       "game": "Seahawks @ Raiders",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.7,
-      "best_ev_pct": 0.6
+      "kalshi_gap": 0.6,
+      "best_ev_pct": 0.4
     },
     {
       "sport": "NFL",
@@ -222,7 +348,7 @@
       "game": "Rams @ Cardinals",
       "pick": "NO EDGE",
       "kalshi_gap": 0.5,
-      "best_ev_pct": -2.8
+      "best_ev_pct": -3.5
     },
     {
       "sport": "NFL",
@@ -230,8 +356,8 @@
       "kickoff": "2026-11-15T21:25:00Z",
       "game": "49ers @ Cowboys",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.2,
-      "best_ev_pct": 0.4
+      "kalshi_gap": 0.1,
+      "best_ev_pct": -0.0
     },
     {
       "sport": "NFL",
@@ -257,8 +383,8 @@
       "kickoff": "2026-11-17T23:00:00Z",
       "game": "Eastern Michigan Eagles @ Western Michigan Broncos",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.9,
-      "best_ev_pct": -2.2
+      "kalshi_gap": 0.4,
+      "best_ev_pct": -2.1
     },
     {
       "sport": "CFB",
@@ -275,7 +401,7 @@
       "kickoff": "2026-11-18T00:00:00Z",
       "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.1,
+      "kalshi_gap": 0.6,
       "best_ev_pct": -2.2
     },
     {
@@ -302,7 +428,7 @@
       "kickoff": "2026-11-20T00:30:00Z",
       "game": "Rice Owls @ Temple Owls",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.3,
+      "kalshi_gap": 0.0,
       "best_ev_pct": null
     },
     {
@@ -311,8 +437,8 @@
       "kickoff": "2026-11-20T01:15:00Z",
       "game": "Colts @ Texans",
       "pick": "NO EDGE",
-      "kalshi_gap": -0.0,
-      "best_ev_pct": -1.2
+      "kalshi_gap": -0.5,
+      "best_ev_pct": -2.4
     },
     {
       "sport": "CFB",
@@ -328,8 +454,8 @@
       "date": "2026-11-20",
       "kickoff": "2026-11-21T00:30:00Z",
       "game": "Clemson Tigers @ Duke Blue Devils",
-      "pick": "Clemson Tigers ML (Kalshi 24\u00a2)",
-      "kalshi_gap": 3.3,
+      "pick": "NO EDGE",
+      "kalshi_gap": 2.7,
       "best_ev_pct": null
     },
     {
@@ -365,7 +491,7 @@
       "kickoff": "2026-11-21T02:00:00Z",
       "game": "New Mexico Lobos @ Wyoming Cowboys",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.2,
+      "kalshi_gap": 0.9,
       "best_ev_pct": null
     },
     {
@@ -432,6 +558,15 @@
       "best_ev_pct": -2.0
     },
     {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T15:30:00Z",
+      "game": "Hawaii Rainbow Warriors @ Nevada Wolf Pack",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
       "sport": "UFC",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T15:45:00Z",
@@ -446,7 +581,7 @@
       "kickoff": "2026-11-21T16:00:00Z",
       "game": "LSU Tigers @ Tennessee Volunteers",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.4,
+      "kalshi_gap": 1.9,
       "best_ev_pct": null
     },
     {
@@ -471,9 +606,27 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T17:00:00Z",
+      "game": "North Texas Mean Green @ Tulane Green Wave",
+      "pick": "North Texas Mean Green ML (Kalshi 74\u00a2)",
+      "kalshi_gap": 6.7,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "East Carolina Pirates @ Army Black Knights",
       "pick": "NO EDGE",
-      "kalshi_gap": 2.4,
+      "kalshi_gap": 2.3,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "Memphis Tigers @ Navy Midshipmen",
+      "pick": "NO EDGE",
+      "kalshi_gap": 2.2,
       "best_ev_pct": null
     },
     {
@@ -484,15 +637,6 @@
       "pick": "NO EDGE",
       "kalshi_gap": 2.1,
       "best_ev_pct": -2.7
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T17:00:00Z",
-      "game": "Memphis Tigers @ Navy Midshipmen",
-      "pick": "NO EDGE",
-      "kalshi_gap": 2.0,
-      "best_ev_pct": null
     },
     {
       "sport": "CFB",
@@ -531,15 +675,6 @@
       "best_ev_pct": -3.2
     },
     {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T17:00:00Z",
-      "game": "UTSA Roadrunners @ UAB Blazers",
-      "pick": "NO EDGE",
-      "kalshi_gap": 1.0,
-      "best_ev_pct": null
-    },
-    {
       "sport": "UFC",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T17:00:00Z",
@@ -561,9 +696,18 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T17:00:00Z",
+      "game": "Northwestern Wildcats @ Minnesota Golden Gophers",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.8,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "Wisconsin Badgers @ Purdue Boilermakers",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.6,
+      "kalshi_gap": 0.5,
       "best_ev_pct": null
     },
     {
@@ -573,15 +717,6 @@
       "game": "UCLA Bruins @ Michigan Wolverines",
       "pick": "NO EDGE",
       "kalshi_gap": 0.4,
-      "best_ev_pct": null
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T17:00:00Z",
-      "game": "Northwestern Wildcats @ Minnesota Golden Gophers",
-      "pick": "NO EDGE",
-      "kalshi_gap": 0.3,
       "best_ev_pct": null
     },
     {
@@ -599,7 +734,16 @@
       "kickoff": "2026-11-21T17:00:00Z",
       "game": "Indiana Hoosiers @ Washington Huskies",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.1,
+      "kalshi_gap": 0.2,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "UTSA Roadrunners @ UAB Blazers",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.2,
       "best_ev_pct": null
     },
     {
@@ -626,7 +770,7 @@
       "kickoff": "2026-11-21T18:00:00Z",
       "game": "Western Kentucky Hilltoppers @ Liberty Flames",
       "pick": "Western Kentucky Hilltoppers ML (Kalshi 12\u00a2)",
-      "kalshi_gap": 5.0,
+      "kalshi_gap": 5.3,
       "best_ev_pct": null
     },
     {
@@ -653,16 +797,7 @@
       "kickoff": "2026-11-21T19:00:00Z",
       "game": "Charlotte 49ers @ Tulsa Golden Hurricane",
       "pick": "Charlotte 49ers ML (Kalshi 10\u00a2)",
-      "kalshi_gap": 3.1,
-      "best_ev_pct": null
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T19:00:00Z",
-      "game": "Middle Tennessee Blue Raiders @ Sam Houston State Bearkats",
-      "pick": "NO EDGE",
-      "kalshi_gap": 1.7,
+      "kalshi_gap": 3.2,
       "best_ev_pct": null
     },
     {
@@ -671,7 +806,16 @@
       "kickoff": "2026-11-21T19:00:00Z",
       "game": "Missouri State Bears @ Jacksonville State Gamecocks",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.5,
+      "kalshi_gap": 1.4,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T19:00:00Z",
+      "game": "Middle Tennessee Blue Raiders @ Sam Houston State Bearkats",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.1,
       "best_ev_pct": null
     },
     {
@@ -687,18 +831,63 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T19:30:00Z",
-      "game": "South Florida Bulls @ Florida Atlantic Owls",
+      "game": "Iowa Hawkeyes @ Illinois Fighting Illini",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.2,
+      "kalshi_gap": 0.5,
       "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T19:30:00Z",
-      "game": "Iowa Hawkeyes @ Illinois Fighting Illini",
+      "game": "South Florida Bulls @ Florida Atlantic Owls",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.5,
+      "kalshi_gap": 0.3,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T19:30:00Z",
+      "game": "UL Monroe Warhawks @ Appalachian State Mountaineers",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:00:00Z",
+      "game": "Florida International Panthers @ Kennesaw State Owls",
+      "pick": "Kennesaw State Owls ML (Kalshi 57\u00a2)",
+      "kalshi_gap": 12.4,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:00:00Z",
+      "game": "Coastal Carolina Chanticleers @ Louisiana Ragin Cajuns",
+      "pick": "NO EDGE",
+      "kalshi_gap": 2.4,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:00:00Z",
+      "game": "Delaware Blue Hens @ New Mexico State Aggies",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.3,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
+      "game": "Old Dominion Monarchs @ UConn Huskies",
+      "pick": "UConn Huskies ML (Kalshi 84\u00a2)",
+      "kalshi_gap": 3.7,
       "best_ev_pct": null
     },
     {
@@ -723,18 +912,18 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T20:30:00Z",
-      "game": "Arizona Wildcats @ Kansas State Wildcats",
+      "game": "Utah Utes @ TCU Horned Frogs",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.6,
+      "kalshi_gap": 2.0,
       "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T20:30:00Z",
-      "game": "Utah Utes @ TCU Horned Frogs",
+      "game": "Arizona Wildcats @ Kansas State Wildcats",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.5,
+      "kalshi_gap": 1.6,
       "best_ev_pct": null
     },
     {
@@ -759,18 +948,9 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T20:30:00Z",
-      "game": "Ohio State Buckeyes @ Nebraska Cornhuskers",
-      "pick": "NO EDGE",
-      "kalshi_gap": 1.0,
-      "best_ev_pct": -0.2
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T20:30:00Z",
       "game": "Texas Tech Red Raiders @ Baylor Bears",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.9,
+      "kalshi_gap": 1.0,
       "best_ev_pct": null
     },
     {
@@ -779,8 +959,17 @@
       "kickoff": "2026-11-21T20:30:00Z",
       "game": "Rutgers Scarlet Knights @ Penn State Nittany Lions",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.9,
+      "kalshi_gap": 0.6,
       "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
+      "game": "Ohio State Buckeyes @ Nebraska Cornhuskers",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.5,
+      "best_ev_pct": -2.2
     },
     {
       "sport": "CFB",
@@ -794,10 +983,82 @@
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "Georgia Southern Eagles @ Troy Trojans",
+      "pick": "Georgia Southern Eagles ML (Kalshi 69\u00a2)",
+      "kalshi_gap": 8.9,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "Northern Illinois Huskies @ North Dakota State Bison",
+      "pick": "North Dakota State Bison ML (Kalshi 93\u00a2)",
+      "kalshi_gap": 3.4,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "South Alabama Jaguars @ Southern Mississippi Golden Eagles",
+      "pick": "NO EDGE",
+      "kalshi_gap": null,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "Georgia State Panthers @ Marshall Thundering Herd",
+      "pick": "NO EDGE",
+      "kalshi_gap": -9.7,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T23:00:00Z",
+      "game": "Washington State Cougars @ Texas State Bobcats",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.0,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
       "kickoff": "2026-11-21T23:15:00Z",
       "game": "Maryland Terrapins @ USC Trojans",
       "pick": "NO EDGE",
       "kalshi_gap": 1.6,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:00:00Z",
+      "game": "Arkansas State Red Wolves @ Louisiana Tech Bulldogs",
+      "pick": "Louisiana Tech Bulldogs ML (Kalshi 85\u00a2)",
+      "kalshi_gap": 5.8,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:00:00Z",
+      "game": "UNLV Rebels @ San Jose State Spartans",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.3,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:30:00Z",
+      "game": "Colorado State Rams @ Fresno State Bulldogs",
+      "pick": "Fresno State Bulldogs ML (Kalshi 86\u00a2)",
+      "kalshi_gap": 8.7,
       "best_ev_pct": null
     },
     {
@@ -813,18 +1074,18 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-22T00:30:00Z",
-      "game": "Kentucky Wildcats @ Missouri Tigers",
+      "game": "SMU Mustangs @ Notre Dame Fighting Irish",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.1,
+      "kalshi_gap": 1.7,
       "best_ev_pct": null
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-22T00:30:00Z",
-      "game": "SMU Mustangs @ Notre Dame Fighting Irish",
+      "game": "Kentucky Wildcats @ Missouri Tigers",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.7,
+      "kalshi_gap": 1.1,
       "best_ev_pct": null
     },
     {
@@ -839,10 +1100,19 @@
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-22T02:30:00Z",
+      "game": "San Diego State Aztecs @ Boise State Broncos",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.6,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
       "kickoff": "2026-11-22T03:15:00Z",
       "game": "Oklahoma State Cowboys @ Arizona State Sun Devils",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.8,
+      "kalshi_gap": 0.7,
       "best_ev_pct": null
     },
     {
@@ -850,8 +1120,8 @@
       "date": "2026-11-22",
       "kickoff": "2026-11-22T18:00:00Z",
       "game": "Saints @ Bears",
-      "pick": "Saints ML (Kalshi 17\u00a2)",
-      "kalshi_gap": 3.6,
+      "pick": "NO EDGE",
+      "kalshi_gap": 2.7,
       "best_ev_pct": -2.4
     },
     {
@@ -860,8 +1130,8 @@
       "kickoff": "2026-11-22T18:00:00Z",
       "game": "Titans @ Cowboys",
       "pick": "NO EDGE",
-      "kalshi_gap": 2.0,
-      "best_ev_pct": -3.0
+      "kalshi_gap": 1.9,
+      "best_ev_pct": -3.5
     },
     {
       "sport": "NFL",
@@ -888,7 +1158,7 @@
       "game": "Cardinals @ Chiefs",
       "pick": "NO EDGE",
       "kalshi_gap": 0.6,
-      "best_ev_pct": -1.7
+      "best_ev_pct": -2.8
     },
     {
       "sport": "NFL",
@@ -896,8 +1166,8 @@
       "kickoff": "2026-11-22T18:00:00Z",
       "game": "Dolphins @ Bills",
       "pick": "NO EDGE",
-      "kalshi_gap": -0.2,
-      "best_ev_pct": -3.8
+      "kalshi_gap": -0.3,
+      "best_ev_pct": -4.2
     },
     {
       "sport": "NFL",
@@ -905,8 +1175,17 @@
       "kickoff": "2026-11-22T21:05:00Z",
       "game": "Jets @ Chargers",
       "pick": "NO EDGE",
-      "kalshi_gap": -0.3,
+      "kalshi_gap": 0.8,
       "best_ev_pct": -2.6
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T21:25:00Z",
+      "game": "Jaguars @ Giants",
+      "pick": "NO EDGE",
+      "kalshi_gap": 2.0,
+      "best_ev_pct": -1.7
     },
     {
       "sport": "NFL",
@@ -916,15 +1195,6 @@
       "pick": "NO EDGE",
       "kalshi_gap": 1.0,
       "best_ev_pct": -1.8
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T21:25:00Z",
-      "game": "Jaguars @ Giants",
-      "pick": "NO EDGE",
-      "kalshi_gap": -0.0,
-      "best_ev_pct": -1.7
     },
     {
       "sport": "NFL",
@@ -1265,8 +1535,8 @@
       "team": "New Orleans Saints",
       "price": 430,
       "book": "FanDuel",
-      "ev_pct": 6.6,
-      "fair_odds": 397,
+      "ev_pct": 7.2,
+      "fair_odds": 394,
       "locked": false
     },
     {
@@ -1311,6 +1581,13 @@
   ],
   "closing_value": [
     {
+      "pick": "Panthers +1.5",
+      "sport": "NFL",
+      "game": "Panthers @ Saints",
+      "kind": "price",
+      "close_ev_pct": 3.3
+    },
+    {
       "pick": "Titans ML +500",
       "sport": "NFL",
       "game": "Jaguars @ Titans",
@@ -1322,7 +1599,7 @@
       "sport": "NFL",
       "game": "Rams @ Cardinals",
       "kind": "longshot",
-      "close_ev_pct": 5.0
+      "close_ev_pct": 5.1
     }
   ],
   "chip_records": {
@@ -1331,6 +1608,26 @@
     "overall": "0-0"
   },
   "chip_lines": [
+    {
+      "sport": "NFL",
+      "date": "2026-11-15",
+      "kickoff": "2026-11-15T18:00:00Z",
+      "game": "Panthers @ Saints",
+      "home": "New Orleans Saints",
+      "away": "Carolina Panthers",
+      "vegas_home_spread": 1.0,
+      "chip_home_spread": 1.5,
+      "diff": -0.5,
+      "total": 49.0,
+      "chip_score": {
+        "New Orleans Saints": 24,
+        "Carolina Panthers": 25
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
     {
       "sport": "CFB",
       "date": "2026-11-15",
@@ -1395,16 +1692,16 @@
       "sport": "NFL",
       "date": "2026-11-15",
       "kickoff": "2026-11-15T18:00:00Z",
-      "game": "Vikings @ Packers",
-      "home": "Green Bay Packers",
-      "away": "Minnesota Vikings",
-      "vegas_home_spread": -2.5,
-      "chip_home_spread": -2.5,
-      "diff": 0.0,
-      "total": 42.0,
+      "game": "Texans @ Browns",
+      "home": "Cleveland Browns",
+      "away": "Houston Texans",
+      "vegas_home_spread": 3.5,
+      "chip_home_spread": 5.5,
+      "diff": -2.0,
+      "total": 40.5,
       "chip_score": {
-        "Green Bay Packers": 22,
-        "Minnesota Vikings": 20
+        "Cleveland Browns": 18,
+        "Houston Texans": 23
       },
       "pick": "PASS",
       "upset": false,
@@ -1435,36 +1732,16 @@
       "sport": "NFL",
       "date": "2026-11-15",
       "kickoff": "2026-11-15T18:00:00Z",
-      "game": "Panthers @ Saints",
-      "home": "New Orleans Saints",
-      "away": "Carolina Panthers",
-      "vegas_home_spread": -1.0,
-      "chip_home_spread": 1.5,
-      "diff": -2.5,
-      "total": 49.0,
+      "game": "Vikings @ Packers",
+      "home": "Green Bay Packers",
+      "away": "Minnesota Vikings",
+      "vegas_home_spread": -2.5,
+      "chip_home_spread": -2.5,
+      "diff": 0.0,
+      "total": 42.5,
       "chip_score": {
-        "New Orleans Saints": 24,
-        "Carolina Panthers": 25
-      },
-      "pick": "PASS",
-      "upset": true,
-      "upset_team": "Carolina Panthers",
-      "locked": false
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-15",
-      "kickoff": "2026-11-15T18:00:00Z",
-      "game": "Texans @ Browns",
-      "home": "Cleveland Browns",
-      "away": "Houston Texans",
-      "vegas_home_spread": 4.0,
-      "chip_home_spread": 5.5,
-      "diff": -1.5,
-      "total": 40.5,
-      "chip_score": {
-        "Cleveland Browns": 18,
-        "Houston Texans": 23
+        "Green Bay Packers": 22,
+        "Minnesota Vikings": 20
       },
       "pick": "PASS",
       "upset": false,
@@ -1598,12 +1875,12 @@
       "game": "Eastern Michigan Eagles @ Western Michigan Broncos",
       "home": "Western Michigan Broncos",
       "away": "Eastern Michigan Eagles",
-      "vegas_home_spread": -14.0,
+      "vegas_home_spread": -14.5,
       "chip_home_spread": -18.5,
-      "diff": 4.5,
-      "total": 46.75,
+      "diff": 4.0,
+      "total": 46.5,
       "chip_score": {
-        "Western Michigan Broncos": 33,
+        "Western Michigan Broncos": 32,
         "Eastern Michigan Eagles": 14
       },
       "pick": "PASS",
@@ -1678,9 +1955,9 @@
       "game": "Rice Owls @ Temple Owls",
       "home": "Temple Owls",
       "away": "Rice Owls",
-      "vegas_home_spread": -3.0,
+      "vegas_home_spread": -3.5,
       "chip_home_spread": -3.5,
-      "diff": 0.5,
+      "diff": 0.0,
       "total": 47.5,
       "chip_score": {
         "Temple Owls": 26,
@@ -1701,7 +1978,7 @@
       "vegas_home_spread": -10.0,
       "chip_home_spread": -6.0,
       "diff": -4.0,
-      "total": 43.5,
+      "total": 43.75,
       "chip_score": {
         "Houston Texans": 25,
         "Indianapolis Colts": 19
@@ -1818,15 +2095,15 @@
       "game": "New Mexico Lobos @ Wyoming Cowboys",
       "home": "Wyoming Cowboys",
       "away": "New Mexico Lobos",
-      "vegas_home_spread": 12.0,
+      "vegas_home_spread": 10.5,
       "chip_home_spread": 3.0,
-      "diff": 9.0,
+      "diff": 7.5,
       "total": 37.5,
       "chip_score": {
         "Wyoming Cowboys": 17,
         "New Mexico Lobos": 20
       },
-      "pick": "Wyoming Cowboys +12",
+      "pick": "Wyoming Cowboys +10.5",
       "upset": false,
       "upset_team": null,
       "locked": false
@@ -1841,9 +2118,9 @@
       "vegas_home_spread": 1.5,
       "chip_home_spread": -8.5,
       "diff": 10.0,
-      "total": 46.5,
+      "total": 46.0,
       "chip_score": {
-        "Tennessee Volunteers": 28,
+        "Tennessee Volunteers": 27,
         "LSU Tigers": 19
       },
       "pick": "Tennessee Volunteers +1.5",
@@ -1875,6 +2152,26 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T17:00:00Z",
+      "game": "North Texas Mean Green @ Tulane Green Wave",
+      "home": "Tulane Green Wave",
+      "away": "North Texas Mean Green",
+      "vegas_home_spread": 13.5,
+      "chip_home_spread": 6.0,
+      "diff": 7.5,
+      "total": 60.5,
+      "chip_score": {
+        "Tulane Green Wave": 27,
+        "North Texas Mean Green": 33
+      },
+      "pick": "Tulane Green Wave +13.5",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
       "game": "East Carolina Pirates @ Army Black Knights",
       "home": "Army Black Knights",
       "away": "East Carolina Pirates",
@@ -1898,13 +2195,13 @@
       "game": "Memphis Tigers @ Navy Midshipmen",
       "home": "Navy Midshipmen",
       "away": "Memphis Tigers",
-      "vegas_home_spread": 3.5,
+      "vegas_home_spread": 3.0,
       "chip_home_spread": 6.0,
-      "diff": -2.5,
-      "total": 65.5,
+      "diff": -3.0,
+      "total": 64.5,
       "chip_score": {
-        "Navy Midshipmen": 30,
-        "Memphis Tigers": 36
+        "Navy Midshipmen": 29,
+        "Memphis Tigers": 35
       },
       "pick": "PASS",
       "upset": false,
@@ -1955,26 +2252,6 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T17:00:00Z",
-      "game": "UTSA Roadrunners @ UAB Blazers",
-      "home": "UAB Blazers",
-      "away": "UTSA Roadrunners",
-      "vegas_home_spread": 6.5,
-      "chip_home_spread": -1.5,
-      "diff": 8.0,
-      "total": 53.5,
-      "chip_score": {
-        "UAB Blazers": 28,
-        "UTSA Roadrunners": 26
-      },
-      "pick": "UAB Blazers +6.5",
-      "upset": true,
-      "upset_team": "UAB Blazers",
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T17:00:00Z",
       "game": "Vanderbilt Commodores @ Florida Gators",
       "home": "Florida Gators",
       "away": "Vanderbilt Commodores",
@@ -1985,6 +2262,26 @@
       "chip_score": {
         "Florida Gators": 29,
         "Vanderbilt Commodores": 18
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "Northwestern Wildcats @ Minnesota Golden Gophers",
+      "home": "Minnesota Golden Gophers",
+      "away": "Northwestern Wildcats",
+      "vegas_home_spread": 3.0,
+      "chip_home_spread": 6.0,
+      "diff": -3.0,
+      "total": 43.5,
+      "chip_score": {
+        "Minnesota Golden Gophers": 19,
+        "Northwestern Wildcats": 25
       },
       "pick": "PASS",
       "upset": false,
@@ -2035,26 +2332,6 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T17:00:00Z",
-      "game": "Northwestern Wildcats @ Minnesota Golden Gophers",
-      "home": "Minnesota Golden Gophers",
-      "away": "Northwestern Wildcats",
-      "vegas_home_spread": 3.0,
-      "chip_home_spread": 6.0,
-      "diff": -3.0,
-      "total": 43.5,
-      "chip_score": {
-        "Minnesota Golden Gophers": 19,
-        "Northwestern Wildcats": 25
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T17:00:00Z",
       "game": "Colorado Buffaloes @ Cincinnati Bearcats",
       "home": "Cincinnati Bearcats",
       "away": "Colorado Buffaloes",
@@ -2081,10 +2358,10 @@
       "vegas_home_spread": 7.5,
       "chip_home_spread": 0.0,
       "diff": 7.5,
-      "total": 43.5,
+      "total": 42.5,
       "chip_score": {
-        "Washington Huskies": 22,
-        "Indiana Hoosiers": 22
+        "Washington Huskies": 21,
+        "Indiana Hoosiers": 21
       },
       "pick": "Washington Huskies +7.5",
       "upset": false,
@@ -2094,13 +2371,33 @@
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "UTSA Roadrunners @ UAB Blazers",
+      "home": "UAB Blazers",
+      "away": "UTSA Roadrunners",
+      "vegas_home_spread": 6.5,
+      "chip_home_spread": -1.5,
+      "diff": 8.0,
+      "total": 53.5,
+      "chip_score": {
+        "UAB Blazers": 28,
+        "UTSA Roadrunners": 26
+      },
+      "pick": "UAB Blazers +6.5",
+      "upset": true,
+      "upset_team": "UAB Blazers",
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
       "kickoff": "2026-11-21T17:30:00Z",
       "game": "North Carolina Tar Heels @ Virginia Cavaliers",
       "home": "Virginia Cavaliers",
       "away": "North Carolina Tar Heels",
-      "vegas_home_spread": -1.5,
+      "vegas_home_spread": -1.0,
       "chip_home_spread": 2.0,
-      "diff": -3.5,
+      "diff": -3.0,
       "total": 43.5,
       "chip_score": {
         "Virginia Cavaliers": 21,
@@ -2121,7 +2418,7 @@
       "vegas_home_spread": -14.5,
       "chip_home_spread": -18.5,
       "diff": 4.0,
-      "total": 52.5,
+      "total": 53.0,
       "chip_score": {
         "Liberty Flames": 36,
         "Western Kentucky Hilltoppers": 17
@@ -2138,13 +2435,33 @@
       "game": "Charlotte 49ers @ Tulsa Golden Hurricane",
       "home": "Tulsa Golden Hurricane",
       "away": "Charlotte 49ers",
-      "vegas_home_spread": -17.5,
+      "vegas_home_spread": -18.5,
       "chip_home_spread": -20.5,
-      "diff": 3.0,
-      "total": 53.5,
+      "diff": 2.0,
+      "total": 52.25,
       "chip_score": {
-        "Tulsa Golden Hurricane": 37,
+        "Tulsa Golden Hurricane": 36,
         "Charlotte 49ers": 16
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T19:00:00Z",
+      "game": "Missouri State Bears @ Jacksonville State Gamecocks",
+      "home": "Jacksonville State Gamecocks",
+      "away": "Missouri State Bears",
+      "vegas_home_spread": -10.0,
+      "chip_home_spread": -13.0,
+      "diff": 3.0,
+      "total": 52.0,
+      "chip_score": {
+        "Jacksonville State Gamecocks": 32,
+        "Missouri State Bears": 20
       },
       "pick": "PASS",
       "upset": false,
@@ -2161,50 +2478,10 @@
       "vegas_home_spread": 5.5,
       "chip_home_spread": 8.5,
       "diff": -3.0,
-      "total": 48.5,
+      "total": 49.0,
       "chip_score": {
         "Sam Houston State Bearkats": 20,
-        "Middle Tennessee Blue Raiders": 28
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T19:00:00Z",
-      "game": "Missouri State Bears @ Jacksonville State Gamecocks",
-      "home": "Jacksonville State Gamecocks",
-      "away": "Missouri State Bears",
-      "vegas_home_spread": -9.5,
-      "chip_home_spread": -13.0,
-      "diff": 3.5,
-      "total": 51.5,
-      "chip_score": {
-        "Jacksonville State Gamecocks": 32,
-        "Missouri State Bears": 19
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T19:30:00Z",
-      "game": "South Florida Bulls @ Florida Atlantic Owls",
-      "home": "Florida Atlantic Owls",
-      "away": "South Florida Bulls",
-      "vegas_home_spread": -1.5,
-      "chip_home_spread": -2.0,
-      "diff": 0.5,
-      "total": 70.5,
-      "chip_score": {
-        "Florida Atlantic Owls": 36,
-        "South Florida Bulls": 34
+        "Middle Tennessee Blue Raiders": 29
       },
       "pick": "PASS",
       "upset": false,
@@ -2221,10 +2498,130 @@
       "vegas_home_spread": 6.5,
       "chip_home_spread": 1.0,
       "diff": 5.5,
-      "total": 43.5,
+      "total": 43.0,
       "chip_score": {
         "Illinois Fighting Illini": 21,
         "Iowa Hawkeyes": 22
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T19:30:00Z",
+      "game": "South Florida Bulls @ Florida Atlantic Owls",
+      "home": "Florida Atlantic Owls",
+      "away": "South Florida Bulls",
+      "vegas_home_spread": 0.0,
+      "chip_home_spread": -2.0,
+      "diff": 2.0,
+      "total": 69.0,
+      "chip_score": {
+        "Florida Atlantic Owls": 36,
+        "South Florida Bulls": 34
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T19:30:00Z",
+      "game": "UL Monroe Warhawks @ Appalachian State Mountaineers",
+      "home": "Appalachian State Mountaineers",
+      "away": "UL Monroe Warhawks",
+      "vegas_home_spread": -14.5,
+      "chip_home_spread": -12.0,
+      "diff": -2.5,
+      "total": 50.5,
+      "chip_score": {
+        "Appalachian State Mountaineers": 31,
+        "UL Monroe Warhawks": 19
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:00:00Z",
+      "game": "Florida International Panthers @ Kennesaw State Owls",
+      "home": "Kennesaw State Owls",
+      "away": "Florida International Panthers",
+      "vegas_home_spread": -3.0,
+      "chip_home_spread": -6.0,
+      "diff": 3.0,
+      "total": 43.0,
+      "chip_score": {
+        "Kennesaw State Owls": 24,
+        "Florida International Panthers": 18
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:00:00Z",
+      "game": "Coastal Carolina Chanticleers @ Louisiana Ragin Cajuns",
+      "home": "Louisiana Ragin Cajuns",
+      "away": "Coastal Carolina Chanticleers",
+      "vegas_home_spread": -9.0,
+      "chip_home_spread": -12.0,
+      "diff": 3.0,
+      "total": 51.0,
+      "chip_score": {
+        "Louisiana Ragin Cajuns": 32,
+        "Coastal Carolina Chanticleers": 20
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:00:00Z",
+      "game": "Delaware Blue Hens @ New Mexico State Aggies",
+      "home": "New Mexico State Aggies",
+      "away": "Delaware Blue Hens",
+      "vegas_home_spread": 3.5,
+      "chip_home_spread": 5.0,
+      "diff": -1.5,
+      "total": 53.5,
+      "chip_score": {
+        "New Mexico State Aggies": 24,
+        "Delaware Blue Hens": 29
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
+      "game": "Old Dominion Monarchs @ UConn Huskies",
+      "home": "UConn Huskies",
+      "away": "Old Dominion Monarchs",
+      "vegas_home_spread": -14.5,
+      "chip_home_spread": -15.5,
+      "diff": 1.0,
+      "total": 48.5,
+      "chip_score": {
+        "UConn Huskies": 32,
+        "Old Dominion Monarchs": 16
       },
       "pick": "PASS",
       "upset": false,
@@ -2275,26 +2672,6 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T20:30:00Z",
-      "game": "Arizona Wildcats @ Kansas State Wildcats",
-      "home": "Kansas State Wildcats",
-      "away": "Arizona Wildcats",
-      "vegas_home_spread": 10.5,
-      "chip_home_spread": 9.5,
-      "diff": 1.0,
-      "total": 50.5,
-      "chip_score": {
-        "Kansas State Wildcats": 20,
-        "Arizona Wildcats": 30
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T20:30:00Z",
       "game": "Utah Utes @ TCU Horned Frogs",
       "home": "TCU Horned Frogs",
       "away": "Utah Utes",
@@ -2305,6 +2682,26 @@
       "chip_score": {
         "TCU Horned Frogs": 21,
         "Utah Utes": 26
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
+      "game": "Arizona Wildcats @ Kansas State Wildcats",
+      "home": "Kansas State Wildcats",
+      "away": "Arizona Wildcats",
+      "vegas_home_spread": 10.5,
+      "chip_home_spread": 9.5,
+      "diff": 1.0,
+      "total": 50.5,
+      "chip_score": {
+        "Kansas State Wildcats": 20,
+        "Arizona Wildcats": 30
       },
       "pick": "PASS",
       "upset": false,
@@ -2355,26 +2752,6 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T20:30:00Z",
-      "game": "Ohio State Buckeyes @ Nebraska Cornhuskers",
-      "home": "Nebraska Cornhuskers",
-      "away": "Ohio State Buckeyes",
-      "vegas_home_spread": 3.5,
-      "chip_home_spread": -4.0,
-      "diff": 7.5,
-      "total": 44.0,
-      "chip_score": {
-        "Nebraska Cornhuskers": 24,
-        "Ohio State Buckeyes": 20
-      },
-      "pick": "Nebraska Cornhuskers +3.5",
-      "upset": true,
-      "upset_team": "Nebraska Cornhuskers",
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T20:30:00Z",
       "game": "Texas Tech Red Raiders @ Baylor Bears",
       "home": "Baylor Bears",
       "away": "Texas Tech Red Raiders",
@@ -2398,9 +2775,9 @@
       "game": "Rutgers Scarlet Knights @ Penn State Nittany Lions",
       "home": "Penn State Nittany Lions",
       "away": "Rutgers Scarlet Knights",
-      "vegas_home_spread": -21.0,
+      "vegas_home_spread": -22.0,
       "chip_home_spread": -21.0,
-      "diff": 0.0,
+      "diff": -1.0,
       "total": 49.0,
       "chip_score": {
         "Penn State Nittany Lions": 35,
@@ -2409,6 +2786,26 @@
       "pick": "PASS",
       "upset": false,
       "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T20:30:00Z",
+      "game": "Ohio State Buckeyes @ Nebraska Cornhuskers",
+      "home": "Nebraska Cornhuskers",
+      "away": "Ohio State Buckeyes",
+      "vegas_home_spread": 3.5,
+      "chip_home_spread": -4.0,
+      "diff": 7.5,
+      "total": 43.5,
+      "chip_score": {
+        "Nebraska Cornhuskers": 24,
+        "Ohio State Buckeyes": 20
+      },
+      "pick": "Nebraska Cornhuskers +3.5",
+      "upset": true,
+      "upset_team": "Nebraska Cornhuskers",
       "locked": false
     },
     {
@@ -2434,6 +2831,106 @@
     {
       "sport": "CFB",
       "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "Georgia Southern Eagles @ Troy Trojans",
+      "home": "Troy Trojans",
+      "away": "Georgia Southern Eagles",
+      "vegas_home_spread": 8.5,
+      "chip_home_spread": 9.5,
+      "diff": -1.0,
+      "total": 47.5,
+      "chip_score": {
+        "Troy Trojans": 19,
+        "Georgia Southern Eagles": 28
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "Northern Illinois Huskies @ North Dakota State Bison",
+      "home": "North Dakota State Bison",
+      "away": "Northern Illinois Huskies",
+      "vegas_home_spread": -25.5,
+      "chip_home_spread": -27.0,
+      "diff": 1.5,
+      "total": 48.5,
+      "chip_score": {
+        "North Dakota State Bison": 38,
+        "Northern Illinois Huskies": 11
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "South Alabama Jaguars @ Southern Mississippi Golden Eagles",
+      "home": "Southern Mississippi Golden Eagles",
+      "away": "South Alabama Jaguars",
+      "vegas_home_spread": 5.5,
+      "chip_home_spread": 4.5,
+      "diff": 1.0,
+      "total": 62.5,
+      "chip_score": {
+        "Southern Mississippi Golden Eagles": 29,
+        "South Alabama Jaguars": 34
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T21:00:00Z",
+      "game": "Georgia State Panthers @ Marshall Thundering Herd",
+      "home": "Marshall Thundering Herd",
+      "away": "Georgia State Panthers",
+      "vegas_home_spread": 2.5,
+      "chip_home_spread": -0.5,
+      "diff": 3.0,
+      "total": 57.5,
+      "chip_score": {
+        "Marshall Thundering Herd": 29,
+        "Georgia State Panthers": 28
+      },
+      "pick": "PASS",
+      "upset": true,
+      "upset_team": "Marshall Thundering Herd",
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T23:00:00Z",
+      "game": "Washington State Cougars @ Texas State Bobcats",
+      "home": "Texas State Bobcats",
+      "away": "Washington State Cougars",
+      "vegas_home_spread": -14.5,
+      "chip_home_spread": -15.0,
+      "diff": 0.5,
+      "total": 57.5,
+      "chip_score": {
+        "Texas State Bobcats": 36,
+        "Washington State Cougars": 21
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
       "kickoff": "2026-11-21T23:15:00Z",
       "game": "Maryland Terrapins @ USC Trojans",
       "home": "USC Trojans",
@@ -2445,6 +2942,66 @@
       "chip_score": {
         "USC Trojans": 34,
         "Maryland Terrapins": 22
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:00:00Z",
+      "game": "Arkansas State Red Wolves @ Louisiana Tech Bulldogs",
+      "home": "Louisiana Tech Bulldogs",
+      "away": "Arkansas State Red Wolves",
+      "vegas_home_spread": -16.5,
+      "chip_home_spread": -18.0,
+      "diff": 1.5,
+      "total": 50.5,
+      "chip_score": {
+        "Louisiana Tech Bulldogs": 34,
+        "Arkansas State Red Wolves": 16
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:00:00Z",
+      "game": "UNLV Rebels @ San Jose State Spartans",
+      "home": "San Jose State Spartans",
+      "away": "UNLV Rebels",
+      "vegas_home_spread": 3.0,
+      "chip_home_spread": 1.5,
+      "diff": 1.5,
+      "total": 49.5,
+      "chip_score": {
+        "San Jose State Spartans": 24,
+        "UNLV Rebels": 26
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:30:00Z",
+      "game": "Colorado State Rams @ Fresno State Bulldogs",
+      "home": "Fresno State Bulldogs",
+      "away": "Colorado State Rams",
+      "vegas_home_spread": -19.5,
+      "chip_home_spread": -20.0,
+      "diff": 0.5,
+      "total": 61.5,
+      "chip_score": {
+        "Fresno State Bulldogs": 41,
+        "Colorado State Rams": 21
       },
       "pick": "PASS",
       "upset": false,
@@ -2475,26 +3032,6 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-22T00:30:00Z",
-      "game": "Kentucky Wildcats @ Missouri Tigers",
-      "home": "Missouri Tigers",
-      "away": "Kentucky Wildcats",
-      "vegas_home_spread": -5.5,
-      "chip_home_spread": -7.0,
-      "diff": 1.5,
-      "total": 48.5,
-      "chip_score": {
-        "Missouri Tigers": 28,
-        "Kentucky Wildcats": 21
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-22T00:30:00Z",
       "game": "SMU Mustangs @ Notre Dame Fighting Irish",
       "home": "Notre Dame Fighting Irish",
       "away": "SMU Mustangs",
@@ -2515,16 +3052,56 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-22T00:30:00Z",
+      "game": "Kentucky Wildcats @ Missouri Tigers",
+      "home": "Missouri Tigers",
+      "away": "Kentucky Wildcats",
+      "vegas_home_spread": -5.5,
+      "chip_home_spread": -7.0,
+      "diff": 1.5,
+      "total": 48.5,
+      "chip_score": {
+        "Missouri Tigers": 28,
+        "Kentucky Wildcats": 21
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T00:30:00Z",
       "game": "Georgia Bulldogs @ South Carolina Gamecocks",
       "home": "South Carolina Gamecocks",
       "away": "Georgia Bulldogs",
       "vegas_home_spread": 16.5,
       "chip_home_spread": 13.0,
       "diff": 3.5,
-      "total": 50.0,
+      "total": 50.5,
       "chip_score": {
-        "South Carolina Gamecocks": 18,
+        "South Carolina Gamecocks": 19,
         "Georgia Bulldogs": 32
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-22T02:30:00Z",
+      "game": "San Diego State Aztecs @ Boise State Broncos",
+      "home": "Boise State Broncos",
+      "away": "San Diego State Aztecs",
+      "vegas_home_spread": -18.5,
+      "chip_home_spread": -18.0,
+      "diff": -0.5,
+      "total": 62.5,
+      "chip_score": {
+        "Boise State Broncos": 40,
+        "San Diego State Aztecs": 22
       },
       "pick": "PASS",
       "upset": false,
@@ -2581,7 +3158,7 @@
       "vegas_home_spread": -7.5,
       "chip_home_spread": -5.0,
       "diff": -2.5,
-      "total": 50.5,
+      "total": 50.75,
       "chip_score": {
         "Dallas Cowboys": 28,
         "Tennessee Titans": 23
@@ -2638,15 +3215,15 @@
       "game": "Cardinals @ Chiefs",
       "home": "Kansas City Chiefs",
       "away": "Arizona Cardinals",
-      "vegas_home_spread": -14.5,
+      "vegas_home_spread": -14.0,
       "chip_home_spread": -8.0,
-      "diff": -6.5,
+      "diff": -6.0,
       "total": 42.0,
       "chip_score": {
         "Kansas City Chiefs": 25,
         "Arizona Cardinals": 17
       },
-      "pick": "Cardinals +14.5",
+      "pick": "Cardinals +14",
       "upset": false,
       "upset_team": null,
       "locked": false
@@ -2681,7 +3258,7 @@
       "vegas_home_spread": -1.5,
       "chip_home_spread": 3.5,
       "diff": -5.0,
-      "total": 43.0,
+      "total": 42.75,
       "chip_score": {
         "Los Angeles Chargers": 20,
         "New York Jets": 23
@@ -2689,26 +3266,6 @@
       "pick": "Jets +1.5",
       "upset": true,
       "upset_team": "New York Jets",
-      "locked": false
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T21:25:00Z",
-      "game": "Raiders @ Broncos",
-      "home": "Denver Broncos",
-      "away": "Las Vegas Raiders",
-      "vegas_home_spread": -8.5,
-      "chip_home_spread": -5.5,
-      "diff": -3.0,
-      "total": 41.5,
-      "chip_score": {
-        "Denver Broncos": 24,
-        "Las Vegas Raiders": 18
-      },
-      "pick": "Raiders +8.5",
-      "upset": false,
-      "upset_team": null,
       "locked": false
     },
     {
@@ -2725,6 +3282,26 @@
       "chip_score": {
         "New York Giants": 18,
         "Jacksonville Jaguars": 26
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "locked": false
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T21:25:00Z",
+      "game": "Raiders @ Broncos",
+      "home": "Denver Broncos",
+      "away": "Las Vegas Raiders",
+      "vegas_home_spread": -8.0,
+      "chip_home_spread": -5.5,
+      "diff": -2.5,
+      "total": 41.25,
+      "chip_score": {
+        "Denver Broncos": 23,
+        "Las Vegas Raiders": 18
       },
       "pick": "PASS",
       "upset": false,
@@ -2773,7 +3350,10 @@
     }
   ],
   "unmatched_kalshi": [
+    "CFB: Hawaii Rainbow Warriors @ Nevada Wolf Pack",
     "CFB: Virginia Tech Hokies @ Miami Hurricanes",
+    "CFB: UL Monroe Warhawks @ Appalachian State Mountaineers",
+    "CFB: South Alabama Jaguars @ Southern Mississippi Golden Eagles",
     "UFC: Adrian Bartosinski @ Tymoteusz \u0141opaczyk",
     "UFC: Tomasz Romanowski @ Igor Michaliszyn",
     "UFC: Madars Fleminas @ Mateusz Pawlik",
