@@ -195,7 +195,7 @@ def evaluate(game, kalshi_pair, sport, threshold=None):
     }
 
 
-def chip_line(row, ratings, hfa, sport):
+def chip_line(row, ratings, hfa, sport, extra=None):
     """Chip's own spread vs Vegas for one game. Returns a dict (pick None when they roughly agree)."""
     from .ratings import chip_spread, match_name
     home, away = row["home"], row["away"]
@@ -206,7 +206,14 @@ def chip_line(row, ratings, hfa, sport):
     ch = chip_spread(ratings, hfa, rh, ra)
     if ch is None:
         return None
+    extra = extra or {}
+    adj = extra.get("adj", {})
+    ch = ch + adj.get(home, 0.0) - adj.get(away, 0.0)       # injured QB makes a team worse
+    ch = round(ch * 2) / 2
+    wx = (extra.get("weather") or {}).get(row["game_id"])
     total = row["fair"].get("_total") or config.DEFAULT_TOTAL.get(sport, 45.0)
+    if wx:
+        total = total + wx["total_adj"]
     margin = -ch  # Chip's expected home margin
     hs, as_ = round((total + margin) / 2), round((total - margin) / 2)
     diff = vh - ch  # > 0: Chip likes the home team more than Vegas does
@@ -221,4 +228,6 @@ def chip_line(row, ratings, hfa, sport):
     return {"vegas_home_spread": vh, "chip_home_spread": ch, "diff": round(diff, 1), "total": total,
             "chip_score": {home: hs, away: as_}, "pick": pick, "pick_team": side,
             "pick_line": (vh if side == home else -vh) if side else None,
-            "upset": upset, "upset_team": chip_fav if upset else None}
+            "upset": upset, "upset_team": chip_fav if upset else None,
+            "injuries": [n for t, n in extra.get("notes", {}).items() if t in (home, away)],
+            "weather": wx["label"] if wx and wx["label"] else None}

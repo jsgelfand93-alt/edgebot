@@ -10,21 +10,36 @@ from . import ratings as ratings_mod
 from .teams import match_game
 
 
-def _chip_model(sp, fetch_results):
+def _chip_model(sp, fetch_results, nfl_data=None):
+    """Returns (ratings, home_field, extra) or None. NFL blends EPA ratings and adds QB injuries."""
     if sp not in ratings_mod.LEAGUES:
         return None
     try:
         games = fetch_results(sp)
         r, hfa = ratings_mod.fit(games, sp)
         print(f"[{sp}] Chip's ratings: {len(r)} teams from {len(games)} games, home field {hfa:+.1f}")
-        return r, hfa
     except Exception as e:
         print(f"[{sp}] Chip's ratings unavailable: {e}")
         return None
+    extra = {}
+    if sp == "NFL":
+        try:
+            from . import nflextra
+            pbp, inj = nfl_data() if nfl_data else (nflextra.load_pbp(ratings_mod.season_year()),
+                                                    nflextra.load_injuries(ratings_mod.season_year()))
+            er, ehfa = ratings_mod.fit(nflextra.epa_games(pbp), sp)
+            w = config.EPA_WEIGHT
+            r = {t: w * er.get(t, r[t]) + (1 - w) * r[t] for t in r}
+            # EPA's own home-field estimate is noisy; keep the score-based home field.
+            extra["adj"], extra["notes"] = nflextra.qb_adjustments(pbp, inj)
+            print(f"[NFL] EPA blended ({w:.0%}); QB injury adjustments: {extra['notes'] or 'none'}")
+        except Exception as e:
+            print(f"[NFL] EPA/injury data unavailable, using scores only: {e}")
+    return r, hfa, extra
 
 
 def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi.fetch_events, out=None,
-         fetch_results=ratings_mod.fetch_results):
+         fetch_results=ratings_mod.fetch_results, nfl_data=None, weather=None):
     con = store.db()
     rows, unmatched, ok = [], [], 0
     now = datetime.now(timezone.utc)
@@ -41,7 +56,12 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
             print(f"[{sp}] Kalshi unavailable ({e}); running best-price check only")
             events = []
         ok += 1
-        model = _chip_model(sp, fetch_results)
+        model = _chip_model(sp, fetch_results, nfl_data)
+        if model and sp == "NFL":
+            from . import nflextra
+            wfn = weather or nflextra.weather_for
+            model[2]["weather"] = {g["id"]: w for g in games
+                                   if (w := wfn(g["home_team"], g["commence_time"]))}
         for g in games:
             start = datetime.fromisoformat(g["commence_time"].replace("Z", "+00:00"))
             if start <= now:
@@ -64,7 +84,7 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
                 store.lock_pick(con, row, row["longshot"])
                 row["longshot"]["locked"] = True
             store.update_close(con, row, sp)
-            row["chip"] = chip_line(row, *model, sp) if model else None
+            row["chip"] = chip_line(row, model[0], model[1], sp, model[2]) if model else None
             if row["chip"] and row["chip"]["pick"] and start - now <= timedelta(hours=lock_hours):
                 store.lock_chip_pick(con, row, row["chip"])
                 row["chip"]["locked"] = True
@@ -144,6 +164,7 @@ def write_output(con, rows, unmatched, path):
              "diff": r["chip"]["diff"], "total": r["chip"]["total"],
              "chip_score": r["chip"]["chip_score"], "pick": r["chip"]["pick"] or "PASS",
              "upset": r["chip"]["upset"], "upset_team": r["chip"]["upset_team"],
+             "injuries": r["chip"].get("injuries", []), "weather": r["chip"].get("weather"),
              "locked": bool(r["chip"].get("locked"))}
             for r in sorted(rows, key=lambda r: r["commence_time"]) if r.get("chip")],
         "unmatched_kalshi": unmatched,

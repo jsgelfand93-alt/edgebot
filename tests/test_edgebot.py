@@ -143,7 +143,9 @@ class T(unittest.TestCase):
         events = {"KXNFLGAME": [NFL_EVENT, NFL_EVENT2], "KXNCAAFGAME": [CFB_EVENT]}
         rows = cli.scan(["NFL", "CFB"], 30, fetch_odds=lambda k: games[k], fetch_events=lambda s: events[s],
                         fetch_results=lambda sp: [{"home": "New York Jets", "away": "Buffalo Bills", "hs": 3, "as": 30,
-                                                   "neutral": False, "date": iso(-48)}] * 3)
+                                                   "neutral": False, "date": iso(-48)}] * 3,
+                        nfl_data=lambda: (_ for _ in ()).throw(RuntimeError("offline test")),
+                        weather=lambda h, k: None)
         out = json.load(open(os.environ["EDGEBOT_OUT"]))
         self.assertEqual(out["picks"][0]["pick"], "Jets ML (Kalshi 18¢)")
         self.assertTrue(out["picks"][0]["locked"])
@@ -190,6 +192,33 @@ class T(unittest.TestCase):
         cl2 = edges.chip_line(row, {"New York Jets": 3.0, "Buffalo Bills": 0.0}, 2.0, "NFL")
         self.assertTrue(cl2["upset"])                     # Chip has the Vegas underdog winning
         self.assertEqual(cl2["pick"], "Jets +7.5")
+
+    def test_nfl_extras_real_data(self):
+        """Uses cached nflverse files if present (downloaded during development); skipped otherwise."""
+        import os, pandas as pd
+        from edgebot import nflextra, ratings
+        if not (os.path.exists("/tmp/pbp.csv.gz") and os.path.exists("/tmp/inj.csv")):
+            self.skipTest("no cached nflverse data")
+        pbp = pd.read_csv("/tmp/pbp.csv.gz", low_memory=False)
+        pbp = pbp[pbp["play_type"].isin(["pass", "run"]) & pbp["epa"].notna()]
+        games = nflextra.epa_games(pbp)
+        self.assertGreater(len(games), 100)
+        r, hfa = ratings.fit(games, "NFL")
+        self.assertEqual(len(r), 32)
+        adj, notes = nflextra.qb_adjustments(pbp, pd.read_csv("/tmp/inj.csv"))
+        for v in adj.values():
+            self.assertTrue(0.75 <= v <= 8.0)
+
+    def test_weather_adjusts_total(self):
+        row = edges.evaluate(NFL_GAME, None, "NFL")
+        wx = {"g1": {"total_adj": -3.5, "label": "WIND 24 MPH"}}
+        cl = edges.chip_line(row, {"New York Jets": 0.0, "Buffalo Bills": 8.0}, 2.0, "NFL", {"weather": wx})
+        self.assertEqual(cl["weather"], "WIND 24 MPH")
+        self.assertEqual(cl["total"], config.DEFAULT_TOTAL["NFL"] - 3.5)
+        cl2 = edges.chip_line(row, {"New York Jets": 0.0, "Buffalo Bills": 8.0}, 2.0, "NFL",
+                              {"adj": {"Buffalo Bills": 6.0}, "notes": {"Buffalo Bills": "QB X OUT (-6.0)"}})
+        self.assertEqual(cl2["chip_home_spread"], 0.0)       # Bills -6 -> pick'em once their QB is out
+        self.assertIn("QB X OUT (-6.0)", cl2["injuries"])
 
     def test_units(self):
         self.assertAlmostEqual(store.units_for("W", 500), 5.0)

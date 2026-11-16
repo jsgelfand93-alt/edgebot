@@ -46,6 +46,9 @@ POINT_VALUE = {"NFL": 0.03, "CFB": 0.025}
 CHIP_PICK_THRESHOLD = {"NFL": float(os.environ.get("CHIP_NFL_PTS", "3.0")),
                        "CFB": float(os.environ.get("CHIP_CFB_PTS", "6.0"))}
 DEFAULT_TOTAL = {"NFL": 44.0, "CFB": 52.0}
+# NFL extras: how much Chip's rating trusts EPA (play-by-play) vs final scores, and the backup-QB baseline.
+EPA_WEIGHT = float(os.environ.get("EPA_WEIGHT", "0.6"))
+BACKUP_QB_EPA = float(os.environ.get("BACKUP_QB_EPA", "-0.12"))
 
 # Books treated as "sharp" get extra weight in the consensus.
 SHARP_BOOKS = {"pinnacle", "circasports", "betonlineag", "lowvig", "bookmaker", "betcris"}
