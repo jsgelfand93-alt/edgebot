@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T08:33:20+00:00",
+  "generated_at": "2026-11-16T08:36:51+00:00",
   "rules": {
     "kalshi_gap_pts": 3.0,
     "best_price_min_ev_pct": 2.0
@@ -50,6 +50,27 @@
     },
     {
       "sport": "CFB",
+      "date": "2026-11-17",
+      "kickoff": "2026-11-18T00:00:00Z",
+      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
+      "pick": "Miami (OH) RedHawks -7.5",
+      "kind": "price",
+      "team": "Miami (OH) RedHawks",
+      "fair_pct": 74,
+      "fair_spread": -9.5,
+      "line": -7.5,
+      "price": -112,
+      "book": "BetRivers",
+      "ev_pct": 4.1,
+      "kalshi_pct": 76,
+      "kalshi_gap": -2.4,
+      "locked": false,
+      "books": 6,
+      "fair_odds": -285,
+      "close_ev_pct": null
+    },
+    {
+      "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-21T17:00:00Z",
       "game": "East Carolina Pirates @ Army Black Knights",
@@ -82,12 +103,12 @@
       "line": null,
       "price": 245,
       "book": "Kalshi",
-      "ev_pct": 9.4,
+      "ev_pct": 9.7,
       "kalshi_pct": 29,
-      "kalshi_gap": 3.2,
+      "kalshi_gap": 3.3,
       "locked": false,
       "books": 5,
-      "fair_odds": 215,
+      "fair_odds": 214,
       "close_ev_pct": null
     },
     {
@@ -152,27 +173,6 @@
       "books": 5,
       "fair_odds": -132,
       "close_ev_pct": null
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-17",
-      "kickoff": "2026-11-18T00:00:00Z",
-      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
-      "pick": "Miami (OH) RedHawks -7.5",
-      "kind": "price",
-      "team": "Miami (OH) RedHawks",
-      "fair_pct": 74,
-      "fair_spread": -9.0,
-      "line": -7.5,
-      "price": -112,
-      "book": "BetRivers",
-      "ev_pct": 2.2,
-      "kalshi_pct": 76,
-      "kalshi_gap": -2.5,
-      "locked": false,
-      "books": 6,
-      "fair_odds": -285,
-      "close_ev_pct": null
     }
   ],
   "slate": [
@@ -198,6 +198,15 @@
       "sport": "CFB",
       "date": "2026-11-17",
       "kickoff": "2026-11-18T00:00:00Z",
+      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
+      "pick": "Miami (OH) RedHawks -7.5",
+      "kalshi_gap": 2.4,
+      "best_ev_pct": 4.1
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-17",
+      "kickoff": "2026-11-18T00:00:00Z",
       "game": "Ball State Cardinals @ Ohio Bobcats",
       "pick": "NO EDGE",
       "kalshi_gap": 2.5,
@@ -205,20 +214,11 @@
     },
     {
       "sport": "CFB",
-      "date": "2026-11-17",
-      "kickoff": "2026-11-18T00:00:00Z",
-      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
-      "pick": "Miami (OH) RedHawks -7.5",
-      "kalshi_gap": 2.0,
-      "best_ev_pct": 2.2
-    },
-    {
-      "sport": "CFB",
       "date": "2026-11-18",
       "kickoff": "2026-11-19T00:00:00Z",
       "game": "Akron Zips @ UMass Minutemen",
       "pick": "UMass Minutemen -3.5",
-      "kalshi_gap": 2.3,
+      "kalshi_gap": 2.8,
       "best_ev_pct": 2.8
     },
     {
@@ -380,8 +380,8 @@
       "kickoff": "2026-11-21T16:15:00Z",
       "game": "Tallison Teixeira @ Shamil Gaziev",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.3,
-      "best_ev_pct": 0.2
+      "kalshi_gap": 0.4,
+      "best_ev_pct": 0.5
     },
     {
       "sport": "CFB",
@@ -587,8 +587,8 @@
       "kickoff": "2026-11-21T19:30:00Z",
       "game": "Iowa Hawkeyes @ Illinois Fighting Illini",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.7,
-      "best_ev_pct": -3.1
+      "kalshi_gap": 1.8,
+      "best_ev_pct": -2.7
     },
     {
       "sport": "CFB",
@@ -641,8 +641,8 @@
       "kickoff": "2026-11-21T20:30:00Z",
       "game": "Utah Utes @ TCU Horned Frogs",
       "pick": "TCU Horned Frogs ML (Kalshi 29\u00a2)",
-      "kalshi_gap": 3.2,
-      "best_ev_pct": -1.6
+      "kalshi_gap": 3.3,
+      "best_ev_pct": -1.4
     },
     {
       "sport": "CFB",
@@ -678,7 +678,7 @@
       "game": "Houston Cougars @ West Virginia Mountaineers",
       "pick": "NO EDGE",
       "kalshi_gap": 1.8,
-      "best_ev_pct": -2.4
+      "best_ev_pct": -2.5
     },
     {
       "sport": "CFB",
@@ -696,7 +696,7 @@
       "game": "Wake Forest Demon Deacons @ Georgia Tech Yellow Jackets",
       "pick": "NO EDGE",
       "kalshi_gap": 1.3,
-      "best_ev_pct": -2.6
+      "best_ev_pct": -3.0
     },
     {
       "sport": "CFB",
@@ -722,7 +722,7 @@
       "kickoff": "2026-11-21T20:30:00Z",
       "game": "Texas Tech Red Raiders @ Baylor Bears",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.6,
+      "kalshi_gap": 0.7,
       "best_ev_pct": -2.3
     },
     {
@@ -837,19 +837,19 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-22T00:00:00Z",
-      "game": "UNLV Rebels @ San Jose State Spartans",
+      "game": "Virginia Tech Hokies @ Miami Hurricanes",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.5,
-      "best_ev_pct": 0.3
+      "kalshi_gap": 1.6,
+      "best_ev_pct": -2.5
     },
     {
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-22T00:00:00Z",
-      "game": "Virginia Tech Hokies @ Miami Hurricanes",
+      "game": "UNLV Rebels @ San Jose State Spartans",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.4,
-      "best_ev_pct": -2.5
+      "kalshi_gap": 1.5,
+      "best_ev_pct": 0.3
     },
     {
       "sport": "CFB",
@@ -902,8 +902,8 @@
       "kickoff": "2026-11-22T01:00:00Z",
       "game": "UTSA Roadrunners @ UAB Blazers",
       "pick": "NO EDGE",
-      "kalshi_gap": 2.1,
-      "best_ev_pct": 0.8
+      "kalshi_gap": 1.8,
+      "best_ev_pct": -0.1
     },
     {
       "sport": "CFB",
@@ -1620,19 +1620,19 @@
       "home": "Baltimore Ravens",
       "away": "Los Angeles Chargers",
       "vegas_home_spread": -4.5,
-      "chip_home_spread": -6.5,
-      "diff": 2.0,
+      "chip_home_spread": -7.5,
+      "diff": 3.0,
       "total": 39.0,
       "chip_score": {
         "Baltimore Ravens": 23,
         "Los Angeles Chargers": 16
       },
-      "pick": "PASS",
+      "pick": "Ravens -4.5",
       "upset": false,
       "upset_team": null,
       "injuries": [],
       "weather": null,
-      "locked": false
+      "locked": true
     },
     {
       "sport": "CFB",
@@ -1660,16 +1660,16 @@
       "sport": "CFB",
       "date": "2026-11-17",
       "kickoff": "2026-11-18T00:00:00Z",
-      "game": "Ball State Cardinals @ Ohio Bobcats",
-      "home": "Ohio Bobcats",
-      "away": "Ball State Cardinals",
-      "vegas_home_spread": -10.5,
-      "chip_home_spread": -10.0,
-      "diff": -0.5,
-      "total": 49.5,
+      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
+      "home": "Kent State Golden Flashes",
+      "away": "Miami (OH) RedHawks",
+      "vegas_home_spread": 9.5,
+      "chip_home_spread": 8.5,
+      "diff": 1.0,
+      "total": 46.0,
       "chip_score": {
-        "Ohio Bobcats": 30,
-        "Ball State Cardinals": 20
+        "Kent State Golden Flashes": 19,
+        "Miami (OH) RedHawks": 27
       },
       "pick": "PASS",
       "upset": false,
@@ -1682,16 +1682,16 @@
       "sport": "CFB",
       "date": "2026-11-17",
       "kickoff": "2026-11-18T00:00:00Z",
-      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
-      "home": "Kent State Golden Flashes",
-      "away": "Miami (OH) RedHawks",
-      "vegas_home_spread": 9.0,
-      "chip_home_spread": 8.5,
-      "diff": 0.5,
-      "total": 46.0,
+      "game": "Ball State Cardinals @ Ohio Bobcats",
+      "home": "Ohio Bobcats",
+      "away": "Ball State Cardinals",
+      "vegas_home_spread": -10.5,
+      "chip_home_spread": -10.0,
+      "diff": -0.5,
+      "total": 49.5,
       "chip_score": {
-        "Kent State Golden Flashes": 19,
-        "Miami (OH) RedHawks": 27
+        "Ohio Bobcats": 30,
+        "Ball State Cardinals": 20
       },
       "pick": "PASS",
       "upset": false,
@@ -1752,8 +1752,8 @@
       "home": "Houston Texans",
       "away": "Indianapolis Colts",
       "vegas_home_spread": -10.0,
-      "chip_home_spread": -8.0,
-      "diff": -2.0,
+      "chip_home_spread": -8.5,
+      "diff": -1.5,
       "total": 44.5,
       "chip_score": {
         "Houston Texans": 26,
@@ -2826,16 +2826,16 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-22T00:00:00Z",
-      "game": "UNLV Rebels @ San Jose State Spartans",
-      "home": "San Jose State Spartans",
-      "away": "UNLV Rebels",
-      "vegas_home_spread": 5.0,
-      "chip_home_spread": 3.5,
-      "diff": 1.5,
-      "total": 46.25,
+      "game": "Virginia Tech Hokies @ Miami Hurricanes",
+      "home": "Miami Hurricanes",
+      "away": "Virginia Tech Hokies",
+      "vegas_home_spread": -20.5,
+      "chip_home_spread": -23.0,
+      "diff": 2.5,
+      "total": 61.0,
       "chip_score": {
-        "San Jose State Spartans": 21,
-        "UNLV Rebels": 25
+        "Miami Hurricanes": 42,
+        "Virginia Tech Hokies": 19
       },
       "pick": "PASS",
       "upset": false,
@@ -2848,16 +2848,16 @@
       "sport": "CFB",
       "date": "2026-11-21",
       "kickoff": "2026-11-22T00:00:00Z",
-      "game": "Virginia Tech Hokies @ Miami Hurricanes",
-      "home": "Miami Hurricanes",
-      "away": "Virginia Tech Hokies",
-      "vegas_home_spread": -20.5,
-      "chip_home_spread": -23.0,
-      "diff": 2.5,
-      "total": 61.0,
+      "game": "UNLV Rebels @ San Jose State Spartans",
+      "home": "San Jose State Spartans",
+      "away": "UNLV Rebels",
+      "vegas_home_spread": 5.0,
+      "chip_home_spread": 3.5,
+      "diff": 1.5,
+      "total": 46.25,
       "chip_score": {
-        "Miami Hurricanes": 42,
-        "Virginia Tech Hokies": 19
+        "San Jose State Spartans": 21,
+        "UNLV Rebels": 25
       },
       "pick": "PASS",
       "upset": false,
@@ -3072,11 +3072,11 @@
       "home": "Philadelphia Eagles",
       "away": "Pittsburgh Steelers",
       "vegas_home_spread": 4.5,
-      "chip_home_spread": 5.0,
-      "diff": -0.5,
+      "chip_home_spread": 6.0,
+      "diff": -1.5,
       "total": 38.5,
       "chip_score": {
-        "Philadelphia Eagles": 17,
+        "Philadelphia Eagles": 16,
         "Pittsburgh Steelers": 22
       },
       "pick": "PASS",
@@ -3094,18 +3094,18 @@
       "home": "Chicago Bears",
       "away": "New Orleans Saints",
       "vegas_home_spread": -10.0,
-      "chip_home_spread": -10.5,
-      "diff": 0.5,
-      "total": 49.0,
+      "chip_home_spread": -11.5,
+      "diff": 1.5,
+      "total": 47.8,
       "chip_score": {
         "Chicago Bears": 30,
-        "New Orleans Saints": 19
+        "New Orleans Saints": 18
       },
       "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
-      "weather": null,
+      "weather": "WIND 13 MPH",
       "locked": false
     },
     {
@@ -3116,11 +3116,11 @@
       "home": "Detroit Lions",
       "away": "Tampa Bay Buccaneers",
       "vegas_home_spread": -5.5,
-      "chip_home_spread": -5.0,
-      "diff": -0.5,
+      "chip_home_spread": -4.0,
+      "diff": -1.5,
       "total": 46.5,
       "chip_score": {
-        "Detroit Lions": 26,
+        "Detroit Lions": 25,
         "Tampa Bay Buccaneers": 21
       },
       "pick": "PASS",
@@ -3138,12 +3138,12 @@
       "home": "Kansas City Chiefs",
       "away": "Arizona Cardinals",
       "vegas_home_spread": -16.5,
-      "chip_home_spread": -14.0,
-      "diff": -2.5,
+      "chip_home_spread": -14.5,
+      "diff": -2.0,
       "total": 41.0,
       "chip_score": {
         "Kansas City Chiefs": 28,
-        "Arizona Cardinals": 14
+        "Arizona Cardinals": 13
       },
       "pick": "PASS",
       "upset": false,
@@ -3160,12 +3160,12 @@
       "home": "Dallas Cowboys",
       "away": "Tennessee Titans",
       "vegas_home_spread": -7.5,
-      "chip_home_spread": -8.0,
-      "diff": 0.5,
+      "chip_home_spread": -8.5,
+      "diff": 1.0,
       "total": 53.5,
       "chip_score": {
         "Dallas Cowboys": 31,
-        "Tennessee Titans": 23
+        "Tennessee Titans": 22
       },
       "pick": "PASS",
       "upset": false,
@@ -3182,18 +3182,18 @@
       "home": "Buffalo Bills",
       "away": "Miami Dolphins",
       "vegas_home_spread": -16.5,
-      "chip_home_spread": -14.5,
-      "diff": -2.0,
-      "total": 46.5,
+      "chip_home_spread": -15.0,
+      "diff": -1.5,
+      "total": 43.8,
       "chip_score": {
-        "Buffalo Bills": 30,
-        "Miami Dolphins": 16
+        "Buffalo Bills": 29,
+        "Miami Dolphins": 14
       },
       "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
-      "weather": null,
+      "weather": "WIND 18 MPH",
       "locked": false
     },
     {
@@ -3204,12 +3204,12 @@
       "home": "Carolina Panthers",
       "away": "Baltimore Ravens",
       "vegas_home_spread": -2.5,
-      "chip_home_spread": -5.5,
-      "diff": 3.0,
+      "chip_home_spread": -6.5,
+      "diff": 4.0,
       "total": 44.5,
       "chip_score": {
-        "Carolina Panthers": 25,
-        "Baltimore Ravens": 20
+        "Carolina Panthers": 26,
+        "Baltimore Ravens": 19
       },
       "pick": "Panthers -2.5",
       "upset": false,
@@ -3226,16 +3226,16 @@
       "home": "Los Angeles Chargers",
       "away": "New York Jets",
       "vegas_home_spread": -3.5,
-      "chip_home_spread": -0.5,
-      "diff": -3.0,
+      "chip_home_spread": 1.0,
+      "diff": -4.5,
       "total": 40.5,
       "chip_score": {
         "Los Angeles Chargers": 20,
-        "New York Jets": 20
+        "New York Jets": 21
       },
       "pick": "Jets +3.5",
-      "upset": false,
-      "upset_team": null,
+      "upset": true,
+      "upset_team": "New York Jets",
       "injuries": [],
       "weather": null,
       "locked": false
@@ -3248,12 +3248,12 @@
       "home": "Denver Broncos",
       "away": "Las Vegas Raiders",
       "vegas_home_spread": -10.0,
-      "chip_home_spread": -9.0,
-      "diff": -1.0,
+      "chip_home_spread": -10.0,
+      "diff": 0.0,
       "total": 40.0,
       "chip_score": {
-        "Denver Broncos": 24,
-        "Las Vegas Raiders": 16
+        "Denver Broncos": 25,
+        "Las Vegas Raiders": 15
       },
       "pick": "PASS",
       "upset": false,
@@ -3270,18 +3270,18 @@
       "home": "New York Giants",
       "away": "Jacksonville Jaguars",
       "vegas_home_spread": 6.5,
-      "chip_home_spread": 5.0,
-      "diff": 1.5,
-      "total": 46.5,
+      "chip_home_spread": 4.0,
+      "diff": 2.5,
+      "total": 45.0,
       "chip_score": {
-        "New York Giants": 21,
-        "Jacksonville Jaguars": 26
+        "New York Giants": 20,
+        "Jacksonville Jaguars": 24
       },
       "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
-      "weather": null,
+      "weather": "RAIN",
       "locked": false
     },
     {
@@ -3292,14 +3292,14 @@
       "home": "San Francisco 49ers",
       "away": "Minnesota Vikings",
       "vegas_home_spread": -3.0,
-      "chip_home_spread": -4.0,
-      "diff": 1.0,
+      "chip_home_spread": -7.0,
+      "diff": 4.0,
       "total": 46.0,
       "chip_score": {
-        "San Francisco 49ers": 25,
-        "Minnesota Vikings": 21
+        "San Francisco 49ers": 26,
+        "Minnesota Vikings": 20
       },
-      "pick": "PASS",
+      "pick": "49ers -3",
       "upset": false,
       "upset_team": null,
       "injuries": [],
