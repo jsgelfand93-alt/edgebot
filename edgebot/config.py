@@ -69,3 +69,6 @@ ODDS_REGIONS = os.environ.get("ODDS_REGIONS", "us")
 VOID_PICKS = [
     ("2026-11-15", "Dolphins"),
 ]
+
+# Home field Chip uses = what Vegas implies on the slate, kept within these bounds (points).
+HFA_MIN, HFA_MAX = 0.0, 3.0

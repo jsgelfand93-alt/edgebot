@@ -38,6 +38,23 @@ def _chip_model(sp, fetch_results, nfl_data=None):
     return r, hfa, extra
 
 
+
+def _market_hfa(rows, ratings, fitted):
+    """Home-field edge implied by Vegas this slate (median), so Chip never leans home/away as a group.
+    Picks then come only from team-strength disagreements. Falls back to the fitted value."""
+    from .ratings import match_name
+    diffs = []
+    for row in rows:
+        vh = (row.get("fair", {}).get(row["home"]) or {}).get("spread")
+        rh, ra = match_name(row["home"], ratings), match_name(row["away"], ratings)
+        if vh is not None and rh and ra:
+            diffs.append(-vh - (ratings[rh] - ratings[ra]))
+    if len(diffs) < 4:
+        return fitted
+    diffs.sort()
+    m = diffs[len(diffs) // 2] if len(diffs) % 2 else (diffs[len(diffs) // 2 - 1] + diffs[len(diffs) // 2]) / 2
+    return round(max(config.HFA_MIN, min(config.HFA_MAX, m)), 2)
+
 def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi.fetch_events, out=None,
          fetch_results=ratings_mod.fetch_results, nfl_data=None, weather=None):
     con = store.db()
@@ -90,11 +107,19 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
                 store.lock_pick(con, row, row["longshot"])
                 row["longshot"]["locked"] = True
             store.update_close(con, row, sp)
-            row["chip"] = chip_line(row, model[0], model[1], sp, model[2]) if model else None
+            row["_start"] = start
+            rows.append(row)
+        sp_rows = [r for r in rows if r["sport"] == sp]
+        if model:
+            hfa = _market_hfa(sp_rows, model[0], model[1])
+            if hfa != model[1]:
+                print(f"[{sp}] home field set from the market: {hfa:+.1f} (results said {model[1]:+.1f})")
+        for row in sp_rows:
+            start = row.pop("_start")
+            row["chip"] = chip_line(row, model[0], hfa, sp, model[2]) if model else None
             if row["chip"] and row["chip"]["pick"] and start - now <= timedelta(hours=lock_hours):
                 store.lock_chip_pick(con, row, row["chip"])
                 row["chip"]["locked"] = True
-            rows.append(row)
         print(f"[{sp}] {len(games)} games, {sum(1 for r in rows if r['sport'] == sp)} matched to Kalshi")
     rows.sort(key=lambda r: -_strength(r))
     if not ok:
