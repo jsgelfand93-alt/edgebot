@@ -136,7 +136,7 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
     if not ok:
         print("No data source worked; keeping the previous edges.json.")
         return rows
-    write_output(con, rows, unmatched, out or config.OUT_PATH)
+    write_output(con, rows, unmatched, out or config.OUT_PATH, sports)
     print_table(rows)
     if unmatched:
         print(f"\nNot matched to a Kalshi market ({len(unmatched)}): " + "; ".join(unmatched[:10]))
@@ -159,7 +159,7 @@ def _strength(r):
     return (pk["ev"] or 0) * 100 if pk and pk["kind"] == "price" else (r["gap"] or 0)
 
 
-def write_output(con, rows, unmatched, path):
+def write_output(con, rows, unmatched, path, sports=None):
     """edges.json: what Chip's video pipeline reads. Percentages are whole points."""
     def pick_json(r):
         pk = r["pick_info"]; t = pk["team"]
@@ -211,10 +211,37 @@ def write_output(con, rows, unmatched, path):
             for r in sorted(rows, key=lambda r: r["commence_time"]) if r.get("chip")],
         "unmatched_kalshi": unmatched,
     }
+    _merge_previous(data, path, sports)
     with open(path, "w") as f:
         json.dump(data, f, indent=2)
     print(f"wrote {path}")
 
+
+
+def _merge_previous(data, path, sports):
+    """A run that scans only some sports keeps the other sports' upcoming games from the last file,
+    so a quick NFL refresh never wipes the college or UFC data. 'updated' says how fresh each sport is."""
+    import os
+    sports = set(sports or config.SPORTS)
+    old = {}
+    if os.path.exists(path):
+        try:
+            with open(path) as f:
+                old = json.load(f)
+        except Exception:
+            old = {}
+    now = data["generated_at"]
+    for key in ("picks", "slate", "longshots", "chip_lines"):
+        keep = [x for x in old.get(key, []) if x.get("sport") not in sports and (x.get("kickoff") or "") > now]
+        data[key] = data[key] + keep
+        if key != "picks":
+            data[key].sort(key=lambda x: x.get("kickoff") or "")
+    data["unmatched_kalshi"] = data["unmatched_kalshi"] + [u for u in old.get("unmatched_kalshi", [])
+                                                         if u.split(":")[0] not in sports]
+    upd = dict(old.get("updated", {}))
+    for sp in sports:
+        upd[sp] = now
+    data["updated"] = upd
 
 def print_table(rows):
     print(f"\n{'SPORT':5} {'GAME':32} {'PICK':24} {'KALSHI GAP':>10} {'BEST PRICE':>28}")
