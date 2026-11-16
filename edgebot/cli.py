@@ -58,10 +58,16 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
         ok += 1
         model = _chip_model(sp, fetch_results, nfl_data)
         if model and sp == "NFL":
-            from . import nflextra
-            wfn = weather or nflextra.weather_for
-            model[2]["weather"] = {g["id"]: w for g in games
-                                   if (w := wfn(g["home_team"], g["commence_time"]))}
+            try:
+                if weather:
+                    wfn = weather
+                else:
+                    from . import nflextra
+                    wfn = nflextra.weather_for
+                model[2]["weather"] = {g["id"]: w for g in games
+                                       if (w := wfn(g["home_team"], g["commence_time"]))}
+            except Exception as e:  # weather is a bonus - never let it stop the scan
+                print(f"[{sp}] weather unavailable: {e}")
         for g in games:
             start = datetime.fromisoformat(g["commence_time"].replace("Z", "+00:00"))
             if start <= now:

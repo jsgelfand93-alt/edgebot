@@ -49,6 +49,10 @@ def db():
                      SELECT MAX(rowid) FROM picks GROUP BY game_id, team, COALESCE(kind,''))""")
     con.execute("""DELETE FROM picks WHERE kind='longshot' AND result='pending' AND rowid NOT IN (
                      SELECT MAX(rowid) FROM picks WHERE kind='longshot' GROUP BY game_id, team)""")
+    # picks the owner pulled before airing never count (game date, team substring)
+    for d, team in config.VOID_PICKS:
+        con.execute("DELETE FROM chip_picks WHERE date=? AND team LIKE ?", (d, f"%{team}%"))
+        con.execute("DELETE FROM picks WHERE date=? AND team LIKE ?", (d, f"%{team}%"))
     con.commit()
     return con
 

@@ -64,3 +64,8 @@ SPORTS = {
 
 # Odds API regions: "us" covers the US books; adding "eu" brings Pinnacle but doubles the credit cost.
 ODDS_REGIONS = os.environ.get("ODDS_REGIONS", "us")
+
+# Picks pulled before they aired (e.g. starting QB ruled out). (game date, team name) - removed from every record.
+VOID_PICKS = [
+    ("2026-11-15", "Dolphins"),
+]
