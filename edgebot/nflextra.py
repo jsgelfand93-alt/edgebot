@@ -38,7 +38,8 @@ STADIUMS = {
 def _csv(url, get=requests.get, **kw):
     r = get(url, timeout=120)
     r.raise_for_status()
-    return pd.read_csv(io.BytesIO(r.content), compression="infer", low_memory=False, **kw)
+    comp = "gzip" if url.endswith(".gz") or r.content[:2] == b"\x1f\x8b" else None
+    return pd.read_csv(io.BytesIO(r.content), compression=comp, low_memory=False, **kw)
 
 
 def load_pbp(year, get=requests.get):
@@ -126,9 +127,13 @@ def weather_for(home_team, kickoff_iso, get=requests.get):
         return None
     i = h["time"].index(key)
     span = slice(i, min(i + 3, len(h["time"])))  # the first ~3 hours of the game
-    wind = float(np.mean(h["wind_speed_10m"][span]))
-    rain = float(np.mean(h["precipitation"][span]))
-    temp = float(np.mean(h["temperature_2m"][span]))
+    def avg(k):
+        vals = [v for v in h.get(k, [])[span] if v is not None]
+        return float(np.mean(vals)) if vals else None
+    wind, rain, temp = avg("wind_speed_10m"), avg("precipitation"), avg("temperature_2m")
+    if wind is None or temp is None:
+        return None  # too far out - the forecast has no numbers for kickoff yet
+    rain = rain or 0.0
     adj, tags = 0.0, []
     if wind >= 12:
         adj -= min(6.0, (wind - 12) * 0.3 + 1.0); tags.append(f"WIND {wind:.0f} MPH")

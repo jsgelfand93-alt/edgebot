@@ -81,8 +81,19 @@ def scan(sports, lock_hours, fetch_odds=odds_api.fetch_odds, fetch_events=kalshi
                 else:
                     from . import nflextra
                     wfn = nflextra.weather_for
-                model[2]["weather"] = {g["id"]: w for g in games
-                                       if (w := wfn(g["home_team"], g["commence_time"]))}
+                wx = {}
+                for g in games:
+                    try:
+                        w = wfn(g["home_team"], g["commence_time"])
+                    except Exception as e:
+                        print(f"[{sp}] weather skipped for {g.get('home_team')}: {e}")
+                        w = None
+                    if w:
+                        wx[g["id"]] = w
+                model[2]["weather"] = wx
+                print(f"[{sp}] weather: {len(wx)} games with a weather call" +
+                      (": " + "; ".join(f"{g['away_team']} @ {g['home_team']} {wx[g['id']]['label']}"
+                                        for g in games if g['id'] in wx) if wx else ""))
             except Exception as e:  # weather is a bonus - never let it stop the scan
                 print(f"[{sp}] weather unavailable: {e}")
         for g in games:
