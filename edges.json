@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T08:22:23+00:00",
+  "generated_at": "2026-11-16T08:27:42+00:00",
   "rules": {
     "kalshi_gap_pts": 3.0,
     "best_price_min_ev_pct": 2.0
@@ -42,7 +42,7 @@
       "book": "FanDuel",
       "ev_pct": 6.8,
       "kalshi_pct": 40,
-      "kalshi_gap": 0.1,
+      "kalshi_gap": 0.6,
       "locked": false,
       "books": 5,
       "fair_odds": 149,
@@ -134,27 +134,6 @@
     },
     {
       "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T17:00:00Z",
-      "game": "Memphis Tigers @ Navy Midshipmen",
-      "pick": "Memphis Tigers -3.5",
-      "kind": "price",
-      "team": "Memphis Tigers",
-      "fair_pct": 60,
-      "fair_spread": -3.0,
-      "line": -3.5,
-      "price": 105,
-      "book": "BetRivers",
-      "ev_pct": 2.9,
-      "kalshi_pct": 60,
-      "kalshi_gap": -0.4,
-      "locked": false,
-      "books": 5,
-      "fair_odds": -148,
-      "close_ev_pct": null
-    },
-    {
-      "sport": "CFB",
       "date": "2026-11-18",
       "kickoff": "2026-11-19T00:00:00Z",
       "game": "Akron Zips @ UMass Minutemen",
@@ -172,6 +151,27 @@
       "locked": false,
       "books": 5,
       "fair_odds": -136,
+      "close_ev_pct": null
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-17",
+      "kickoff": "2026-11-18T00:00:00Z",
+      "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
+      "pick": "Miami (OH) RedHawks -7.5",
+      "kind": "price",
+      "team": "Miami (OH) RedHawks",
+      "fair_pct": 74,
+      "fair_spread": -9.0,
+      "line": -7.5,
+      "price": -112,
+      "book": "BetRivers",
+      "ev_pct": 2.2,
+      "kalshi_pct": 76,
+      "kalshi_gap": -2.5,
+      "locked": false,
+      "books": 6,
+      "fair_odds": -285,
       "close_ev_pct": null
     }
   ],
@@ -208,9 +208,9 @@
       "date": "2026-11-17",
       "kickoff": "2026-11-18T00:00:00Z",
       "game": "Miami (OH) RedHawks @ Kent State Golden Flashes",
-      "pick": "NO EDGE",
-      "kalshi_gap": 2.1,
-      "best_ev_pct": 1.9
+      "pick": "Miami (OH) RedHawks -7.5",
+      "kalshi_gap": 2.0,
+      "best_ev_pct": 2.2
     },
     {
       "sport": "CFB",
@@ -218,7 +218,7 @@
       "kickoff": "2026-11-19T00:00:00Z",
       "game": "Akron Zips @ UMass Minutemen",
       "pick": "UMass Minutemen -3.5",
-      "kalshi_gap": 2.8,
+      "kalshi_gap": 2.3,
       "best_ev_pct": 2.8
     },
     {
@@ -263,7 +263,7 @@
       "kickoff": "2026-11-21T00:30:00Z",
       "game": "Clemson Tigers @ Duke Blue Devils",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.7,
+      "kalshi_gap": 1.8,
       "best_ev_pct": 1.6
     },
     {
@@ -272,7 +272,7 @@
       "kickoff": "2026-11-21T00:30:00Z",
       "game": "Bowling Green Falcons @ Toledo Rockets",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.5,
+      "kalshi_gap": 1.6,
       "best_ev_pct": -2.3
     },
     {
@@ -389,7 +389,7 @@
       "kickoff": "2026-11-21T17:00:00Z",
       "game": "Colorado Buffaloes @ Cincinnati Bearcats",
       "pick": "Colorado Buffaloes +2.5",
-      "kalshi_gap": 0.4,
+      "kalshi_gap": 0.6,
       "best_ev_pct": 6.8
     },
     {
@@ -400,15 +400,6 @@
       "pick": "East Carolina Pirates ML +190",
       "kalshi_gap": 1.4,
       "best_ev_pct": 4.1
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T17:00:00Z",
-      "game": "Memphis Tigers @ Navy Midshipmen",
-      "pick": "Memphis Tigers -3.5",
-      "kalshi_gap": 0.9,
-      "best_ev_pct": 2.9
     },
     {
       "sport": "CFB",
@@ -463,6 +454,15 @@
       "pick": "NO EDGE",
       "kalshi_gap": 1.0,
       "best_ev_pct": -3.7
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "Memphis Tigers @ Navy Midshipmen",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.9,
+      "best_ev_pct": 1.0
     },
     {
       "sport": "UFC",
@@ -524,8 +524,8 @@
       "kickoff": "2026-11-21T18:00:00Z",
       "game": "Western Kentucky Hilltoppers @ Liberty Flames",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.5,
-      "best_ev_pct": -2.5
+      "kalshi_gap": 1.3,
+      "best_ev_pct": -3.0
     },
     {
       "sport": "UFC",
@@ -551,8 +551,8 @@
       "kickoff": "2026-11-21T19:00:00Z",
       "game": "Missouri State Bears @ Jacksonville State Gamecocks",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.4,
-      "best_ev_pct": -2.8
+      "kalshi_gap": 1.1,
+      "best_ev_pct": -3.0
     },
     {
       "sport": "CFB",
@@ -596,8 +596,8 @@
       "kickoff": "2026-11-21T19:30:00Z",
       "game": "Iowa Hawkeyes @ Illinois Fighting Illini",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.9,
-      "best_ev_pct": -2.9
+      "kalshi_gap": 1.8,
+      "best_ev_pct": -2.7
     },
     {
       "sport": "CFB",
@@ -614,7 +614,7 @@
       "kickoff": "2026-11-21T20:00:00Z",
       "game": "Coastal Carolina Chanticleers @ Louisiana Ragin Cajuns",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.9,
+      "kalshi_gap": 2.0,
       "best_ev_pct": -2.1
     },
     {
@@ -632,8 +632,8 @@
       "kickoff": "2026-11-21T20:00:00Z",
       "game": "Florida International Panthers @ Kennesaw State Owls",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.4,
-      "best_ev_pct": -2.0
+      "kalshi_gap": 1.5,
+      "best_ev_pct": -1.7
     },
     {
       "sport": "CFB",
@@ -785,7 +785,7 @@
       "kickoff": "2026-11-21T21:00:00Z",
       "game": "Georgia State Panthers @ Marshall Thundering Herd",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.8,
+      "kalshi_gap": 1.9,
       "best_ev_pct": -0.1
     },
     {
@@ -1375,19 +1375,6 @@
       "locked": false
     },
     {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T20:00:00Z",
-      "game": "Coastal Carolina Chanticleers @ Louisiana Ragin Cajuns",
-      "pick": "Coastal Carolina Chanticleers ML +375",
-      "team": "Coastal Carolina Chanticleers",
-      "price": 375,
-      "book": "FanDuel",
-      "ev_pct": 3.9,
-      "fair_odds": 357,
-      "locked": false
-    },
-    {
       "sport": "NFL",
       "date": "2026-11-22",
       "kickoff": "2026-11-22T21:25:00Z",
@@ -1442,19 +1429,6 @@
     {
       "sport": "CFB",
       "date": "2026-11-21",
-      "kickoff": "2026-11-21T18:00:00Z",
-      "game": "Western Kentucky Hilltoppers @ Liberty Flames",
-      "pick": "Western Kentucky Hilltoppers ML +700",
-      "team": "Western Kentucky Hilltoppers",
-      "price": 700,
-      "book": "BetRivers",
-      "ev_pct": 12.0,
-      "fair_odds": 614,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
       "kickoff": "2026-11-21T21:00:00Z",
       "game": "Northern Illinois Huskies @ North Dakota State Bison",
       "pick": "Northern Illinois Huskies ML +1750",
@@ -1476,6 +1450,19 @@
       "book": "BetMGM",
       "ev_pct": 4.0,
       "fair_odds": 909,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T18:00:00Z",
+      "game": "Western Kentucky Hilltoppers @ Liberty Flames",
+      "pick": "Western Kentucky Hilltoppers ML +700",
+      "team": "Western Kentucky Hilltoppers",
+      "price": 700,
+      "book": "BetRivers",
+      "ev_pct": 10.5,
+      "fair_odds": 624,
       "locked": false
     },
     {
@@ -1646,12 +1633,12 @@
       "home": "Baltimore Ravens",
       "away": "Los Angeles Chargers",
       "vegas_home_spread": -4.5,
-      "chip_home_spread": -3.0,
-      "diff": -1.5,
+      "chip_home_spread": -6.5,
+      "diff": 2.0,
       "total": 39.0,
       "chip_score": {
-        "Baltimore Ravens": 21,
-        "Los Angeles Chargers": 18
+        "Baltimore Ravens": 23,
+        "Los Angeles Chargers": 16
       },
       "pick": "PASS",
       "upset": false,
@@ -1668,12 +1655,12 @@
       "home": "Western Michigan Broncos",
       "away": "Eastern Michigan Eagles",
       "vegas_home_spread": -14.5,
-      "chip_home_spread": -18.5,
-      "diff": 4.0,
+      "chip_home_spread": -16.5,
+      "diff": 2.0,
       "total": 46.5,
       "chip_score": {
         "Western Michigan Broncos": 32,
-        "Eastern Michigan Eagles": 14
+        "Eastern Michigan Eagles": 15
       },
       "pick": "PASS",
       "upset": false,
@@ -1690,12 +1677,12 @@
       "home": "Ohio Bobcats",
       "away": "Ball State Cardinals",
       "vegas_home_spread": -10.5,
-      "chip_home_spread": -12.0,
-      "diff": 1.5,
+      "chip_home_spread": -10.0,
+      "diff": -0.5,
       "total": 49.5,
       "chip_score": {
-        "Ohio Bobcats": 31,
-        "Ball State Cardinals": 19
+        "Ohio Bobcats": 30,
+        "Ball State Cardinals": 20
       },
       "pick": "PASS",
       "upset": false,
@@ -1712,12 +1699,12 @@
       "home": "Kent State Golden Flashes",
       "away": "Miami (OH) RedHawks",
       "vegas_home_spread": 9.0,
-      "chip_home_spread": 6.5,
-      "diff": 2.5,
+      "chip_home_spread": 8.5,
+      "diff": 0.5,
       "total": 46.0,
       "chip_score": {
-        "Kent State Golden Flashes": 20,
-        "Miami (OH) RedHawks": 26
+        "Kent State Golden Flashes": 19,
+        "Miami (OH) RedHawks": 27
       },
       "pick": "PASS",
       "upset": false,
@@ -1734,12 +1721,12 @@
       "home": "Buffalo Bulls",
       "away": "Central Michigan Chippewas",
       "vegas_home_spread": -2.5,
-      "chip_home_spread": -6.5,
-      "diff": 4.0,
+      "chip_home_spread": -4.5,
+      "diff": 2.0,
       "total": 43.5,
       "chip_score": {
-        "Buffalo Bulls": 25,
-        "Central Michigan Chippewas": 18
+        "Buffalo Bulls": 24,
+        "Central Michigan Chippewas": 20
       },
       "pick": "PASS",
       "upset": false,
@@ -1756,12 +1743,12 @@
       "home": "Temple Owls",
       "away": "Rice Owls",
       "vegas_home_spread": -3.5,
-      "chip_home_spread": -3.5,
-      "diff": 0.0,
+      "chip_home_spread": -2.0,
+      "diff": -1.5,
       "total": 48.5,
       "chip_score": {
-        "Temple Owls": 26,
-        "Rice Owls": 22
+        "Temple Owls": 25,
+        "Rice Owls": 23
       },
       "pick": "PASS",
       "upset": false,
@@ -1778,14 +1765,14 @@
       "home": "Houston Texans",
       "away": "Indianapolis Colts",
       "vegas_home_spread": -10.0,
-      "chip_home_spread": -4.5,
-      "diff": -5.5,
+      "chip_home_spread": -8.0,
+      "diff": -2.0,
       "total": 44.5,
       "chip_score": {
-        "Houston Texans": 24,
-        "Indianapolis Colts": 20
+        "Houston Texans": 26,
+        "Indianapolis Colts": 18
       },
-      "pick": "Colts +10",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -1800,14 +1787,14 @@
       "home": "UCF Knights",
       "away": "Iowa State Cyclones",
       "vegas_home_spread": -2.5,
-      "chip_home_spread": 1.5,
-      "diff": -4.0,
+      "chip_home_spread": 3.5,
+      "diff": -6.0,
       "total": 53.5,
       "chip_score": {
-        "UCF Knights": 26,
+        "UCF Knights": 25,
         "Iowa State Cyclones": 28
       },
-      "pick": "PASS",
+      "pick": "Iowa State Cyclones +2.5",
       "upset": true,
       "upset_team": "Iowa State Cyclones",
       "injuries": [],
@@ -1822,12 +1809,12 @@
       "home": "Duke Blue Devils",
       "away": "Clemson Tigers",
       "vegas_home_spread": -12.5,
-      "chip_home_spread": -15.0,
-      "diff": 2.5,
+      "chip_home_spread": -13.0,
+      "diff": 0.5,
       "total": 43.5,
       "chip_score": {
-        "Duke Blue Devils": 29,
-        "Clemson Tigers": 14
+        "Duke Blue Devils": 28,
+        "Clemson Tigers": 15
       },
       "pick": "PASS",
       "upset": false,
@@ -1844,12 +1831,12 @@
       "home": "Toledo Rockets",
       "away": "Bowling Green Falcons",
       "vegas_home_spread": -15.5,
-      "chip_home_spread": -13.0,
-      "diff": -2.5,
+      "chip_home_spread": -11.0,
+      "diff": -4.5,
       "total": 48.5,
       "chip_score": {
-        "Toledo Rockets": 31,
-        "Bowling Green Falcons": 18
+        "Toledo Rockets": 30,
+        "Bowling Green Falcons": 19
       },
       "pick": "PASS",
       "upset": false,
@@ -1866,14 +1853,14 @@
       "home": "Michigan State Spartans",
       "away": "Oregon Ducks",
       "vegas_home_spread": 14.0,
-      "chip_home_spread": 7.5,
-      "diff": 6.5,
+      "chip_home_spread": 9.5,
+      "diff": 4.5,
       "total": 44.25,
       "chip_score": {
-        "Michigan State Spartans": 18,
-        "Oregon Ducks": 26
+        "Michigan State Spartans": 17,
+        "Oregon Ducks": 27
       },
-      "pick": "Michigan State Spartans +14",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -1888,12 +1875,12 @@
       "home": "Air Force Falcons",
       "away": "UTEP Miners",
       "vegas_home_spread": -21.5,
-      "chip_home_spread": -23.0,
-      "diff": 1.5,
+      "chip_home_spread": -21.0,
+      "diff": -0.5,
       "total": 45.5,
       "chip_score": {
-        "Air Force Falcons": 34,
-        "UTEP Miners": 11
+        "Air Force Falcons": 33,
+        "UTEP Miners": 12
       },
       "pick": "PASS",
       "upset": false,
@@ -1910,12 +1897,12 @@
       "home": "Wyoming Cowboys",
       "away": "New Mexico Lobos",
       "vegas_home_spread": 8.0,
-      "chip_home_spread": 3.0,
-      "diff": 5.0,
+      "chip_home_spread": 4.5,
+      "diff": 3.5,
       "total": 37.5,
       "chip_score": {
-        "Wyoming Cowboys": 17,
-        "New Mexico Lobos": 20
+        "Wyoming Cowboys": 16,
+        "New Mexico Lobos": 21
       },
       "pick": "PASS",
       "upset": false,
@@ -1932,12 +1919,12 @@
       "home": "Cincinnati Bearcats",
       "away": "Colorado Buffaloes",
       "vegas_home_spread": -3.5,
-      "chip_home_spread": -3.5,
-      "diff": 0.0,
+      "chip_home_spread": -1.5,
+      "diff": -2.0,
       "total": 60.5,
       "chip_score": {
-        "Cincinnati Bearcats": 32,
-        "Colorado Buffaloes": 28
+        "Cincinnati Bearcats": 31,
+        "Colorado Buffaloes": 30
       },
       "pick": "PASS",
       "upset": false,
@@ -1954,34 +1941,12 @@
       "home": "Army Black Knights",
       "away": "East Carolina Pirates",
       "vegas_home_spread": -5.0,
-      "chip_home_spread": -7.5,
-      "diff": 2.5,
+      "chip_home_spread": -5.5,
+      "diff": 0.5,
       "total": 44.5,
       "chip_score": {
-        "Army Black Knights": 26,
-        "East Carolina Pirates": 18
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "injuries": [],
-      "weather": null,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-21T17:00:00Z",
-      "game": "Memphis Tigers @ Navy Midshipmen",
-      "home": "Navy Midshipmen",
-      "away": "Memphis Tigers",
-      "vegas_home_spread": 3.0,
-      "chip_home_spread": 6.0,
-      "diff": -3.0,
-      "total": 66.5,
-      "chip_score": {
-        "Navy Midshipmen": 30,
-        "Memphis Tigers": 36
+        "Army Black Knights": 25,
+        "East Carolina Pirates": 20
       },
       "pick": "PASS",
       "upset": false,
@@ -1998,12 +1963,12 @@
       "home": "Kansas Jayhawks",
       "away": "BYU Cougars",
       "vegas_home_spread": 5.5,
-      "chip_home_spread": 2.5,
-      "diff": 3.0,
+      "chip_home_spread": 4.0,
+      "diff": 1.5,
       "total": 48.0,
       "chip_score": {
-        "Kansas Jayhawks": 23,
-        "BYU Cougars": 25
+        "Kansas Jayhawks": 22,
+        "BYU Cougars": 26
       },
       "pick": "PASS",
       "upset": false,
@@ -2020,12 +1985,12 @@
       "home": "Florida Gators",
       "away": "Vanderbilt Commodores",
       "vegas_home_spread": -14.0,
-      "chip_home_spread": -11.5,
-      "diff": -2.5,
+      "chip_home_spread": -9.5,
+      "diff": -4.5,
       "total": 47.5,
       "chip_score": {
-        "Florida Gators": 30,
-        "Vanderbilt Commodores": 18
+        "Florida Gators": 28,
+        "Vanderbilt Commodores": 19
       },
       "pick": "PASS",
       "upset": false,
@@ -2042,12 +2007,34 @@
       "home": "Boston College Eagles",
       "away": "Syracuse Orange",
       "vegas_home_spread": 3.5,
-      "chip_home_spread": 0.5,
-      "diff": 3.0,
+      "chip_home_spread": 2.5,
+      "diff": 1.0,
       "total": 50.5,
       "chip_score": {
-        "Boston College Eagles": 25,
+        "Boston College Eagles": 24,
         "Syracuse Orange": 26
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "injuries": [],
+      "weather": null,
+      "locked": false
+    },
+    {
+      "sport": "CFB",
+      "date": "2026-11-21",
+      "kickoff": "2026-11-21T17:00:00Z",
+      "game": "Memphis Tigers @ Navy Midshipmen",
+      "home": "Navy Midshipmen",
+      "away": "Memphis Tigers",
+      "vegas_home_spread": 3.5,
+      "chip_home_spread": 8.0,
+      "diff": -4.5,
+      "total": 66.5,
+      "chip_score": {
+        "Navy Midshipmen": 29,
+        "Memphis Tigers": 37
       },
       "pick": "PASS",
       "upset": false,
@@ -2064,12 +2051,12 @@
       "home": "Minnesota Golden Gophers",
       "away": "Northwestern Wildcats",
       "vegas_home_spread": 3.0,
-      "chip_home_spread": 6.0,
-      "diff": -3.0,
+      "chip_home_spread": 8.0,
+      "diff": -5.0,
       "total": 43.5,
       "chip_score": {
-        "Minnesota Golden Gophers": 19,
-        "Northwestern Wildcats": 25
+        "Minnesota Golden Gophers": 18,
+        "Northwestern Wildcats": 26
       },
       "pick": "PASS",
       "upset": false,
@@ -2086,12 +2073,12 @@
       "home": "Purdue Boilermakers",
       "away": "Wisconsin Badgers",
       "vegas_home_spread": 6.0,
-      "chip_home_spread": 1.5,
-      "diff": 4.5,
+      "chip_home_spread": 3.5,
+      "diff": 2.5,
       "total": 44.5,
       "chip_score": {
-        "Purdue Boilermakers": 22,
-        "Wisconsin Badgers": 23
+        "Purdue Boilermakers": 20,
+        "Wisconsin Badgers": 24
       },
       "pick": "PASS",
       "upset": false,
@@ -2108,12 +2095,12 @@
       "home": "Tulane Green Wave",
       "away": "North Texas Mean Green",
       "vegas_home_spread": 7.0,
-      "chip_home_spread": 6.0,
-      "diff": 1.0,
+      "chip_home_spread": 8.0,
+      "diff": -1.0,
       "total": 57.25,
       "chip_score": {
-        "Tulane Green Wave": 26,
-        "North Texas Mean Green": 32
+        "Tulane Green Wave": 25,
+        "North Texas Mean Green": 33
       },
       "pick": "PASS",
       "upset": false,
@@ -2130,12 +2117,12 @@
       "home": "Virginia Cavaliers",
       "away": "North Carolina Tar Heels",
       "vegas_home_spread": -1.0,
-      "chip_home_spread": 2.0,
-      "diff": -3.0,
+      "chip_home_spread": 4.0,
+      "diff": -5.0,
       "total": 43.5,
       "chip_score": {
-        "Virginia Cavaliers": 21,
-        "North Carolina Tar Heels": 23
+        "Virginia Cavaliers": 20,
+        "North Carolina Tar Heels": 24
       },
       "pick": "PASS",
       "upset": true,
@@ -2152,12 +2139,12 @@
       "home": "Liberty Flames",
       "away": "Western Kentucky Hilltoppers",
       "vegas_home_spread": -16.5,
-      "chip_home_spread": -18.5,
-      "diff": 2.0,
+      "chip_home_spread": -16.5,
+      "diff": 0.0,
       "total": 53.25,
       "chip_score": {
-        "Liberty Flames": 36,
-        "Western Kentucky Hilltoppers": 17
+        "Liberty Flames": 35,
+        "Western Kentucky Hilltoppers": 18
       },
       "pick": "PASS",
       "upset": false,
@@ -2174,12 +2161,12 @@
       "home": "Jacksonville State Gamecocks",
       "away": "Missouri State Bears",
       "vegas_home_spread": -10.5,
-      "chip_home_spread": -13.0,
-      "diff": 2.5,
+      "chip_home_spread": -11.0,
+      "diff": 0.5,
       "total": 52.5,
       "chip_score": {
-        "Jacksonville State Gamecocks": 33,
-        "Missouri State Bears": 20
+        "Jacksonville State Gamecocks": 32,
+        "Missouri State Bears": 21
       },
       "pick": "PASS",
       "upset": false,
@@ -2196,12 +2183,12 @@
       "home": "Sam Houston State Bearkats",
       "away": "Middle Tennessee Blue Raiders",
       "vegas_home_spread": 6.5,
-      "chip_home_spread": 8.5,
-      "diff": -2.0,
+      "chip_home_spread": 10.5,
+      "diff": -4.0,
       "total": 48.75,
       "chip_score": {
-        "Sam Houston State Bearkats": 20,
-        "Middle Tennessee Blue Raiders": 29
+        "Sam Houston State Bearkats": 19,
+        "Middle Tennessee Blue Raiders": 30
       },
       "pick": "PASS",
       "upset": false,
@@ -2218,12 +2205,12 @@
       "home": "Tulsa Golden Hurricane",
       "away": "Charlotte 49ers",
       "vegas_home_spread": -22.0,
-      "chip_home_spread": -20.5,
-      "diff": -1.5,
+      "chip_home_spread": -18.5,
+      "diff": -3.5,
       "total": 52.25,
       "chip_score": {
-        "Tulsa Golden Hurricane": 36,
-        "Charlotte 49ers": 16
+        "Tulsa Golden Hurricane": 35,
+        "Charlotte 49ers": 17
       },
       "pick": "PASS",
       "upset": false,
@@ -2240,16 +2227,16 @@
       "home": "Florida Atlantic Owls",
       "away": "South Florida Bulls",
       "vegas_home_spread": 1.5,
-      "chip_home_spread": -2.0,
-      "diff": 3.5,
+      "chip_home_spread": 0.0,
+      "diff": 1.5,
       "total": 65.5,
       "chip_score": {
-        "Florida Atlantic Owls": 34,
-        "South Florida Bulls": 32
+        "Florida Atlantic Owls": 33,
+        "South Florida Bulls": 33
       },
       "pick": "PASS",
-      "upset": true,
-      "upset_team": "Florida Atlantic Owls",
+      "upset": false,
+      "upset_team": null,
       "injuries": [],
       "weather": null,
       "locked": false
@@ -2262,12 +2249,12 @@
       "home": "Illinois Fighting Illini",
       "away": "Iowa Hawkeyes",
       "vegas_home_spread": 6.5,
-      "chip_home_spread": 1.0,
-      "diff": 5.5,
+      "chip_home_spread": 3.0,
+      "diff": 3.5,
       "total": 43.5,
       "chip_score": {
-        "Illinois Fighting Illini": 21,
-        "Iowa Hawkeyes": 22
+        "Illinois Fighting Illini": 20,
+        "Iowa Hawkeyes": 23
       },
       "pick": "PASS",
       "upset": false,
@@ -2284,12 +2271,12 @@
       "home": "Appalachian State Mountaineers",
       "away": "UL Monroe Warhawks",
       "vegas_home_spread": -14.0,
-      "chip_home_spread": -12.0,
-      "diff": -2.0,
+      "chip_home_spread": -10.0,
+      "diff": -4.0,
       "total": 50.5,
       "chip_score": {
-        "Appalachian State Mountaineers": 31,
-        "UL Monroe Warhawks": 19
+        "Appalachian State Mountaineers": 30,
+        "UL Monroe Warhawks": 20
       },
       "pick": "PASS",
       "upset": false,
@@ -2306,11 +2293,11 @@
       "home": "Louisiana Ragin Cajuns",
       "away": "Coastal Carolina Chanticleers",
       "vegas_home_spread": -10.0,
-      "chip_home_spread": -12.0,
-      "diff": 2.0,
+      "chip_home_spread": -10.0,
+      "diff": 0.0,
       "total": 51.0,
       "chip_score": {
-        "Louisiana Ragin Cajuns": 32,
+        "Louisiana Ragin Cajuns": 30,
         "Coastal Carolina Chanticleers": 20
       },
       "pick": "PASS",
@@ -2328,12 +2315,12 @@
       "home": "New Mexico State Aggies",
       "away": "Delaware Blue Hens",
       "vegas_home_spread": 3.0,
-      "chip_home_spread": 5.0,
-      "diff": -2.0,
+      "chip_home_spread": 7.0,
+      "diff": -4.0,
       "total": 52.5,
       "chip_score": {
-        "New Mexico State Aggies": 24,
-        "Delaware Blue Hens": 29
+        "New Mexico State Aggies": 23,
+        "Delaware Blue Hens": 30
       },
       "pick": "PASS",
       "upset": false,
@@ -2350,12 +2337,12 @@
       "home": "Kennesaw State Owls",
       "away": "Florida International Panthers",
       "vegas_home_spread": -3.5,
-      "chip_home_spread": -6.0,
-      "diff": 2.5,
+      "chip_home_spread": -4.0,
+      "diff": 0.5,
       "total": 44.5,
       "chip_score": {
-        "Kennesaw State Owls": 25,
-        "Florida International Panthers": 19
+        "Kennesaw State Owls": 24,
+        "Florida International Panthers": 20
       },
       "pick": "PASS",
       "upset": false,
@@ -2372,11 +2359,11 @@
       "home": "TCU Horned Frogs",
       "away": "Utah Utes",
       "vegas_home_spread": 6.5,
-      "chip_home_spread": 4.5,
-      "diff": 2.0,
+      "chip_home_spread": 6.5,
+      "diff": 0.0,
       "total": 46.5,
       "chip_score": {
-        "TCU Horned Frogs": 21,
+        "TCU Horned Frogs": 20,
         "Utah Utes": 26
       },
       "pick": "PASS",
@@ -2394,14 +2381,14 @@
       "home": "Michigan Wolverines",
       "away": "UCLA Bruins",
       "vegas_home_spread": 5.5,
-      "chip_home_spread": 10.0,
-      "diff": -4.5,
+      "chip_home_spread": 12.0,
+      "diff": -6.5,
       "total": 38.5,
       "chip_score": {
-        "Michigan Wolverines": 14,
-        "UCLA Bruins": 24
+        "Michigan Wolverines": 13,
+        "UCLA Bruins": 25
       },
-      "pick": "PASS",
+      "pick": "UCLA Bruins -5.5",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -2416,12 +2403,12 @@
       "home": "West Virginia Mountaineers",
       "away": "Houston Cougars",
       "vegas_home_spread": 7.0,
-      "chip_home_spread": 3.0,
-      "diff": 4.0,
+      "chip_home_spread": 5.0,
+      "diff": 2.0,
       "total": 70.5,
       "chip_score": {
-        "West Virginia Mountaineers": 34,
-        "Houston Cougars": 37
+        "West Virginia Mountaineers": 33,
+        "Houston Cougars": 38
       },
       "pick": "PASS",
       "upset": false,
@@ -2438,12 +2425,12 @@
       "home": "Kansas State Wildcats",
       "away": "Arizona Wildcats",
       "vegas_home_spread": 8.5,
-      "chip_home_spread": 9.5,
-      "diff": -1.0,
+      "chip_home_spread": 11.5,
+      "diff": -3.0,
       "total": 52.5,
       "chip_score": {
-        "Kansas State Wildcats": 22,
-        "Arizona Wildcats": 31
+        "Kansas State Wildcats": 20,
+        "Arizona Wildcats": 32
       },
       "pick": "PASS",
       "upset": false,
@@ -2460,12 +2447,12 @@
       "home": "UConn Huskies",
       "away": "Old Dominion Monarchs",
       "vegas_home_spread": -13.5,
-      "chip_home_spread": -15.5,
-      "diff": 2.0,
+      "chip_home_spread": -13.5,
+      "diff": 0.0,
       "total": 47.5,
       "chip_score": {
-        "UConn Huskies": 32,
-        "Old Dominion Monarchs": 16
+        "UConn Huskies": 30,
+        "Old Dominion Monarchs": 17
       },
       "pick": "PASS",
       "upset": false,
@@ -2482,11 +2469,11 @@
       "home": "Georgia Tech Yellow Jackets",
       "away": "Wake Forest Demon Deacons",
       "vegas_home_spread": 21.0,
-      "chip_home_spread": 18.5,
-      "diff": 2.5,
+      "chip_home_spread": 20.5,
+      "diff": 0.5,
       "total": 56.5,
       "chip_score": {
-        "Georgia Tech Yellow Jackets": 19,
+        "Georgia Tech Yellow Jackets": 18,
         "Wake Forest Demon Deacons": 38
       },
       "pick": "PASS",
@@ -2504,12 +2491,12 @@
       "home": "Tennessee Volunteers",
       "away": "LSU Tigers",
       "vegas_home_spread": 0.0,
-      "chip_home_spread": -8.5,
-      "diff": 8.5,
+      "chip_home_spread": -6.5,
+      "diff": 6.5,
       "total": 46.0,
       "chip_score": {
-        "Tennessee Volunteers": 27,
-        "LSU Tigers": 19
+        "Tennessee Volunteers": 26,
+        "LSU Tigers": 20
       },
       "pick": "Tennessee Volunteers PK",
       "upset": false,
@@ -2526,12 +2513,12 @@
       "home": "Penn State Nittany Lions",
       "away": "Rutgers Scarlet Knights",
       "vegas_home_spread": -24.0,
-      "chip_home_spread": -21.0,
-      "diff": -3.0,
+      "chip_home_spread": -19.5,
+      "diff": -4.5,
       "total": 50.5,
       "chip_score": {
-        "Penn State Nittany Lions": 36,
-        "Rutgers Scarlet Knights": 15
+        "Penn State Nittany Lions": 35,
+        "Rutgers Scarlet Knights": 16
       },
       "pick": "PASS",
       "upset": false,
@@ -2548,16 +2535,16 @@
       "home": "Baylor Bears",
       "away": "Texas Tech Red Raiders",
       "vegas_home_spread": 3.5,
-      "chip_home_spread": -0.5,
-      "diff": 4.0,
+      "chip_home_spread": 1.5,
+      "diff": 2.0,
       "total": 57.0,
       "chip_score": {
-        "Baylor Bears": 29,
-        "Texas Tech Red Raiders": 28
+        "Baylor Bears": 28,
+        "Texas Tech Red Raiders": 29
       },
       "pick": "PASS",
-      "upset": true,
-      "upset_team": "Baylor Bears",
+      "upset": false,
+      "upset_team": null,
       "injuries": [],
       "weather": null,
       "locked": false
@@ -2570,12 +2557,12 @@
       "home": "Texas Longhorns",
       "away": "Arkansas Razorbacks",
       "vegas_home_spread": -21.0,
-      "chip_home_spread": -13.0,
-      "diff": -8.0,
+      "chip_home_spread": -11.0,
+      "diff": -10.0,
       "total": 47.25,
       "chip_score": {
-        "Texas Longhorns": 30,
-        "Arkansas Razorbacks": 17
+        "Texas Longhorns": 29,
+        "Arkansas Razorbacks": 18
       },
       "pick": "Arkansas Razorbacks +21",
       "upset": false,
@@ -2592,14 +2579,14 @@
       "home": "Nebraska Cornhuskers",
       "away": "Ohio State Buckeyes",
       "vegas_home_spread": 2.5,
-      "chip_home_spread": -4.0,
-      "diff": 6.5,
+      "chip_home_spread": -2.0,
+      "diff": 4.5,
       "total": 43.5,
       "chip_score": {
-        "Nebraska Cornhuskers": 24,
-        "Ohio State Buckeyes": 20
+        "Nebraska Cornhuskers": 23,
+        "Ohio State Buckeyes": 21
       },
-      "pick": "Nebraska Cornhuskers +2.5",
+      "pick": "PASS",
       "upset": true,
       "upset_team": "Nebraska Cornhuskers",
       "injuries": [],
@@ -2614,12 +2601,12 @@
       "home": "Washington Huskies",
       "away": "Indiana Hoosiers",
       "vegas_home_spread": 8.0,
-      "chip_home_spread": 0.0,
-      "diff": 8.0,
+      "chip_home_spread": 2.0,
+      "diff": 6.0,
       "total": 43.75,
       "chip_score": {
-        "Washington Huskies": 22,
-        "Indiana Hoosiers": 22
+        "Washington Huskies": 21,
+        "Indiana Hoosiers": 23
       },
       "pick": "Washington Huskies +8",
       "upset": false,
@@ -2636,11 +2623,11 @@
       "home": "Louisville Cardinals",
       "away": "Pittsburgh Panthers",
       "vegas_home_spread": -13.5,
-      "chip_home_spread": -15.5,
-      "diff": 2.0,
+      "chip_home_spread": -13.5,
+      "diff": 0.0,
       "total": 50.5,
       "chip_score": {
-        "Louisville Cardinals": 33,
+        "Louisville Cardinals": 32,
         "Pittsburgh Panthers": 18
       },
       "pick": "PASS",
@@ -2658,11 +2645,11 @@
       "home": "Florida State Seminoles",
       "away": "NC State Wolfpack",
       "vegas_home_spread": -9.0,
-      "chip_home_spread": -12.0,
-      "diff": 3.0,
+      "chip_home_spread": -10.0,
+      "diff": 1.0,
       "total": 55.0,
       "chip_score": {
-        "Florida State Seminoles": 34,
+        "Florida State Seminoles": 32,
         "NC State Wolfpack": 22
       },
       "pick": "PASS",
@@ -2680,12 +2667,12 @@
       "home": "Oklahoma Sooners",
       "away": "Texas A&M Aggies",
       "vegas_home_spread": -7.5,
-      "chip_home_spread": -5.0,
-      "diff": -2.5,
+      "chip_home_spread": -3.0,
+      "diff": -4.5,
       "total": 39.5,
       "chip_score": {
-        "Oklahoma Sooners": 22,
-        "Texas A&M Aggies": 17
+        "Oklahoma Sooners": 21,
+        "Texas A&M Aggies": 18
       },
       "pick": "PASS",
       "upset": false,
@@ -2702,12 +2689,12 @@
       "home": "Troy Trojans",
       "away": "Georgia Southern Eagles",
       "vegas_home_spread": 8.5,
-      "chip_home_spread": 9.0,
-      "diff": -0.5,
+      "chip_home_spread": 11.0,
+      "diff": -2.5,
       "total": 48.5,
       "chip_score": {
-        "Troy Trojans": 20,
-        "Georgia Southern Eagles": 29
+        "Troy Trojans": 19,
+        "Georgia Southern Eagles": 30
       },
       "pick": "PASS",
       "upset": false,
@@ -2724,16 +2711,16 @@
       "home": "Marshall Thundering Herd",
       "away": "Georgia State Panthers",
       "vegas_home_spread": 2.0,
-      "chip_home_spread": -0.5,
-      "diff": 2.5,
+      "chip_home_spread": 1.5,
+      "diff": 0.5,
       "total": 57.5,
       "chip_score": {
-        "Marshall Thundering Herd": 29,
-        "Georgia State Panthers": 28
+        "Marshall Thundering Herd": 28,
+        "Georgia State Panthers": 30
       },
       "pick": "PASS",
-      "upset": true,
-      "upset_team": "Marshall Thundering Herd",
+      "upset": false,
+      "upset_team": null,
       "injuries": [],
       "weather": null,
       "locked": false
@@ -2746,12 +2733,12 @@
       "home": "North Dakota State Bison",
       "away": "Northern Illinois Huskies",
       "vegas_home_spread": -25.0,
-      "chip_home_spread": -27.0,
-      "diff": 2.0,
+      "chip_home_spread": -25.0,
+      "diff": 0.0,
       "total": 45.5,
       "chip_score": {
-        "North Dakota State Bison": 36,
-        "Northern Illinois Huskies": 9
+        "North Dakota State Bison": 35,
+        "Northern Illinois Huskies": 10
       },
       "pick": "PASS",
       "upset": false,
@@ -2768,12 +2755,12 @@
       "home": "Southern Mississippi Golden Eagles",
       "away": "South Alabama Jaguars",
       "vegas_home_spread": 5.5,
-      "chip_home_spread": 4.5,
-      "diff": 1.0,
+      "chip_home_spread": 6.5,
+      "diff": -1.0,
       "total": 63.5,
       "chip_score": {
-        "Southern Mississippi Golden Eagles": 30,
-        "South Alabama Jaguars": 34
+        "Southern Mississippi Golden Eagles": 28,
+        "South Alabama Jaguars": 35
       },
       "pick": "PASS",
       "upset": false,
@@ -2790,12 +2777,12 @@
       "home": "Texas State Bobcats",
       "away": "Washington State Cougars",
       "vegas_home_spread": -11.5,
-      "chip_home_spread": -15.0,
-      "diff": 3.5,
+      "chip_home_spread": -13.0,
+      "diff": 1.5,
       "total": 60.5,
       "chip_score": {
-        "Texas State Bobcats": 38,
-        "Washington State Cougars": 23
+        "Texas State Bobcats": 37,
+        "Washington State Cougars": 24
       },
       "pick": "PASS",
       "upset": false,
@@ -2812,14 +2799,14 @@
       "home": "USC Trojans",
       "away": "Maryland Terrapins",
       "vegas_home_spread": -17.0,
-      "chip_home_spread": -11.5,
-      "diff": -5.5,
+      "chip_home_spread": -9.5,
+      "diff": -7.5,
       "total": 57.0,
       "chip_score": {
-        "USC Trojans": 34,
-        "Maryland Terrapins": 23
+        "USC Trojans": 33,
+        "Maryland Terrapins": 24
       },
-      "pick": "PASS",
+      "pick": "Maryland Terrapins +17",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -2834,11 +2821,11 @@
       "home": "Louisiana Tech Bulldogs",
       "away": "Arkansas State Red Wolves",
       "vegas_home_spread": -14.5,
-      "chip_home_spread": -18.0,
-      "diff": 3.5,
+      "chip_home_spread": -16.0,
+      "diff": 1.5,
       "total": 53.0,
       "chip_score": {
-        "Louisiana Tech Bulldogs": 36,
+        "Louisiana Tech Bulldogs": 34,
         "Arkansas State Red Wolves": 18
       },
       "pick": "PASS",
@@ -2856,12 +2843,12 @@
       "home": "San Jose State Spartans",
       "away": "UNLV Rebels",
       "vegas_home_spread": 5.0,
-      "chip_home_spread": 1.5,
-      "diff": 3.5,
+      "chip_home_spread": 3.5,
+      "diff": 1.5,
       "total": 46.25,
       "chip_score": {
-        "San Jose State Spartans": 22,
-        "UNLV Rebels": 24
+        "San Jose State Spartans": 21,
+        "UNLV Rebels": 25
       },
       "pick": "PASS",
       "upset": false,
@@ -2878,12 +2865,12 @@
       "home": "Miami Hurricanes",
       "away": "Virginia Tech Hokies",
       "vegas_home_spread": -20.5,
-      "chip_home_spread": -25.0,
-      "diff": 4.5,
+      "chip_home_spread": -23.0,
+      "diff": 2.5,
       "total": 61.0,
       "chip_score": {
-        "Miami Hurricanes": 43,
-        "Virginia Tech Hokies": 18
+        "Miami Hurricanes": 42,
+        "Virginia Tech Hokies": 19
       },
       "pick": "PASS",
       "upset": false,
@@ -2900,14 +2887,14 @@
       "home": "California Golden Bears",
       "away": "Stanford Cardinal",
       "vegas_home_spread": 2.5,
-      "chip_home_spread": 6.5,
-      "diff": -4.0,
+      "chip_home_spread": 8.5,
+      "diff": -6.0,
       "total": 56.0,
       "chip_score": {
-        "California Golden Bears": 25,
-        "Stanford Cardinal": 31
+        "California Golden Bears": 24,
+        "Stanford Cardinal": 32
       },
-      "pick": "PASS",
+      "pick": "Stanford Cardinal -2.5",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -2922,11 +2909,11 @@
       "home": "Notre Dame Fighting Irish",
       "away": "SMU Mustangs",
       "vegas_home_spread": -21.0,
-      "chip_home_spread": -17.5,
-      "diff": -3.5,
+      "chip_home_spread": -15.5,
+      "diff": -5.5,
       "total": 56.5,
       "chip_score": {
-        "Notre Dame Fighting Irish": 37,
+        "Notre Dame Fighting Irish": 36,
         "SMU Mustangs": 20
       },
       "pick": "PASS",
@@ -2944,12 +2931,12 @@
       "home": "Missouri Tigers",
       "away": "Kentucky Wildcats",
       "vegas_home_spread": -5.5,
-      "chip_home_spread": -6.5,
-      "diff": 1.0,
+      "chip_home_spread": -5.0,
+      "diff": -0.5,
       "total": 48.5,
       "chip_score": {
-        "Missouri Tigers": 28,
-        "Kentucky Wildcats": 21
+        "Missouri Tigers": 27,
+        "Kentucky Wildcats": 22
       },
       "pick": "PASS",
       "upset": false,
@@ -2966,12 +2953,12 @@
       "home": "South Carolina Gamecocks",
       "away": "Georgia Bulldogs",
       "vegas_home_spread": 16.5,
-      "chip_home_spread": 12.5,
-      "diff": 4.0,
+      "chip_home_spread": 14.5,
+      "diff": 2.0,
       "total": 51.5,
       "chip_score": {
-        "South Carolina Gamecocks": 20,
-        "Georgia Bulldogs": 32
+        "South Carolina Gamecocks": 18,
+        "Georgia Bulldogs": 33
       },
       "pick": "PASS",
       "upset": false,
@@ -2988,12 +2975,12 @@
       "home": "Fresno State Bulldogs",
       "away": "Colorado State Rams",
       "vegas_home_spread": -21.0,
-      "chip_home_spread": -20.0,
-      "diff": -1.0,
+      "chip_home_spread": -18.0,
+      "diff": -3.0,
       "total": 64.5,
       "chip_score": {
-        "Fresno State Bulldogs": 42,
-        "Colorado State Rams": 22
+        "Fresno State Bulldogs": 41,
+        "Colorado State Rams": 23
       },
       "pick": "PASS",
       "upset": false,
@@ -3010,16 +2997,16 @@
       "home": "UAB Blazers",
       "away": "UTSA Roadrunners",
       "vegas_home_spread": 6.0,
-      "chip_home_spread": -1.5,
-      "diff": 7.5,
+      "chip_home_spread": 0.0,
+      "diff": 6.0,
       "total": 52.5,
       "chip_score": {
-        "UAB Blazers": 27,
+        "UAB Blazers": 26,
         "UTSA Roadrunners": 26
       },
       "pick": "UAB Blazers +6",
-      "upset": true,
-      "upset_team": "UAB Blazers",
+      "upset": false,
+      "upset_team": null,
       "injuries": [],
       "weather": null,
       "locked": false
@@ -3032,12 +3019,12 @@
       "home": "Boise State Broncos",
       "away": "San Diego State Aztecs",
       "vegas_home_spread": -17.0,
-      "chip_home_spread": -18.0,
-      "diff": 1.0,
+      "chip_home_spread": -16.0,
+      "diff": -1.0,
       "total": 62.25,
       "chip_score": {
-        "Boise State Broncos": 40,
-        "San Diego State Aztecs": 22
+        "Boise State Broncos": 39,
+        "San Diego State Aztecs": 23
       },
       "pick": "PASS",
       "upset": false,
@@ -3054,12 +3041,12 @@
       "home": "Arizona State Sun Devils",
       "away": "Oklahoma State Cowboys",
       "vegas_home_spread": 3.0,
-      "chip_home_spread": 1.0,
-      "diff": 2.0,
+      "chip_home_spread": 3.0,
+      "diff": 0.0,
       "total": 61.75,
       "chip_score": {
-        "Arizona State Sun Devils": 30,
-        "Oklahoma State Cowboys": 31
+        "Arizona State Sun Devils": 29,
+        "Oklahoma State Cowboys": 32
       },
       "pick": "PASS",
       "upset": false,
@@ -3076,12 +3063,12 @@
       "home": "Oregon State Beavers",
       "away": "Utah State Aggies",
       "vegas_home_spread": -9.0,
-      "chip_home_spread": -10.0,
-      "diff": 1.0,
+      "chip_home_spread": -8.0,
+      "diff": -1.0,
       "total": 51.75,
       "chip_score": {
-        "Oregon State Beavers": 31,
-        "Utah State Aggies": 21
+        "Oregon State Beavers": 30,
+        "Utah State Aggies": 22
       },
       "pick": "PASS",
       "upset": false,
@@ -3098,14 +3085,14 @@
       "home": "Philadelphia Eagles",
       "away": "Pittsburgh Steelers",
       "vegas_home_spread": 4.5,
-      "chip_home_spread": 8.5,
-      "diff": -4.0,
+      "chip_home_spread": 5.0,
+      "diff": -0.5,
       "total": 38.5,
       "chip_score": {
-        "Philadelphia Eagles": 15,
-        "Pittsburgh Steelers": 24
+        "Philadelphia Eagles": 17,
+        "Pittsburgh Steelers": 22
       },
-      "pick": "Steelers -4.5",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -3120,14 +3107,14 @@
       "home": "Chicago Bears",
       "away": "New Orleans Saints",
       "vegas_home_spread": -10.0,
-      "chip_home_spread": -7.0,
-      "diff": -3.0,
+      "chip_home_spread": -10.5,
+      "diff": 0.5,
       "total": 49.0,
       "chip_score": {
-        "Chicago Bears": 28,
-        "New Orleans Saints": 21
+        "Chicago Bears": 30,
+        "New Orleans Saints": 19
       },
-      "pick": "Saints +10",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -3142,14 +3129,14 @@
       "home": "Detroit Lions",
       "away": "Tampa Bay Buccaneers",
       "vegas_home_spread": -5.5,
-      "chip_home_spread": -1.5,
-      "diff": -4.0,
+      "chip_home_spread": -5.0,
+      "diff": -0.5,
       "total": 46.5,
       "chip_score": {
-        "Detroit Lions": 24,
-        "Tampa Bay Buccaneers": 22
+        "Detroit Lions": 26,
+        "Tampa Bay Buccaneers": 21
       },
-      "pick": "Buccaneers +5.5",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -3164,14 +3151,14 @@
       "home": "Kansas City Chiefs",
       "away": "Arizona Cardinals",
       "vegas_home_spread": -16.5,
-      "chip_home_spread": -10.5,
-      "diff": -6.0,
+      "chip_home_spread": -14.0,
+      "diff": -2.5,
       "total": 41.0,
       "chip_score": {
-        "Kansas City Chiefs": 26,
-        "Arizona Cardinals": 15
+        "Kansas City Chiefs": 28,
+        "Arizona Cardinals": 14
       },
-      "pick": "Cardinals +16.5",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -3186,14 +3173,14 @@
       "home": "Dallas Cowboys",
       "away": "Tennessee Titans",
       "vegas_home_spread": -7.5,
-      "chip_home_spread": -4.5,
-      "diff": -3.0,
+      "chip_home_spread": -8.0,
+      "diff": 0.5,
       "total": 53.5,
       "chip_score": {
-        "Dallas Cowboys": 29,
-        "Tennessee Titans": 24
+        "Dallas Cowboys": 31,
+        "Tennessee Titans": 23
       },
-      "pick": "Titans +7.5",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -3208,14 +3195,14 @@
       "home": "Buffalo Bills",
       "away": "Miami Dolphins",
       "vegas_home_spread": -16.5,
-      "chip_home_spread": -11.0,
-      "diff": -5.5,
+      "chip_home_spread": -14.5,
+      "diff": -2.0,
       "total": 46.5,
       "chip_score": {
-        "Buffalo Bills": 29,
-        "Miami Dolphins": 18
+        "Buffalo Bills": 30,
+        "Miami Dolphins": 16
       },
-      "pick": "Dolphins +16.5",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -3230,14 +3217,14 @@
       "home": "Carolina Panthers",
       "away": "Baltimore Ravens",
       "vegas_home_spread": -2.5,
-      "chip_home_spread": -2.0,
-      "diff": -0.5,
+      "chip_home_spread": -5.5,
+      "diff": 3.0,
       "total": 44.5,
       "chip_score": {
-        "Carolina Panthers": 23,
-        "Baltimore Ravens": 21
+        "Carolina Panthers": 25,
+        "Baltimore Ravens": 20
       },
-      "pick": "PASS",
+      "pick": "Panthers -2.5",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -3252,16 +3239,16 @@
       "home": "Los Angeles Chargers",
       "away": "New York Jets",
       "vegas_home_spread": -3.5,
-      "chip_home_spread": 3.0,
-      "diff": -6.5,
+      "chip_home_spread": -0.5,
+      "diff": -3.0,
       "total": 40.5,
       "chip_score": {
-        "Los Angeles Chargers": 19,
-        "New York Jets": 22
+        "Los Angeles Chargers": 20,
+        "New York Jets": 20
       },
       "pick": "Jets +3.5",
-      "upset": true,
-      "upset_team": "New York Jets",
+      "upset": false,
+      "upset_team": null,
       "injuries": [],
       "weather": null,
       "locked": false
@@ -3274,14 +3261,14 @@
       "home": "Denver Broncos",
       "away": "Las Vegas Raiders",
       "vegas_home_spread": -10.0,
-      "chip_home_spread": -5.5,
-      "diff": -4.5,
+      "chip_home_spread": -9.0,
+      "diff": -1.0,
       "total": 40.0,
       "chip_score": {
-        "Denver Broncos": 23,
-        "Las Vegas Raiders": 17
+        "Denver Broncos": 24,
+        "Las Vegas Raiders": 16
       },
-      "pick": "Raiders +10",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -3296,12 +3283,12 @@
       "home": "New York Giants",
       "away": "Jacksonville Jaguars",
       "vegas_home_spread": 6.5,
-      "chip_home_spread": 8.5,
-      "diff": -2.0,
+      "chip_home_spread": 5.0,
+      "diff": 1.5,
       "total": 46.5,
       "chip_score": {
-        "New York Giants": 19,
-        "Jacksonville Jaguars": 28
+        "New York Giants": 21,
+        "Jacksonville Jaguars": 26
       },
       "pick": "PASS",
       "upset": false,
@@ -3318,12 +3305,12 @@
       "home": "San Francisco 49ers",
       "away": "Minnesota Vikings",
       "vegas_home_spread": -3.0,
-      "chip_home_spread": -0.5,
-      "diff": -2.5,
+      "chip_home_spread": -4.0,
+      "diff": 1.0,
       "total": 46.0,
       "chip_score": {
-        "San Francisco 49ers": 23,
-        "Minnesota Vikings": 23
+        "San Francisco 49ers": 25,
+        "Minnesota Vikings": 21
       },
       "pick": "PASS",
       "upset": false,
@@ -3340,14 +3327,14 @@
       "home": "Washington Commanders",
       "away": "Cincinnati Bengals",
       "vegas_home_spread": 4.5,
-      "chip_home_spread": 9.5,
-      "diff": -5.0,
+      "chip_home_spread": 6.0,
+      "diff": -1.5,
       "total": 51.75,
       "chip_score": {
-        "Washington Commanders": 21,
-        "Cincinnati Bengals": 31
+        "Washington Commanders": 23,
+        "Cincinnati Bengals": 29
       },
-      "pick": "Bengals -4.5",
+      "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
