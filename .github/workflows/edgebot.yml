@@ -1,18 +1,27 @@
 name: edgebot
 
+# Each run is about 1 hour before one of Chip's video runs and only scans the sport that video needs
+# (saves Odds API credits: ~350 of the 500 free per month). Times are UTC = Pacific + 8 (PST).
 on:
   schedule:
-    - cron: "0 15 * * 4"
-    - cron: "0 21 * * 5"
-    - cron: "0 14 * * 6"
-    - cron: "0 23 * * 6"
-    - cron: "0 13 * * 0"
-    - cron: "0 15 * * 1"
-    - cron: "0 15 * * 2"
-    - cron: "0 15 * * 3"
-    - cron: "45 15 * * 0"
-    - cron: "45 18 * * 0"
-  workflow_dispatch: {}
+    - cron: "15 14 * * 0"   # Sun 6:15 AM PT  NFL  (Last Call 7:14)
+    - cron: "15 18 * * 0"   # Sun 10:15 AM PT NFL  (Sunday Night Short 11:14)
+    - cron: "15 15 * * 1"   # Mon 7:15 AM PT  NFL  (Receipts 8:14, grades the weekend)
+    - cron: "15 18 * * 1"   # Mon 10:15 AM PT NFL  (Monday Night Short 11:14)
+    - cron: "15 15 * * 2"   # Tue 7:15 AM PT  NFL  (prediction slate 8:14 + Short 11:14)
+    - cron: "15 21 * * 2"   # Tue 1:15 PM PT  NFL  (Shorts 2:14 and 5:14)
+    - cron: "15 15 * * 3"   # Wed 7:15 AM PT  CFB+UFC (college slate 8:14 + Short 11:14)
+    - cron: "15 22 * * 3"   # Wed 2:15 PM PT  CFB+UFC (college Short 3:14, UFC prediction 5:14)
+    - cron: "15 20 * * 4"   # Thu 12:15 PM PT NFL  (Thursday Night Short 1:14)
+    - cron: "15 23 * * 5"   # Fri 3:15 PM PT  CFB  (college Best Lines 4:14)
+    - cron: "15 1 * * 6"    # Fri 5:15 PM PT  UFC  (UFC Best Lines 6:14)
+    - cron: "15 14 * * 6"   # Sat 6:15 AM PT  CFB+UFC (Last Call 7:14)
+    - cron: "15 1 * * 0"    # Sat 5:15 PM PT  NFL  (NFL Best Lines 6:14)
+  workflow_dispatch:
+    inputs:
+      sports:
+        description: "Sports to scan"
+        default: "NFL,CFB,UFC"
 
 permissions:
   contents: write
@@ -27,14 +36,24 @@ jobs:
           python-version: "3.12"
       - name: Find the bot's folder
         run: |
-          echo "Repo contents:"; find . -path ./.git -prune -o -maxdepth 3 -print | sort
           APP=$(dirname "$(find . -path ./.git -prune -o -name requirements.txt -print | head -1)")
           if [ -z "$APP" ] || [ ! -d "$APP/edgebot" ]; then
             echo "::error::Could not find requirements.txt next to the edgebot folder. Upload the bot files to the repo."; exit 1
           fi
           echo "Using folder: $APP"
           echo "APP=$APP" >> "$GITHUB_ENV"
-      - run: pip install -r "$APP/requirements.txt"
+      - name: Pick the sports for this run
+        run: |
+          case "${{ github.event.schedule }}" in
+            "15 15 * * 3"|"15 22 * * 3"|"15 14 * * 6") S="CFB,UFC" ;;
+            "15 23 * * 5") S="CFB" ;;
+            "15 1 * * 6") S="UFC" ;;
+            "") S="${{ github.event.inputs.sports }}" ;;
+            *) S="NFL" ;;
+          esac
+          echo "Scanning: ${S:-NFL,CFB,UFC}"
+          echo "SPORTS=${S:-NFL,CFB,UFC}" >> "$GITHUB_ENV"
+      - run: pip install -r "$APP/requirements.txt" pandas
       - name: Grade finished picks
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
@@ -42,11 +61,12 @@ jobs:
       - name: Scan for edges
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-        run: cd "$APP" && python -m edgebot scan --sports NFL,CFB,UFC --lock-hours 30
+        run: cd "$APP" && python -m edgebot scan --sports "$SPORTS" --lock-hours 30
       - name: Save results to the repo
         run: |
           git config user.name "edgebot"
           git config user.email "edgebot@users.noreply.github.com"
           git add "$APP/edges.json" "$APP/edgebot.sqlite" || true
-          git commit -m "edgebot run $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing changed"
+          git commit -m "edgebot run $(date -u +%Y-%m-%dT%H:%MZ) $SPORTS" || echo "nothing changed"
+          git pull --rebase || true
           git push
