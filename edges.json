@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T02:17:29+00:00",
+  "generated_at": "2026-11-22T14:56:57+00:00",
   "rules": {
     "kalshi_gap_pts": 3.0,
     "best_price_min_ev_pct": 2.0
@@ -11,9 +11,9 @@
       "label": "1-0 \u00b7 +0.8u"
     },
     "CFB": {
-      "record": "0-0",
-      "units": 0,
-      "label": "0-0 \u00b7 +0.0u"
+      "record": "0-2",
+      "units": -2.0,
+      "label": "0-2 \u00b7 -2.0u"
     },
     "UFC": {
       "record": "0-0",
@@ -21,66 +21,21 @@
       "label": "0-0 \u00b7 +0.0u"
     },
     "overall": {
-      "record": "1-0",
-      "units": 0.83,
-      "label": "1-0 \u00b7 +0.8u"
+      "record": "1-2",
+      "units": -1.17,
+      "label": "1-2 \u00b7 -1.2u"
     }
   },
   "picks": [],
   "slate": [
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-22T02:30:00Z",
-      "game": "San Diego State Aztecs @ Boise State Broncos",
-      "pick": "NO EDGE",
-      "kalshi_gap": 1.2,
-      "best_ev_pct": 1.4
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-22T03:15:00Z",
-      "game": "Oklahoma State Cowboys @ Arizona State Sun Devils",
-      "pick": "NO EDGE",
-      "kalshi_gap": 0.2,
-      "best_ev_pct": -2.4
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-22T03:30:00Z",
-      "game": "Utah State Aggies @ Oregon State Beavers",
-      "pick": "NO EDGE",
-      "kalshi_gap": 0.8,
-      "best_ev_pct": -1.4
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-22T03:30:00Z",
-      "game": "Hawaii Rainbow Warriors @ Nevada Wolf Pack",
-      "pick": "NO EDGE",
-      "kalshi_gap": null,
-      "best_ev_pct": -2.9
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T18:00:00Z",
-      "game": "Buccaneers @ Lions",
-      "pick": "NO EDGE",
-      "kalshi_gap": 2.6,
-      "best_ev_pct": -1.8
-    },
     {
       "sport": "NFL",
       "date": "2026-11-22",
       "kickoff": "2026-11-22T18:00:00Z",
       "game": "Saints @ Bears",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.6,
-      "best_ev_pct": -3.1
+      "kalshi_gap": 1.3,
+      "best_ev_pct": -1.0
     },
     {
       "sport": "NFL",
@@ -89,7 +44,16 @@
       "game": "Cardinals @ Chiefs",
       "pick": "NO EDGE",
       "kalshi_gap": 1.2,
-      "best_ev_pct": -0.0
+      "best_ev_pct": -1.1
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
+      "game": "Buccaneers @ Lions",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.0,
+      "best_ev_pct": -2.3
     },
     {
       "sport": "NFL",
@@ -97,8 +61,8 @@
       "kickoff": "2026-11-22T18:00:00Z",
       "game": "Dolphins @ Bills",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.1,
-      "best_ev_pct": -3.1
+      "kalshi_gap": 0.9,
+      "best_ev_pct": -0.8
     },
     {
       "sport": "NFL",
@@ -107,7 +71,7 @@
       "game": "Titans @ Cowboys",
       "pick": "NO EDGE",
       "kalshi_gap": 0.6,
-      "best_ev_pct": -1.5
+      "best_ev_pct": -1.6
     },
     {
       "sport": "NFL",
@@ -115,8 +79,8 @@
       "kickoff": "2026-11-22T18:00:00Z",
       "game": "Ravens @ Panthers",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.0,
-      "best_ev_pct": -0.4
+      "kalshi_gap": 0.1,
+      "best_ev_pct": -0.7
     },
     {
       "sport": "NFL",
@@ -124,8 +88,8 @@
       "kickoff": "2026-11-22T18:00:00Z",
       "game": "Steelers @ Eagles",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.0,
-      "best_ev_pct": -2.2
+      "kalshi_gap": 0.1,
+      "best_ev_pct": -2.7
     },
     {
       "sport": "NFL",
@@ -133,17 +97,8 @@
       "kickoff": "2026-11-22T21:05:00Z",
       "game": "Jets @ Chargers",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.3,
-      "best_ev_pct": -0.1
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T21:25:00Z",
-      "game": "Jaguars @ Giants",
-      "pick": "NO EDGE",
-      "kalshi_gap": 0.8,
-      "best_ev_pct": -1.5
+      "kalshi_gap": 0.7,
+      "best_ev_pct": -2.9
     },
     {
       "sport": "NFL",
@@ -151,8 +106,17 @@
       "kickoff": "2026-11-22T21:25:00Z",
       "game": "Raiders @ Broncos",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.4,
-      "best_ev_pct": -0.5
+      "kalshi_gap": 0.5,
+      "best_ev_pct": -3.2
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T21:25:00Z",
+      "game": "Jaguars @ Giants",
+      "pick": "NO EDGE",
+      "kalshi_gap": 0.1,
+      "best_ev_pct": -0.4
     },
     {
       "sport": "NFL",
@@ -160,8 +124,8 @@
       "kickoff": "2026-11-23T01:20:00Z",
       "game": "Vikings @ 49ers",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.3,
-      "best_ev_pct": -0.2
+      "kalshi_gap": 0.5,
+      "best_ev_pct": -2.1
     },
     {
       "sport": "NFL",
@@ -169,8 +133,8 @@
       "kickoff": "2026-11-24T01:15:00Z",
       "game": "Bengals @ Commanders",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.7,
-      "best_ev_pct": -2.4
+      "kalshi_gap": 0.8,
+      "best_ev_pct": -3.0
     },
     {
       "sport": "CFB",
@@ -196,8 +160,8 @@
       "kickoff": "2026-11-26T01:00:00Z",
       "game": "Packers @ Rams",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.4,
-      "best_ev_pct": -1.8
+      "kalshi_gap": 0.2,
+      "best_ev_pct": -2.4
     },
     {
       "sport": "NFL",
@@ -205,7 +169,7 @@
       "kickoff": "2026-11-26T18:00:00Z",
       "game": "Bears @ Lions",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.3,
+      "kalshi_gap": 0.2,
       "best_ev_pct": null
     },
     {
@@ -214,7 +178,7 @@
       "kickoff": "2026-11-26T21:30:00Z",
       "game": "Eagles @ Cowboys",
       "pick": "NO EDGE",
-      "kalshi_gap": -0.4,
+      "kalshi_gap": 0.1,
       "best_ev_pct": null
     },
     {
@@ -232,7 +196,7 @@
       "kickoff": "2026-11-27T01:20:00Z",
       "game": "Chiefs @ Bills",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.6,
+      "kalshi_gap": -0.4,
       "best_ev_pct": null
     },
     {
@@ -259,7 +223,7 @@
       "kickoff": "2026-11-27T20:00:00Z",
       "game": "Broncos @ Steelers",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.1,
+      "kalshi_gap": 1.0,
       "best_ev_pct": null
     },
     {
@@ -358,16 +322,7 @@
       "kickoff": "2026-11-29T18:00:00Z",
       "game": "Ravens @ Texans",
       "pick": "NO EDGE",
-      "kalshi_gap": 2.3,
-      "best_ev_pct": null
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-29",
-      "kickoff": "2026-11-29T18:00:00Z",
-      "game": "Saints @ Bengals",
-      "pick": "NO EDGE",
-      "kalshi_gap": 1.6,
+      "kalshi_gap": 1.3,
       "best_ev_pct": null
     },
     {
@@ -383,9 +338,18 @@
       "sport": "NFL",
       "date": "2026-11-29",
       "kickoff": "2026-11-29T18:00:00Z",
+      "game": "Saints @ Bengals",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.1,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T18:00:00Z",
       "game": "Jets @ Dolphins",
       "pick": "NO EDGE",
-      "kalshi_gap": 1.0,
+      "kalshi_gap": 0.5,
       "best_ev_pct": null
     },
     {
@@ -394,7 +358,7 @@
       "kickoff": "2026-11-29T18:00:00Z",
       "game": "Falcons @ Vikings",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.7,
+      "kalshi_gap": 0.3,
       "best_ev_pct": null
     },
     {
@@ -403,7 +367,7 @@
       "kickoff": "2026-11-29T18:00:00Z",
       "game": "Titans @ Jaguars",
       "pick": "NO EDGE",
-      "kalshi_gap": -0.1,
+      "kalshi_gap": 0.3,
       "best_ev_pct": null
     },
     {
@@ -412,16 +376,7 @@
       "kickoff": "2026-11-29T21:05:00Z",
       "game": "Patriots @ Chargers",
       "pick": "NO EDGE",
-      "kalshi_gap": 0.6,
-      "best_ev_pct": null
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-29",
-      "kickoff": "2026-11-29T21:25:00Z",
-      "game": "Commanders @ Cardinals",
-      "pick": "NO EDGE",
-      "kalshi_gap": 1.2,
+      "kalshi_gap": 1.6,
       "best_ev_pct": null
     },
     {
@@ -429,6 +384,15 @@
       "date": "2026-11-29",
       "kickoff": "2026-11-29T21:25:00Z",
       "game": "Seahawks @ 49ers",
+      "pick": "NO EDGE",
+      "kalshi_gap": 1.4,
+      "best_ev_pct": null
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T21:25:00Z",
+      "game": "Commanders @ Cardinals",
       "pick": "NO EDGE",
       "kalshi_gap": 0.9,
       "best_ev_pct": null
@@ -439,7 +403,7 @@
       "kickoff": "2026-11-30T01:20:00Z",
       "game": "Raiders @ Browns",
       "pick": "NO EDGE",
-      "kalshi_gap": 2.9,
+      "kalshi_gap": 0.3,
       "best_ev_pct": null
     },
     {
@@ -448,7 +412,7 @@
       "kickoff": "2026-12-01T01:15:00Z",
       "game": "Panthers @ Buccaneers",
       "pick": "NO EDGE",
-      "kalshi_gap": 2.2,
+      "kalshi_gap": 2.1,
       "best_ev_pct": null
     },
     {
@@ -747,9 +711,9 @@
       "label": "0-3 \u00b7 -3.0u"
     },
     "CFB": {
-      "record": "1-10",
-      "units": 6.0,
-      "label": "1-10 \u00b7 +6.0u"
+      "record": "1-17",
+      "units": -1.0,
+      "label": "1-17 \u00b7 -1.0u"
     },
     "UFC": {
       "record": "0-0",
@@ -757,53 +721,47 @@
       "label": "0-0 \u00b7 +0.0u"
     },
     "overall": {
-      "record": "1-13",
-      "units": 3.0,
-      "label": "1-13 \u00b7 +3.0u"
+      "record": "1-20",
+      "units": -4.0,
+      "label": "1-20 \u00b7 -4.0u"
     }
   },
   "longshots": [
     {
       "sport": "NFL",
       "date": "2026-11-22",
-      "kickoff": "2026-11-22T18:00:00Z",
-      "game": "Saints @ Bears",
-      "pick": "Saints ML +520",
-      "team": "New Orleans Saints",
-      "price": 520,
+      "kickoff": "2026-11-22T21:25:00Z",
+      "game": "Raiders @ Broncos",
+      "pick": "Raiders ML +500",
+      "team": "Las Vegas Raiders",
+      "price": 500,
       "book": "FanDuel",
-      "ev_pct": 6.0,
-      "fair_odds": 485,
-      "locked": true
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T18:00:00Z",
-      "game": "Cardinals @ Chiefs",
-      "pick": "Cardinals ML +980",
-      "team": "Arizona Cardinals",
-      "price": 980,
-      "book": "FanDuel",
-      "ev_pct": 5.0,
-      "fair_odds": 928,
+      "ev_pct": 2.2,
+      "fair_odds": 487,
       "locked": true
     }
   ],
   "closing_value": [
     {
+      "pick": "Raiders ML +500",
+      "sport": "NFL",
+      "game": "Raiders @ Broncos",
+      "kind": "longshot",
+      "close_ev_pct": 2.2
+    },
+    {
       "pick": "Cardinals ML +980",
       "sport": "NFL",
       "game": "Cardinals @ Chiefs",
       "kind": "longshot",
-      "close_ev_pct": 5.0
+      "close_ev_pct": 4.6
     },
     {
       "pick": "Saints ML +520",
       "sport": "NFL",
       "game": "Saints @ Bears",
       "kind": "longshot",
-      "close_ev_pct": 6.0
+      "close_ev_pct": 4.3
     },
     {
       "pick": "Arizona Wildcats -7.5",
@@ -976,100 +934,10 @@
   ],
   "chip_records": {
     "NFL": "2-2",
-    "CFB": "4-4",
-    "overall": "6-6"
+    "CFB": "6-4",
+    "overall": "8-6"
   },
   "chip_lines": [
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-22T02:30:00Z",
-      "game": "San Diego State Aztecs @ Boise State Broncos",
-      "home": "Boise State Broncos",
-      "away": "San Diego State Aztecs",
-      "vegas_home_spread": -19.0,
-      "chip_home_spread": -16.5,
-      "diff": -2.5,
-      "total": 60.5,
-      "chip_score": {
-        "Boise State Broncos": 38,
-        "San Diego State Aztecs": 22
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "injuries": [],
-      "weather": null,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-22T03:15:00Z",
-      "game": "Oklahoma State Cowboys @ Arizona State Sun Devils",
-      "home": "Arizona State Sun Devils",
-      "away": "Oklahoma State Cowboys",
-      "vegas_home_spread": 2.5,
-      "chip_home_spread": 2.0,
-      "diff": 0.5,
-      "total": 59.5,
-      "chip_score": {
-        "Arizona State Sun Devils": 29,
-        "Oklahoma State Cowboys": 31
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "injuries": [],
-      "weather": null,
-      "locked": false
-    },
-    {
-      "sport": "CFB",
-      "date": "2026-11-21",
-      "kickoff": "2026-11-22T03:30:00Z",
-      "game": "Utah State Aggies @ Oregon State Beavers",
-      "home": "Oregon State Beavers",
-      "away": "Utah State Aggies",
-      "vegas_home_spread": -8.5,
-      "chip_home_spread": -8.5,
-      "diff": 0.0,
-      "total": 50.5,
-      "chip_score": {
-        "Oregon State Beavers": 30,
-        "Utah State Aggies": 21
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "injuries": [],
-      "weather": null,
-      "locked": false
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-22",
-      "kickoff": "2026-11-22T18:00:00Z",
-      "game": "Buccaneers @ Lions",
-      "home": "Detroit Lions",
-      "away": "Tampa Bay Buccaneers",
-      "vegas_home_spread": -3.5,
-      "chip_home_spread": -3.0,
-      "diff": -0.5,
-      "total": 47.5,
-      "chip_score": {
-        "Detroit Lions": 25,
-        "Tampa Bay Buccaneers": 22
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "injuries": [
-        "QB B.Mayfield QUESTIONABLE (-0.8)"
-      ],
-      "weather": null,
-      "locked": false
-    },
     {
       "sport": "NFL",
       "date": "2026-11-22",
@@ -1080,7 +948,7 @@
       "vegas_home_spread": -11.5,
       "chip_home_spread": -8.5,
       "diff": -3.0,
-      "total": 48.5,
+      "total": 48.0,
       "chip_score": {
         "Chicago Bears": 28,
         "New Orleans Saints": 20
@@ -1099,20 +967,44 @@
       "game": "Cardinals @ Chiefs",
       "home": "Kansas City Chiefs",
       "away": "Arizona Cardinals",
-      "vegas_home_spread": -16.0,
+      "vegas_home_spread": -15.5,
       "chip_home_spread": -12.0,
-      "diff": -4.0,
-      "total": 38.6,
+      "diff": -3.5,
+      "total": 38.5,
       "chip_score": {
         "Kansas City Chiefs": 25,
         "Arizona Cardinals": 13
       },
-      "pick": "Cardinals +16",
+      "pick": "Cardinals +15.5",
       "upset": false,
       "upset_team": null,
       "injuries": [],
       "weather": "WIND 15 MPH",
       "locked": true
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-22",
+      "kickoff": "2026-11-22T18:00:00Z",
+      "game": "Buccaneers @ Lions",
+      "home": "Detroit Lions",
+      "away": "Tampa Bay Buccaneers",
+      "vegas_home_spread": -3.5,
+      "chip_home_spread": -3.0,
+      "diff": -0.5,
+      "total": 48.5,
+      "chip_score": {
+        "Detroit Lions": 26,
+        "Tampa Bay Buccaneers": 23
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "injuries": [
+        "QB B.Mayfield QUESTIONABLE (-0.8)"
+      ],
+      "weather": null,
+      "locked": false
     },
     {
       "sport": "NFL",
@@ -1124,7 +1016,7 @@
       "vegas_home_spread": -16.5,
       "chip_home_spread": -13.0,
       "diff": -3.5,
-      "total": 43.3,
+      "total": 43.2,
       "chip_score": {
         "Buffalo Bills": 28,
         "Miami Dolphins": 15
@@ -1146,9 +1038,9 @@
       "vegas_home_spread": -7.5,
       "chip_home_spread": -6.5,
       "diff": -1.0,
-      "total": 55.0,
+      "total": 54.5,
       "chip_score": {
-        "Dallas Cowboys": 31,
+        "Dallas Cowboys": 30,
         "Tennessee Titans": 24
       },
       "pick": "PASS",
@@ -1168,7 +1060,7 @@
       "vegas_home_spread": -2.5,
       "chip_home_spread": -4.5,
       "diff": 2.0,
-      "total": 43.5,
+      "total": 44.5,
       "chip_score": {
         "Carolina Panthers": 24,
         "Baltimore Ravens": 20
@@ -1228,16 +1120,16 @@
       "sport": "NFL",
       "date": "2026-11-22",
       "kickoff": "2026-11-22T21:25:00Z",
-      "game": "Jaguars @ Giants",
-      "home": "New York Giants",
-      "away": "Jacksonville Jaguars",
-      "vegas_home_spread": 6.0,
-      "chip_home_spread": 5.5,
-      "diff": 0.5,
-      "total": 45.5,
+      "game": "Raiders @ Broncos",
+      "home": "Denver Broncos",
+      "away": "Las Vegas Raiders",
+      "vegas_home_spread": -10.5,
+      "chip_home_spread": -8.0,
+      "diff": -2.5,
+      "total": 41.0,
       "chip_score": {
-        "New York Giants": 20,
-        "Jacksonville Jaguars": 26
+        "Denver Broncos": 24,
+        "Las Vegas Raiders": 16
       },
       "pick": "PASS",
       "upset": false,
@@ -1250,16 +1142,16 @@
       "sport": "NFL",
       "date": "2026-11-22",
       "kickoff": "2026-11-22T21:25:00Z",
-      "game": "Raiders @ Broncos",
-      "home": "Denver Broncos",
-      "away": "Las Vegas Raiders",
-      "vegas_home_spread": -10.5,
-      "chip_home_spread": -8.0,
-      "diff": -2.5,
-      "total": 40.5,
+      "game": "Jaguars @ Giants",
+      "home": "New York Giants",
+      "away": "Jacksonville Jaguars",
+      "vegas_home_spread": 5.5,
+      "chip_home_spread": 5.5,
+      "diff": 0.0,
+      "total": 45.0,
       "chip_score": {
-        "Denver Broncos": 24,
-        "Las Vegas Raiders": 16
+        "New York Giants": 20,
+        "Jacksonville Jaguars": 25
       },
       "pick": "PASS",
       "upset": false,
@@ -1278,7 +1170,7 @@
       "vegas_home_spread": -3.5,
       "chip_home_spread": -5.5,
       "diff": 2.0,
-      "total": 46.5,
+      "total": 45.5,
       "chip_score": {
         "San Francisco 49ers": 26,
         "Minnesota Vikings": 20
@@ -1300,16 +1192,16 @@
       "vegas_home_spread": 6.0,
       "chip_home_spread": 7.0,
       "diff": -1.0,
-      "total": 55.0,
+      "total": 54.0,
       "chip_score": {
         "Washington Commanders": 24,
-        "Cincinnati Bengals": 31
+        "Cincinnati Bengals": 30
       },
       "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
-      "weather": null,
+      "weather": "WIND 12 MPH",
       "locked": false
     },
     {
@@ -1454,16 +1346,16 @@
       "vegas_home_spread": -3.0,
       "chip_home_spread": -2.5,
       "diff": -0.5,
-      "total": 47.1,
+      "total": 48.9,
       "chip_score": {
-        "Buffalo Bills": 25,
-        "Kansas City Chiefs": 22
+        "Buffalo Bills": 26,
+        "Kansas City Chiefs": 23
       },
       "pick": "PASS",
       "upset": false,
       "upset_team": null,
       "injuries": [],
-      "weather": "WIND 18 MPH \u00b7 RAIN",
+      "weather": "WIND 17 MPH",
       "locked": false
     },
     {
@@ -1520,7 +1412,7 @@
       "vegas_home_spread": 2.5,
       "chip_home_spread": 0.0,
       "diff": 2.5,
-      "total": 39.0,
+      "total": 40.5,
       "chip_score": {
         "Pittsburgh Steelers": 20,
         "Denver Broncos": 20
@@ -1529,7 +1421,7 @@
       "upset": false,
       "upset_team": null,
       "injuries": [],
-      "weather": "RAIN",
+      "weather": null,
       "locked": false
     },
     {
@@ -1778,28 +1670,6 @@
       "sport": "NFL",
       "date": "2026-11-29",
       "kickoff": "2026-11-29T18:00:00Z",
-      "game": "Saints @ Bengals",
-      "home": "Cincinnati Bengals",
-      "away": "New Orleans Saints",
-      "vegas_home_spread": -10.0,
-      "chip_home_spread": -12.0,
-      "diff": 2.0,
-      "total": 52.5,
-      "chip_score": {
-        "Cincinnati Bengals": 32,
-        "New Orleans Saints": 20
-      },
-      "pick": "PASS",
-      "upset": false,
-      "upset_team": null,
-      "injuries": [],
-      "weather": null,
-      "locked": false
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-29",
-      "kickoff": "2026-11-29T18:00:00Z",
       "game": "Giants @ Colts",
       "home": "Indianapolis Colts",
       "away": "New York Giants",
@@ -1822,22 +1692,44 @@
       "sport": "NFL",
       "date": "2026-11-29",
       "kickoff": "2026-11-29T18:00:00Z",
+      "game": "Saints @ Bengals",
+      "home": "Cincinnati Bengals",
+      "away": "New Orleans Saints",
+      "vegas_home_spread": -10.0,
+      "chip_home_spread": -12.0,
+      "diff": 2.0,
+      "total": 52.5,
+      "chip_score": {
+        "Cincinnati Bengals": 32,
+        "New Orleans Saints": 20
+      },
+      "pick": "PASS",
+      "upset": false,
+      "upset_team": null,
+      "injuries": [],
+      "weather": null,
+      "locked": false
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T18:00:00Z",
       "game": "Jets @ Dolphins",
       "home": "Miami Dolphins",
       "away": "New York Jets",
       "vegas_home_spread": 3.0,
       "chip_home_spread": -1.5,
       "diff": 4.5,
-      "total": 41.5,
+      "total": 40.0,
       "chip_score": {
-        "Miami Dolphins": 22,
-        "New York Jets": 20
+        "Miami Dolphins": 21,
+        "New York Jets": 19
       },
       "pick": "Dolphins +3",
       "upset": true,
       "upset_team": "Miami Dolphins",
       "injuries": [],
-      "weather": null,
+      "weather": "WIND 14 MPH",
       "locked": false
     },
     {
@@ -1910,6 +1802,28 @@
       "sport": "NFL",
       "date": "2026-11-29",
       "kickoff": "2026-11-29T21:25:00Z",
+      "game": "Seahawks @ 49ers",
+      "home": "San Francisco 49ers",
+      "away": "Seattle Seahawks",
+      "vegas_home_spread": -1.5,
+      "chip_home_spread": -5.5,
+      "diff": 4.0,
+      "total": 46.5,
+      "chip_score": {
+        "San Francisco 49ers": 26,
+        "Seattle Seahawks": 20
+      },
+      "pick": "49ers -1.5",
+      "upset": false,
+      "upset_team": null,
+      "injuries": [],
+      "weather": null,
+      "locked": false
+    },
+    {
+      "sport": "NFL",
+      "date": "2026-11-29",
+      "kickoff": "2026-11-29T21:25:00Z",
       "game": "Commanders @ Cardinals",
       "home": "Arizona Cardinals",
       "away": "Washington Commanders",
@@ -1922,28 +1836,6 @@
         "Washington Commanders": 22
       },
       "pick": "Cardinals +6.5",
-      "upset": false,
-      "upset_team": null,
-      "injuries": [],
-      "weather": null,
-      "locked": false
-    },
-    {
-      "sport": "NFL",
-      "date": "2026-11-29",
-      "kickoff": "2026-11-29T21:25:00Z",
-      "game": "Seahawks @ 49ers",
-      "home": "San Francisco 49ers",
-      "away": "Seattle Seahawks",
-      "vegas_home_spread": -2.5,
-      "chip_home_spread": -5.5,
-      "diff": 3.0,
-      "total": 46.5,
-      "chip_score": {
-        "San Francisco 49ers": 26,
-        "Seattle Seahawks": 20
-      },
-      "pick": "49ers -2.5",
       "upset": false,
       "upset_team": null,
       "injuries": [],
@@ -1979,9 +1871,9 @@
       "game": "Panthers @ Buccaneers",
       "home": "Tampa Bay Buccaneers",
       "away": "Carolina Panthers",
-      "vegas_home_spread": -2.0,
+      "vegas_home_spread": -2.5,
       "chip_home_spread": -4.0,
-      "diff": 2.0,
+      "diff": 1.5,
       "total": 43.0,
       "chip_score": {
         "Tampa Bay Buccaneers": 24,
@@ -2046,7 +1938,7 @@
   ],
   "updated": {
     "UFC": "2026-11-21T14:55:43+00:00",
-    "NFL": "2026-11-22T02:17:29+00:00",
+    "NFL": "2026-11-22T14:56:57+00:00",
     "CFB": "2026-11-21T14:55:43+00:00"
   }
 }
